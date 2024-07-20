@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
+
+/* Varaible Declaration */
+:root {
+  /* Font Family */
+  --font-family: "Inter", sans-serif;
+
+  /* Border Radius */
+  --border-radius: 4px;
+
+  /* Breakpoints */
+  --breakpoints-sm: 480;
+  --breakpoints-md: 768px;
+  --breakpoints-lg: 1024px;
+  --breakpoints-xl: 1200px;
+  --breakpoints-max: 1440px;
+
+  /* Transition */
+  --transition-duration: 0.4s;
+  --transition-duration-ms: 1.2;
+  --transition-type: ease-in-out;
+
+  /* Box Shadow */
+  --box-shadow-wide: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-paper: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-light: 0px 1px 2px rgba(0, 0, 0, 0.05);
+
+  /* Colors */
+  --color-primary-dark: #1aa64b;
+  --color-primary-main: #1db954;
+  --color-primary-light: #33c065;
+  --color-secondary-dark: #212121;
+  --color-secondary-main: #121212;
+  --color-secondary-light: #535353;
+  --color-grey-light: #e5e5e5;
+  --color-grey-main: #d4d4d4;
+  --color-grey-dark: #a6a6a6;
+  --color-success: #379777;
+  --color-error: #e4003a;
+  --color-warning: #ffb22c;
+  --color-info: #009fbd;
+  --color-black: #2d2727;
+  --color-white: #fff7fc;
+
+  --font-family: "Inter", sans-serif;
+
+  --font-size-h1: 36px;
+  --font-size-h2: 30px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+  --font-size-h5: 18px;
+  --font-size-h6: 16px;
+  --font-size-h7: 14px;
+  --font-size-button: 16px;
+  --font-size-p: 14px;
+  --font-size-caption: 12px;
+
+  --font-size-small: 12px;
+  --font-size-medium: 14px;
+  --font-size-large: 16px;
+
+  --border-radius-large: 8px;
+  --border-radius-medium: 5px;
+  --border-radius-small: 3px;
+
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+}

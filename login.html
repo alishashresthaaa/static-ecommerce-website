@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>My Tune Player - Login</title>
+  </head>
+  <body>
+    <div class="form-outer-container">
+      <div class="form-inner-container">
+        <div class="form-content">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Logo" />
+          </a>
+          <h3>Login to MyTunes</h3>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-flat btn-full"><i class="fab fa-google"></i> &nbsp;Sign up with Google</button>
+        <button type="submit" class="btn btn-flat btn-full"><i class="fab fa-facebook"></i> &nbsp;Sign up with Facebook</button>
+        <button type="submit" class="btn btn-flat btn-full"><i class="fab fa-apple"></i> &nbsp;Sign up with Apple</button>
+
+        <form class="form-container" id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email address" />
+            <div class="error-message" id="emailError"></div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" />
+            <div class="error-message" id="passwordError"></div>
+          </div>
+
+          <div class="form-group">
+            <label><input type="checkbox" value="remember" /> Remember me?</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Log In</button>
+        </form>
+
+        <p style="text-align: center"><a href="forgotpassword.html">Forgot your password?</a></p>
+
+        <h5 class="form-footer">Don't have an account? <a href="register.html">Sign up for Spotify.</a></h5>
+
+        <p class="form-copyright">All Rights Reserved &copy; 2024 Music Place</p>
+      </div>
+    </div>
+
+    <script src="js/register.js"></script>
+  </body>
+</html>
