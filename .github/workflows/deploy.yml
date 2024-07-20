@@ -1,0 +1,31 @@
+name: Deploy to Cloudflare
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Publish to Cloudflare Pages
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Copy Files to Build Folder
+        run: |
+          mkdir -p build # Create the build folder if it doesn't exist
+          rsync -av --exclude='.git*' . build/
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.ACCOUNT_ID }}
+          projectName: fe-mytunes
+          directory: build
+          branch: main
