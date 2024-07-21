@@ -2,6 +2,7 @@
 @import url(./form.css);
 @import url(./home.css);
 @import url(./authenticate.css);
+@import url(./dashboard.css);
 
 /* Reset */
 * {
@@ -12,7 +13,7 @@
 
 body {
   scroll-behavior: smooth;
-  line-height: 1.6;
+  line-height: 1.2;
   font-family: var(--font-family);
 }
 
