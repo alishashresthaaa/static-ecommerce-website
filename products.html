@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <title>Our Plans - myTunes</title>
+</head>
+
+<body>
+    <!-- Showcase & Nav -->
+    <div id="showcase">
+        <header>
+            <nav class="cf">
+                <ul class="cf">
+                    <li class="hide-on-small">
+                        <a href="#showcase" class="logo"><img src="images/logo.png" /></a>
+                    </li>
+                    <li><a href="#showcase">Overview</a></li>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#gift-cards">Gift Cards</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <a href="#" id="openup"><img src="images/logo.png" /></a>
+            </nav>
+        </header>
+
+        <div class="products__container">
+            <div class="products__list">
+            </div>
+            <div class="product__details">
+            </div>
+        </div>
+
+
+
+        <!-- Footer Component -->
+        <footer>
+            <div class="footer__top">
+                <!-- Footer Details Container -->
+                <div class="footer__top__container">
+                    <!-- Footer Logo Column -->
+                    <div class="footer__logo">
+                        <div>
+                            <img src="images/logo.png" alt="logo" class="footer__image" />
+                            <p class="footer__details">Dive into a world of endless music.</p>
+                        </div>
+                        <!-- Social Container -->
+                        <div class="footer__socials">
+                            <div class="footer__title">Get connected with us</div>
+                            <div class="footer__socials__list">
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <img src="images/instagram.png" alt="Instagram" />
+                                </a>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <img src="images/facebook.png" alt="Facebook" />
+                                </a>
+                                <a href="https://www.tiktok.com/" target="_blank">
+                                    <img src="images/tiktok.png" alt="Tiktok" />
+                                </a>
+                                <a href="https://www.twitter.com/" target="_blank">
+                                    <img src="images/twitter.png" alt="Twitter" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__col">
+                        <div class="footer__title">Quick Links</div>
+                        <div class="footer__list">
+                            <a href="#">About Us</a>
+                            <a href="#">Register</a>
+                            <a href="#">Contact</a>
+                            <a href="#">Our Products</a>
+                            <a href="#">Pricing</a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__title">Genres</div>
+                        <div class="footer__list">
+                            <a href="#">Rock</a>
+                            <a href="#">Jazz</a>
+                            <a href="#">Hip Hop</a>
+                            <a href="#">Hard Rock</a>
+                            <a href="#">Soft Rock</a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__title">Explore</div>
+                        <div class="footer__list">
+                            <a href="#">Blogs</a>
+                            <a href="#">Reviews</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
+        </footer>
+        <script>
+            hamburger = document.querySelector(".hamburger");
+            hamburger.onclick = function () {
+                navBar = document.querySelector(".nav__bar");
+                navBar.classList.toggle("nav__bar--active");
+            };
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/products.js"></script>
+</body>
+
+</html>
