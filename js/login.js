@@ -1,67 +1,83 @@
-document.getElementById("loginForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent form submission
+$(document).ready(function() {
+  // Constants for valid credentials
+  const VALID_EMAIL = "test@test.com";
+  const VALID_PASSWORD = "test@123";
 
-  let isValid = true;
-
-  // Clear previous errors and classes
-  document.querySelectorAll(".error-message").forEach((el) => (el.textContent = ""));
-  document.querySelectorAll("input").forEach((el) => el.classList.remove("input-error"));
-
-  // Validate Email
-  const email = document.getElementById("email").value.trim();
-  const validEmail = "sandip.tamang@lambton.com";
-  if (email !== validEmail) {
-    document.getElementById("emailError").textContent = "Email is invalid.";
-    document.getElementById("email").classList.add("input-error");
-    isValid = false;
+  // Function to display error messages
+  function showError(inputId, message) {
+    $(`#${inputId}Error`).text(message);
+    $(`#${inputId}`).addClass("input-error");
   }
 
-  // Validate Password
-  const password = document.getElementById("password").value.trim();
-  const validPassword = "Sandip@123";
-  if (password !== validPassword) {
-    document.getElementById("passwordError").textContent = "Password is invalid.";
-    document.getElementById("password").classList.add("input-error");
-    isValid = false;
+  // Function to clear error messages
+  function clearErrors() {
+    $(".error-message").text("");
+    $("input").removeClass("input-error");
   }
 
-  // If form is valid, submit the form
-  if (isValid) {
-    this.submit();
+  // Function to validate the email
+  function validateEmail(email) {
+    return email === VALID_EMAIL;
   }
-});
 
-// Add event listeners for real-time validation
-document.querySelectorAll("input").forEach((input) => {
-  input.addEventListener("input", function () {
-    const id = this.id;
-    const value = this.value.trim();
-    const errorElement = document.getElementById(`${id}Error`);
+  // Function to validate the password
+  function validatePassword(password) {
+    return password === VALID_PASSWORD;
+  }
 
+  // Handle form submission
+  $("#loginForm").on("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    clearErrors(); // Clear previous errors
+
+    let isValid = true;
+
+    // Validate Email
+    const email = $("#email").val().trim();
+    if (!validateEmail(email)) {
+      showError("email", "Email is invalid.");
+      isValid = false;
+    }
+
+    // Validate Password
+    const password = $("#password").val().trim();
+    if (!validatePassword(password)) {
+      showError("password", "Password is invalid.");
+      isValid = false;
+    }
+
+    // If form is valid, submit the form
+    if (isValid) {
+      this.submit();
+      window.location.href = "/";
+    }
+  });
+
+  // Handle real-time validation
+  $("input").on("input", function() {
+    const id = $(this).attr("id");
+    const value = $(this).val().trim();
     let errorMessage = "";
     let isValid = true;
 
     switch (id) {
       case "email":
-        if (value !== "sandip.tamang@gmail.com") {
-          errorMessage = "Email is invalid.";
-          isValid = false;
-        }
+        isValid = validateEmail(value);
+        if (!isValid) errorMessage = "Email is invalid.";
         break;
       case "password":
-        if (value !== "Sandip@123") {
-          errorMessage = "Password is invalid.";
-          isValid = false;
-        }
+        isValid = validatePassword(value);
+        if (!isValid) errorMessage = "Password is invalid.";
         break;
     }
 
     if (isValid) {
-      this.classList.remove("input-error");
-      errorElement.textContent = "";
+      $(this).removeClass("input-error");
+      $(`#${id}Error`).text("");
     } else {
-      this.classList.add("input-error");
-      errorElement.textContent = errorMessage;
+      $(this).addClass("input-error");
+      $(`#${id}Error`).text(errorMessage);
     }
   });
 });
