@@ -3,6 +3,7 @@
 @import url(./home.css);
 @import url(./authenticate.css);
 @import url(./dashboard.css);
+@import url(./playlist.css);
 
 /* Reset */
 * {
