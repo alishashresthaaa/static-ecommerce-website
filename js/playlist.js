@@ -17,8 +17,11 @@ function shufflePlaylist(array) {
   }
 }
 
-const generatePlaylist = function (artists, genres, limit = 50) {
+const generatePlaylist = function (artists = null, genres = null, limit = 50) {
   let playlist = SONGS.filter((song) => {
+    if (!artists && !genres) {
+      return true;
+    }
     return (
       artists.some((element) => song.artists.includes(element)) ||
       genres.includes(song.genre)
@@ -108,10 +111,14 @@ $(document).ready(function () {
     }
   };
 
-  var handleSubmit = function () {
+  var handleGenerate = function () {
     const playlist = generatePlaylist(selectedArtists, selectedGenres);
     populatePlaylist(playlist);
   };
 
-  $("#generate").on("click", handleSubmit);
+  $("#generate").on("click", handleGenerate);
+  $("#lucky").on("click", function () {
+    const playlist = generatePlaylist();
+    populatePlaylist(playlist);
+  });
 });
