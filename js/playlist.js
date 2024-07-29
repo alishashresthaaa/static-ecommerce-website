@@ -32,22 +32,35 @@ const generatePlaylist = function (artists = null, genres = null, limit = 50) {
 };
 
 const getPlaylistItem = function (song) {
-  let $playlistItem = $("<div>").addClass("playlist-item");
-  let $songImage = $("<img>")
-    .addClass("song-image")
-    .attr("src", song.image)
-    .attr("alt", song.title);
+  let $playlistItem = $("<div>", { class: "playlist-item" });
+  let $songImage = $("<img>", {
+    src: song.image,
+    alt: song.title,
+    class: "song-image",
+  });
   $playlistItem.append($songImage);
 
-  let $songInfo = $("<div>").addClass("song-info");
-
-  let $songTitle = $("<div>").addClass("song-title").text(song.title);
+  let $songInfo = $("<div>", { class: "song-info" });
+  let $songTitle = $("<a>", {
+    class: "song-title",
+    text: song.title,
+  });
   $songInfo.append($songTitle);
 
-  let $album = $("<div>").addClass("album-artist").text(`${song.album}`);
+  let $album = $("<div>", { class: "song-album", text: song.album });
   $songInfo.append($album);
 
+  let $artist = $("<div>", {
+    class: "song-artist",
+    text: song.artists.join(", "),
+  });
+  $songInfo.append($artist);
+
   $playlistItem.append($songInfo);
+
+  let $audioPreview = $("<div>", { class: "audio-preview" });
+  $playlistItem.append($audioPreview);
+
   return $playlistItem;
 };
 
@@ -67,24 +80,25 @@ $(document).ready(function () {
   var populateGenres = function () {
     let genresDiv = $("#genres");
     $.each(GENRES, function (index, value) {
-      let $genre = $("<div>")
-        .addClass("genre category-item ")
-        .text(value)
-        .on(`click`, function () {
-          toggleGenre($(this), value);
-        });
+      let $genre = $("<div>", {
+        class: "genre category-item",
+        text: value,
+      }).on(`click`, function () {
+        toggleGenre($(this), value);
+      });
       genresDiv.append($genre);
     });
 
     let artistsDiv = $("#artists");
 
     $.each(ARTISTS, function (index, value) {
-      let $artist = $("<div>")
-        .addClass("artist category-item")
-        .text(value)
-        .on(`click`, function () {
-          toggleArtists($(this), value);
-        });
+      let $artist = $("<div>", {
+        id: value,
+        class: "artist category-item",
+        text: value,
+      }).on(`click`, function () {
+        toggleArtists($(this), value);
+      });
       artistsDiv.append($artist);
     });
   };
