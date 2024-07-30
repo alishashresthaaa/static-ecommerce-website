@@ -4,3 +4,7 @@ function redirectToLogin() {
 function redirectToHome() {
   window.location.href = "index.html";
 }
+
+function redirectToSearch() {
+  window.location.href = "search.html";
+}

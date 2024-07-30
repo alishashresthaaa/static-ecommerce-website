@@ -61,5 +61,93 @@
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 20px 60px;
+  padding: 40px 60px;
+}
+
+.about__bg__container,
+.download__bg__container {
+  background-color: var(--color-white-dark);
+}
+
+.about__container,
+.download__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about__left,
+.about__right {
+  flex: 0 0 50%;
+}
+
+.about__left img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+.about__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about__right .btn {
+  width: max-content;
+}
+
+.service__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.service__item {
+  flex: 0 0 30%;
+  text-align: center;
+}
+
+.service__item i {
+  color: var(--color-primary-main);
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.service__item h3 {
+  font-size: 20px;
+  color: var(--color-secondary-main);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.download__container {
+  width: 80%;
+  justify-content: space-between;
+}
+
+.download__left,
+.download__right {
+  flex: 0 0 40%;
+}
+
+.download__right img {
+  max-width: 300px;
+  height: auto;
+  width: 100%;
+}
+
+.download__left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.download__app__store img {
+  cursor: pointer;
 }

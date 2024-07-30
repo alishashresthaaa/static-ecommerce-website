@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>mytunes - buy playlist</title>
+    <title>mytunes - home</title>
   </head>
 
   <body>
@@ -40,6 +41,7 @@
         </div>
       </div>
 
+      <!-- Action Form -->
       <form action="search.html" id="search" class="showcase__search">
         <select name="artist" id="artist">
           <option value="">Select Artist</option>
@@ -54,7 +56,7 @@
     </section>
 
     <!-- Slider - Mood picks for you -->
-    <section class="container mood-slider">
+    <section class="container">
       <div class="title-container">
         <h1>Most Bought Playlist</h1>
         <a href="search.html">Show All</a>
@@ -68,27 +70,24 @@
       </div>
     </section>
 
-    <!-- Artist Categories -->
-    <section class="container genre-slider">
-      <div class="title-container">
-        <h1>Find playlist by genre</h1>
-        <a href="#">Show All</a>
-      </div>
-      <div class="swiper genre-slider-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div style="background-image: url('https://api.basobaas.com/api/files/nnwe5fw5nlidq9l/6hwjupcab2mk03p/house_OBjLqtuhaI.jpg?thumb=180x0')" class="genre__card">
-              <div class="genre__card__overlay"></div>
-              <span class="genre__card__title">Rock</span>
-            </div>
-          </div>
-          <!-- More swiper-slide items here -->
+    <!-- About Us -->
+    <div class="about__bg__container">
+      <div class="container about__container">
+        <div class="about__left">
+          <img src="images/about.png" alt="About" />
+        </div>
+        <div class="about__right">
+          <h2>About Us</h2>
+          <p>We are a music streaming platform that provides you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from. Our platform is designed to provide you with the best music experience.</p>
+          <p>We have a team of experts who curate the best music playlists for you. Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+
+          <button class="btn btn-primary" onclick="redirectToSearch()">Search</button>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Slider - Our top sales -->
-    <section class="container mood-slider">
+    <section class="container">
       <div class="title-container">
         <h1>Our Top Sales</h1>
         <a href="search.html">Show All</a>
@@ -101,6 +100,44 @@
         <div class="swiper-button-next"></div>
       </div>
     </section>
+
+    <!-- About Us - Three Section -->
+    <div class="container">
+      <div class="service__container">
+        <div class="service__item">
+          <i class="fa-solid fa-star"></i>
+          <h3>Quality Music</h3>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+        </div>
+        <div class="service__item">
+          <i class="fa-solid fa-shield"></i>
+          <h3>Secure Payment</h3>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+        </div>
+        <div class="service__item">
+          <i class="fa-solid fa-phone"></i>
+          <h3>24/7 Support</h3>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download our app -->
+    <div class="download__bg__container">
+      <div class="container download__container">
+        <div class="download__left">
+          <h2>Download Our App</h2>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+          <div class="download__app__store">
+            <img src="images/app_store_bg.svg" alt="App Store" />
+            <img src="images/play_store_bg.svg" alt="Play Store" />
+          </div>
+        </div>
+        <div class="download__right">
+          <img src="images/scan.png" alt="Download" />
+        </div>
+      </div>
+    </div>
 
     <!-- Footer Component -->
     <footer>
@@ -168,15 +205,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const genreSlider = new Swiper(".genre-slider-swiper", {
-        direction: "horizontal",
-        loop: true,
-        slidesPerView: "auto",
-        spaceBetween: 20,
-      });
-    </script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/home.js"></script>
