@@ -1,4 +1,4 @@
-import { openDB, addUser, updateUserProfile } from "./db/db.js";
+import { openDB, registerUser } from "./db/indexed_db.js";
 
 const $ = function (id) {
   return document.getElementById(id);
@@ -89,7 +89,7 @@ const registerUser = function (event) {
     email: $("email").value.trim(),
     password: $("password").value.trim(),
   };
-  addUser(user.email, user)
+  registerUser(user.email, user)
     .then(() => {
       // todo : display success message
       // window.location.href = "login.html";
