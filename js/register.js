@@ -1,17 +1,8 @@
+import { openDB, addUser, updateUserProfile } from "./db/db.js";
+
 const $ = function (id) {
   return document.getElementById(id);
 };
-
-$(document).ready(function() {
-  $('#togglePassword').click(function() {
-    const passwordField = $('#password');
-    const type = passwordField.attr('type') === 'password' ? 'text' : 'password';
-    passwordField.attr('type', type);
-    
-    // Toggle eye icon class
-    $(this).toggleClass('fa-eye fa-eye-slash');
-  });
-});
 
 let isValid = false;
 
@@ -92,15 +83,37 @@ const registerUser = function (event) {
     return;
   }
 
-  $("registrationForm").submit();
-  window.location.href = "login.html";
+  const user = {
+    firstName: $("firstName").value.trim(),
+    lastName: $("lastName").value.trim(),
+    email: $("email").value.trim(),
+    password: $("password").value.trim(),
+  };
+  addUser(user.email, user)
+    .then(() => {
+      // todo : display success message
+      // window.location.href = "login.html";
+    })
+    .catch((error) => {
+      // todo: display error message
+      console.error("Error adding user");
+    });
 };
 
 window.onload = function () {
+  openDB()
+    .then(() => {
+      console.log("Database opened successfully");
+    })
+    .catch((error) => {
+      console.error("Error opening database", error);
+    });
+
   const registrationForm = $("registrationForm");
   if (registrationForm) {
     registrationForm.onsubmit = registerUser;
   }
+
   const firstNameInput = $("firstName");
   const lastNameInput = $("lastName");
   const emailInput = $("email");
