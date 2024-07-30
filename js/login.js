@@ -49,10 +49,11 @@ const validateField = function (event) {
 const authenticateUser = function (event) {
   event.preventDefault(); // Prevent form submission
 
+  // Trigger validation for all fields
+  validateField({ target: $("email") });
+  validateField({ target: $("password") });
+
   if (!isValid) {
-    // Trigger validation for all fields
-    validateField({ target: $("email") });
-    validateField({ target: $("password") });
     return;
   }
 
@@ -68,7 +69,8 @@ const authenticateUser = function (event) {
   }
 
   if (authenticated) {
-    $("loginForm").submit();
+    // Replace this with actual form submission logic if needed
+    alert("Login successful!");
   }
 };
 

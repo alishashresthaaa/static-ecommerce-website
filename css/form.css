@@ -5,6 +5,7 @@
 }
 
 label {
+  font-family: var(--font-family);
   display: flex;
   align-items: stretch;
   margin-bottom: 5px;
@@ -14,14 +15,14 @@ label {
 input,
 select,
 textarea {
+  font-family: var(--font-family);
   box-sizing: border-box;
   width: 100%;
   max-width: 500px;
   padding: 10px;
   font-size: 1rem;
-  border: 2px solid var(--color-grey-light);
+  border: 1px solid var(--color-grey-light);
   border-radius: var(--border-radius-medium);
-  font-family: "Montserrat", sans-serif;
 
   &:focus {
     outline: none;
@@ -93,6 +94,7 @@ input[type="checkbox"]::before {
 }
 
 .btn {
+  text-transform: uppercase;
   font-family: var(--font-family);
   font-size: var(--font-size-button);
   text-align: center;
@@ -143,6 +145,10 @@ input[type="checkbox"]::before {
 
 .btn-flat:hover {
   border: 1px solid var(--color-primary-main);
+}
+
+.btn-full {
+  width: 100%;
 }
 
 a {
