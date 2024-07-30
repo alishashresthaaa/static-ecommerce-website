@@ -2,6 +2,17 @@ const $ = function (id) {
   return document.getElementById(id);
 };
 
+$(document).ready(function() {
+  $('#togglePassword').click(function() {
+    const passwordField = $('#password');
+    const type = passwordField.attr('type') === 'password' ? 'text' : 'password';
+    passwordField.attr('type', type);
+    
+    // Toggle eye icon class
+    $(this).toggleClass('fa-eye fa-eye-slash');
+  });
+});
+
 let isValid = false;
 
 // Regex pattern for email validation
