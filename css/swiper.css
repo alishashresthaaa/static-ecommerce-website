@@ -25,6 +25,7 @@
 .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 15px;
+  color: var(--color-white);
 }
 
 .swiper-button-prev::after {
@@ -35,11 +36,15 @@
   margin-left: 2px;
 }
 
+.swiper-button-disabled{
+  display: none;
+}
+
 .title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   flex-wrap: wrap;
 }
 

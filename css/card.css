@@ -113,6 +113,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 12px;
 }
 
 .card__key,
@@ -127,10 +128,10 @@
 
 .playlist__icon {
   color: var(--color-grey-dark);
-  font-size: 20px;
-  margin-right: 8px;
-  font-weight: 400;
+  font-size: 12px;
+  margin-right: 4px;
 }
+
 .card__tracks {
   color: var(--color-secondary-light);
 }
