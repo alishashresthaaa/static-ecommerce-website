@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>mytunes - buy playlist</title>
+    <title>mytunes -playlist detail</title>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -27,99 +27,109 @@
     </header>
 
     <!-- Playlist Details -->
-    <section class="container playlist__header">
-      <img src="images/playlist/one.jpg" alt="Playlist" class="playlist__image" />
-      <div class="playlist__content">
-        <h5>Playlist</h5>
-        <h2>Best of John Mayer</h2>
-        <div class="playlist__info">
-          <p><span>Total Songs:</span> <span>12</span></p>
-          <p><span>Total Minutes:</span> <span>3342</span> minutes</p>
-          <p><span>Price:</span> <span>$34</span></p>
+    <section class="container playlist__flex">
+      <div class="playlist__flex__left">
+        <!-- Album Image -->
+        <img src="images/playlist/one.jpg" alt="Playlist" class="playlist__image" />
+        <!-- Overview -->
+        <div class="playlist__content">
+          <h3 class="playlist__title">Playlist Overview</h3>
+          <p class="playlist__info">Total Songs: <span>12</span></p>
+          <p class="playlist__info">Total Minutes: <span>3342 minutes </span></p>
+          <p class="playlist__info">Price: <span>$34</span></p>
         </div>
+
+        <!-- Artist List -->
+        <section class="playlist__content">
+          <h3 class="playlist__title">Artist List</h3>
+          <div id="artist__list" class="content__grid">
+            <span class="search__pills">John Mayer</span>
+            <span class="search__pills">Bob Dylan</span>
+            <span class="search__pills">Bon Jovi</span>
+            <span class="search__pills">John Mayer</span>
+            <span class="search__pills">John Mayer</span>
+            <span class="search__pills">John Mayer</span>
+            <span class="search__pills">Bob Dylan</span>
+            <span class="search__pills">Bon Jovi</span>
+            <span class="search__pills">John Mayer</span>
+            <span class="search__pills">John Mayer</span>
+          </div>
+        </section>
+
+        <!-- Genre List -->
+        <section class="playlist__content">
+          <h3 class="playlist__title">Genre List</h3>
+          <div id="genre__list" class="content__grid">
+            <span class="search__pills">Sad</span>
+            <span class="search__pills">Kill Me</span>
+            <span class="search__pills">Sleepy</span>
+            <span class="search__pills">Well</span>
+            <span class="search__pills">Sike</span>
+            <span class="search__pills">Sad</span>
+            <span class="search__pills">Kill Me</span>
+            <span class="search__pills">Sleepy</span>
+            <span class="search__pills">Well</span>
+            <span class="search__pills">Sike</span>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Section -->
+      <div class="playlist__flex__right">
+        <h3 class="playlist__title">Track List</h3>
+        <!-- Track Table -->
+        <table class="track__table">
+          <tr>
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Duration</th>
+          </tr>
+          <tr>
+            <td>Gravity</td>
+            <td>John Mayer</td>
+            <td>3:30</td>
+          </tr>
+          <tr>
+            <td>Slow Dancing in a burning room</td>
+            <td>John Mayer</td>
+            <td>3:30</td>
+          </tr>
+          <tr>
+            <td>Gravity</td>
+            <td>John Mayer</td>
+            <td>3:30</td>
+          </tr>
+          <tr>
+            <td>Slow Dancing in a burning room</td>
+            <td>John Mayer</td>
+            <td>3:30</td>
+          </tr>
+          <tr>
+            <td>Gravity</td>
+            <td>John Mayer</td>
+            <td>3:30</td>
+          </tr>
+          <tr>
+            <td>Slow Dancing in a burning room</td>
+            <td>John Mayer</td>
+            <td>3:30</td>
+          </tr>
+          <tr>
+            <td>Gravity</td>
+            <td>John Mayer</td>
+            <td>3:30</td>
+          </tr>
+          <tr>
+            <td>Slow Dancing in a burning room</td>
+            <td>John Mayer</td>
+            <td>3:30</td>
+          </tr>
+        </table>
+
+        <!-- Button -->
         <div class="playlist__btn">
           <button class="btn btn-primary">Add To Cart</button>
           <button class="btn btn-secondary">Buy Now</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Playlist description -->
-    <section class="container playlist__desc">
-      <h3 class="playlist__title">Description</h3>
-      <p>John Mayer is an American singer-songwriter, guitarist, and record producer. Born in Bridgeport, Connecticut, Mayer attended Berklee College of Music in Boston, but disenrolled and moved to Atlanta in 1997 with Clay Cook. Together, they formed</p>
-    </section>
-
-    <!-- Artist List -->
-    <section class="container playlist__artist">
-      <h3 class="playlist__title">Artist List</h3>
-      <div class="artist__list">
-        <span class="search__pills">John Mayer</span>
-        <span class="search__pills">Bob Dylan</span>
-        <span class="search__pills">Bon Jovi</span>
-        <span class="search__pills">John Mayer</span>
-        <span class="search__pills">John Mayer</span>
-      </div>
-    </section>
-
-    <!-- Genre List -->
-    <section class="container playlist__artist">
-      <h3 class="playlist__title">Genre List</h3>
-      <div class="artist__list">
-        <span class="search__pills">Sad</span>
-        <span class="search__pills">Kill Me</span>
-        <span class="search__pills">Sleepy</span>
-        <span class="search__pills">Well</span>
-        <span class="search__pills">Sike</span>
-      </div>
-    </section>
-
-    <!-- Track List -->
-    <section class="container playlist__tracks">
-      <h3 class="playlist__title">Track List</h3>
-
-      <table class="track__table">
-        <tr>
-          <th>Song</th>
-          <th>Artist</th>
-          <th>Duration</th>
-        </tr>
-        <tr>
-          <td>Gravity</td>
-          <td>John Mayer</td>
-          <td>3:30</td>
-        </tr>
-        <tr>
-          <td>Slow Dancing in a burning room</td>
-          <td>John Mayer</td>
-          <td>3:30</td>
-        </tr>
-      </table>
-    </section>
-
-    <!-- Review List -->
-    <section class="container playlist__review">
-      <h3 class="playlist__title">User Reviews</h3>
-      <div class="review__list">
-        <div class="review__card">
-          <div class="review__card__header">
-            <img src="images/user1.jpg" alt="User" />
-            <div>
-              <h5>John Doe</h5>
-              <p>5/5</p>
-            </div>
-          </div>
-          <p class="review__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
-        </div>
-        <div class="review__card">
-          <div class="review__card__header">
-            <img src="images/user2.jpg" alt="User" />
-            <div>
-              <h5>Jane Doe</h5>
-              <p>4/5</p>
-            </div>
-          </div>
-          <p class="review__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
         </div>
       </div>
     </section>
