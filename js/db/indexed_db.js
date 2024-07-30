@@ -1,7 +1,7 @@
-import { getLoggedUser } from "./local_storage";
+import { getLoggedUser } from "./local_storage.js";
 
 const DB_NAME = "mytunesDB";
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 const STORE_NAME_USERS = "users";
 const STORE_NAME_CART = "cartItems";
 
@@ -25,7 +25,7 @@ function openDB() {
           keyPath: "id",
           autoIncrement: true,
         });
-        cartStore.createIndex("userEmail", "userEmail", { unique: false });
+        cartStore.createIndex("email", "email", { unique: false });
       }
     };
 
@@ -110,7 +110,7 @@ function updateUserProfile(email, user) {
  * @param {string} email - The email of the user to retrieve.
  * @returns {Promise<Object>} A promise that resolves with the user object.
  */
-function getCurrentUser(email) {
+function getUser(email) {
   return new Promise((resolve, reject) => {
     const transaction = db.transaction([STORE_NAME_USERS], "readonly");
     const store = transaction.objectStore(STORE_NAME_USERS);
@@ -143,7 +143,7 @@ function addCartItem(cartItem) {
 
     const transaction = db.transaction([STORE_NAME_CART], "readwrite");
     const store = transaction.objectStore(STORE_NAME_CART);
-    cartItem.userEmail = loggedInUser.email;
+    cartItem.email = loggedInUser.email;
     store.add(cartItem);
 
     transaction.oncomplete = () => {
@@ -188,11 +188,11 @@ function getMyCartItems() {
       reject(new Error("User is not logged in"));
       return;
     }
-    const userEmail = loggedInUser.email;
+    const email = loggedInUser.email;
     const transaction = db.transaction([STORE_NAME_CART], "readonly");
     const store = transaction.objectStore(STORE_NAME_CART);
-    const index = store.index("userEmail");
-    const request = index.getAll(userEmail);
+    const index = store.index("email");
+    const request = index.getAll(email);
 
     request.onsuccess = (event) => {
       resolve(event.target.result);
@@ -208,7 +208,7 @@ export {
   openDB,
   registerUser,
   updateUserProfile,
-  getCurrentUser,
+  getUser,
   addCartItem,
   removeCartItem,
   getMyCartItems,

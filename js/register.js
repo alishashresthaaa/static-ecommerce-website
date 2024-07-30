@@ -70,7 +70,7 @@ const validateField = function (event) {
   isValid = document.querySelectorAll(".input-error").length === 0;
 };
 
-const registerUser = function (event) {
+const registerNewUser = function (event) {
   event.preventDefault(); // Prevent form submission
 
   if (!isValid) {
@@ -89,15 +89,28 @@ const registerUser = function (event) {
     email: $("email").value.trim(),
     password: $("password").value.trim(),
   };
-  registerUser(user.email, user)
+  registerUser(user)
     .then(() => {
-      // todo : display success message
-      // window.location.href = "login.html";
+      showModal();
     })
     .catch((error) => {
       // todo: display error message
-      console.error("Error adding user");
+      console.error("Error adding user", error);
     });
+};
+
+// Modal functionality
+const successModal = $("successModal");
+
+const showModal = function () {
+  overlay.style.display = "block";
+  successModal.style.display = "block";
+};
+
+const closeModal = function () {
+  overlay.style.display = "none";
+  successModal.style.display = "none";
+  window.location.href = "login.html";
 };
 
 window.onload = function () {
@@ -111,8 +124,10 @@ window.onload = function () {
 
   const registrationForm = $("registrationForm");
   if (registrationForm) {
-    registrationForm.onsubmit = registerUser;
+    registrationForm.onsubmit = registerNewUser;
   }
+
+  $("closeDialog").onclick = closeModal;
 
   const firstNameInput = $("firstName");
   const lastNameInput = $("lastName");
