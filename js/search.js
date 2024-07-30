@@ -81,7 +81,7 @@ $(document).ready(function () {
     let genresDiv = $("#genres");
     $.each(GENRES, function (index, value) {
       let $genre = $("<div>", {
-        class: "genre category-item",
+        class: "genre search__pills",
         text: value,
       }).on(`click`, function () {
         toggleGenre($(this), value);
@@ -94,7 +94,7 @@ $(document).ready(function () {
     $.each(ARTISTS, function (index, value) {
       let $artist = $("<div>", {
         id: value,
-        class: "artist category-item",
+        class: "artist search__pills",
         text: value,
       }).on(`click`, function () {
         toggleArtists($(this), value);

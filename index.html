@@ -3,76 +3,131 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <title>mytunes - buy playlist</title>
   </head>
   <body>
-    <!-- Showcase & Nav -->
-    <div id="showcase">
-      <header>
-        <nav class="cf">
-          <ul class="cf">
-            <li class="hide-on-small">
-              <a href="#showcase" class="logo"><img src="images/logo.png" /></a>
-            </li>
-            <li><a href="#showcase">Overview</a></li>
-            <li><a href="#music">Music</a></li>
-            <li><a href="#video">Video</a></li>
-            <li><a href="#gift-cards">Gift Cards</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="login.html">Login</a></li>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="nav__container">
+        <div class="nav__left">
+          <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html">Home</a></li>
+            <li class="nav__item"><a href="search.html">Search</a></li>
+            <li class="nav__item"><a href="">Pricing</a></li>
+            <li class="nav__item"><a href="#">FAQ</a></li>
           </ul>
-          <a href="#" id="openup"><img src="images/logo.png" /></a>
-        </nav>
-      </header>
-      <div class="section-main container">
-        <h1>myTunes.</h1>
-        <h2>Your music, movies, and TV shows take center stage.</h2>
-        <p class="lead hide-on-small">myTunes is the best way to organize and enjoy the music, movies, and TV shows you already have — and shop for the ones you want. Enjoy all the entertainment myTunes has to offer on your Mac and PC.</p>
-      </div>
-    </div>
+        </div>
+        <div class="nav__right">
+          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
+        </div>
+      </nav>
+    </header>
 
-    <!-- Playlist section -->
-    <section id="music" class="section">
-      <div class="container">
-        <div class="row">
-          <div class = "col-md-3">
-            <div class = "music-card row">
-              <img src="images/playlist1.jpg" alt="Playlist1" class="col-md-4" />
-              <h3 class="col-md-8">Song 1</h3>
-              <button type="button" class="btn btn-primary"><span class="fas fa-plus"></span> Add</button>
+    <!-- Showcase -->
+    <section class="container showcase__container">
+      <div class="showcase__container__flex">
+        <div class="showcase__content">
+          <h2>Come to Vibe.</h2>
+          <p>Explore, Buy, & Vibe</p>
+          <p>Different artist, playlist, moodboards</p>
+        </div>
+        <div class="showcase__image">
+          <img src="images/pic1.jpg" alt="Showcase" />
+        </div>
+      </div>
+
+      <form action="#" class="showcase__search">
+        <select name="artist" id="artist">
+          <option value="">Select Artist</option>
+          <!-- Add actual artist options here -->
+        </select>
+        <select name="genre" id="genre">
+          <option value="">Select Genre</option>
+          <!-- Add actual genre options here -->
+        </select>
+        <button class="btn btn-primary">Search</button>
+      </form>
+    </section>
+
+    <!-- Slider - Mood picks for you -->
+    <section class="container mood-slider">
+      <div class="title-container">
+        <h1>Most Buyed Playlist</h1>
+        <a href="#">Show All</a>
+      </div>
+      <div class="swiper mood-slider-swiper">
+        <div class="swiper-wrapper">
+          <!-- Repeatable Slide Item -->
+          <div class="swiper-slide">
+            <div class="playlist__card">
+              <div class="playlist__card__image">
+                <img src="images/playlist/one.jpg" alt="Playlist Image" />
+              </div>
+              <div class="playlist__card__content">
+                <p class="playlist__title">Best of John Mayer</p>
+                <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+                <p class="playlist__description">Total Songs: <span>15</span></p>
+                <p class="playlist__price">Price: <span>50</span></p>
+                <button class="btn btn-primary playlist__btn">Add to Cart</button>
+              </div>
+            </div>
           </div>
+          <!-- More swiper-slide items here -->
         </div>
-        <div class="col-md-9">
-          
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <!-- Artist Categories -->
+    <section class="container genre-slider">
+      <div class="title-container">
+        <h1>Find playlist by genre</h1>
+        <a href="#">Show All</a>
+      </div>
+      <div class="swiper genre-slider-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div style="background-image: url('https://api.basobaas.com/api/files/nnwe5fw5nlidq9l/6hwjupcab2mk03p/house_OBjLqtuhaI.jpg?thumb=180x0')" class="genre__card">
+              <div class="genre__card__overlay"></div>
+              <span class="genre__card__title">Rock</span>
+            </div>
+          </div>
+          <!-- More swiper-slide items here -->
         </div>
       </div>
     </section>
 
-    <!-- Video Section -->
-    <section id="video" class="section bg-light">
-      <div class="container">
-        <h3>The movie and TV collection you always wished for. Granted.</h3>
-        <p class="lead">With over 100,000 movies and TV shows to choose from, there’s always something great to watch on myTunes and if you watch on Orange TV 4K, you’ll be able to enjoy a tremendous selection of your favorite content in 4K HDR. So get ready to enjoy episodes of your favorite TV shows or hit movies you’ve been waiting to see — anytime, anywhere. Just tap to play, or even download if you’re going somewhere you won’t have Wi-Fi.</p>
-        <button type="button" class="btn btn-primary">Read More</button>
-        <img src="images/mockup2.png" alt="Mockup2" class="mockup" />
+    <!-- Slider - Our top sales -->
+    <section class="container mood-slider">
+      <div class="title-container">
+        <h1>Our Top Sales</h1>
+        <a href="#">Show All</a>
       </div>
-    </section>
-
-    <!-- Gift Card Section -->
-    <section id="gift-cards" class="section bg-light">
-      <div class="container gift-cards-container">
-        <div class="gift-cards">
-          <img src="images/cards.png" alt="Cards" class="mockup" />
+      <div class="swiper mood-slider-swiper">
+        <div class="swiper-wrapper">
+          <!-- Repeatable Slide Item -->
+          <div class="swiper-slide">
+            <div class="playlist__card">
+              <div class="playlist__card__image">
+                <img src="images/playlist/one.jpg" alt="Playlist Image" />
+              </div>
+              <div class="playlist__card__content">
+                <p class="playlist__title">Best of John Mayer</p>
+                <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+                <p class="playlist__description">Total Songs: <span>15</span></p>
+                <p class="playlist__price">Price: <span>50</span></p>
+                <button class="btn btn-primary playlist__btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <!-- More swiper-slide items here -->
         </div>
-        <div class="d-flex">
-          <h2>Gift Cards</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet corrupti quo fugiat repudiandae quas unde error distinctio, harum assumenda suscipit iusto quisquam rem veritatis recusandae quae aspernatur! Cumque mollitia ullam repellendus amet officia autem, et ipsam quam voluptatibus, quidem doloremque?</p>
-          <p>Already have an Orange MyTunes Music Gift Card?</p>
-          <hr />
-          <button class="btn btn-secondary"><i class="fas fa-chevron-right"></i>&nbsp; Reedem</button>
-        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
 
@@ -84,7 +139,7 @@
           <!-- Footer Logo Column -->
           <div class="footer__logo">
             <div>
-              <img src="images/logo.png" alt="logo" class="footer__image" />
+              <img src="images/logo-white.svg" alt="logo" class="footer__image" />
               <p class="footer__details">Dive into a world of endless music.</p>
             </div>
             <!-- Social Container -->
@@ -140,13 +195,28 @@
       </div>
       <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      hamburger = document.querySelector(".hamburger");
-      hamburger.onclick = function () {
-        navBar = document.querySelector(".nav__bar");
-        navBar.classList.toggle("nav__bar--active");
-      };
+      const moodSlider = new Swiper(".mood-slider-swiper", {
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      const genreSlider = new Swiper(".genre-slider-swiper", {
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: "auto",
+        spaceBetween: 20,
+      });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

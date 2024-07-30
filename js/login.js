@@ -1,83 +1,91 @@
-$(document).ready(function() {
-  // Constants for valid credentials
-  const VALID_EMAIL = "test@test.com";
-  const VALID_PASSWORD = "test@123";
+const $ = function (id) {
+  return document.getElementById(id);
+};
 
-  // Function to display error messages
-  function showError(inputId, message) {
-    $(`#${inputId}Error`).text(message);
-    $(`#${inputId}`).addClass("input-error");
+const validEmail = "admin@gmail.com";
+const validPassword = "admin123";
+let isValid = false;
+
+// Regex pattern for email validation
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const validateField = function (event) {
+  const id = event.target.id;
+  const value = event.target.value.trim();
+  const errorElement = $(`${id}Error`);
+
+  let errorMessage = "";
+  let isFieldValid = true;
+
+  switch (id) {
+    case "email":
+      if (value === "") {
+        errorMessage = "Email is required.";
+        isFieldValid = false;
+      } else if (!emailPattern.test(value)) {
+        errorMessage = "Email is invalid.";
+        isFieldValid = false;
+      }
+      break;
+    case "password":
+      if (value === "") {
+        errorMessage = "Password is required.";
+        isFieldValid = false;
+      }
+      break;
   }
 
-  // Function to clear error messages
-  function clearErrors() {
-    $(".error-message").text("");
-    $("input").removeClass("input-error");
+  errorElement.textContent = errorMessage;
+  if (!isFieldValid) {
+    event.target.classList.add("input-error");
+  } else {
+    event.target.classList.remove("input-error");
   }
 
-  // Function to validate the email
-  function validateEmail(email) {
-    return email === VALID_EMAIL;
+  // Update the overall form validity
+  isValid = document.querySelectorAll(".input-error").length === 0;
+};
+
+const authenticateUser = function (event) {
+  event.preventDefault(); // Prevent form submission
+
+  if (!isValid) {
+    // Trigger validation for all fields
+    validateField({ target: $("email") });
+    validateField({ target: $("password") });
+    return;
   }
 
-  // Function to validate the password
-  function validatePassword(password) {
-    return password === VALID_PASSWORD;
+  let authenticated = false;
+  const email = $("email").value.trim();
+  const password = $("password").value.trim();
+
+  if (email === validEmail && password === validPassword) {
+    authenticated = true;
+  } else {
+    $("passwordError").textContent = "Username or password is incorrect.";
+    $("password").classList.add("input-error");
   }
 
-  // Handle form submission
-  $("#loginForm").on("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
+  if (authenticated) {
+    $("loginForm").submit();
+  }
+};
 
-    clearErrors(); // Clear previous errors
+window.onload = function () {
+  const loginForm = $("loginForm");
+  if (loginForm) {
+    loginForm.onsubmit = authenticateUser;
+  }
 
-    let isValid = true;
+  const emailInput = $("email");
+  const passwordInput = $("password");
 
-    // Validate Email
-    const email = $("#email").val().trim();
-    if (!validateEmail(email)) {
-      showError("email", "Email is invalid.");
-      isValid = false;
-    }
+  if (emailInput) {
+    emailInput.addEventListener("input", validateField);
+  }
 
-    // Validate Password
-    const password = $("#password").val().trim();
-    if (!validatePassword(password)) {
-      showError("password", "Password is invalid.");
-      isValid = false;
-    }
-
-    // If form is valid, submit the form
-    if (isValid) {
-      this.submit();
-      window.location.href = "/";
-    }
-  });
-
-  // Handle real-time validation
-  $("input").on("input", function() {
-    const id = $(this).attr("id");
-    const value = $(this).val().trim();
-    let errorMessage = "";
-    let isValid = true;
-
-    switch (id) {
-      case "email":
-        isValid = validateEmail(value);
-        if (!isValid) errorMessage = "Email is invalid.";
-        break;
-      case "password":
-        isValid = validatePassword(value);
-        if (!isValid) errorMessage = "Password is invalid.";
-        break;
-    }
-
-    if (isValid) {
-      $(this).removeClass("input-error");
-      $(`#${id}Error`).text("");
-    } else {
-      $(this).addClass("input-error");
-      $(`#${id}Error`).text(errorMessage);
-    }
-  });
-});
+  if (passwordInput) {
+    passwordInput.addEventListener("input", validateField);
+  }
+};

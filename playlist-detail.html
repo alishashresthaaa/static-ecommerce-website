@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>mytunes - buy playlist</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="nav__container">
+        <div class="nav__left">
+          <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html">Home</a></li>
+            <li class="nav__item"><a href="playlist.html">Search</a></li>
+            <li class="nav__item"><a href="">Pricing</a></li>
+            <li class="nav__item"><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="nav__right">
+          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Playlist Details -->
+    <section class="container playlist__header">
+      <img src="images/playlist/one.jpg" alt="Playlist" class="playlist__image" />
+      <div class="playlist__content">
+        <h5>Playlist</h5>
+        <h2>Best of John Mayer</h2>
+        <div class="playlist__info">
+          <p><span>Total Songs:</span> <span>12</span></p>
+          <p><span>Total Minutes:</span> <span>3342</span> minutes</p>
+          <p><span>Price:</span> <span>$34</span></p>
+        </div>
+        <div class="playlist__btn">
+          <button class="btn btn-primary">Add To Cart</button>
+          <button class="btn btn-secondary">Buy Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Playlist description -->
+    <section class="container playlist__desc">
+      <h3 class="playlist__title">Description</h3>
+      <p>John Mayer is an American singer-songwriter, guitarist, and record producer. Born in Bridgeport, Connecticut, Mayer attended Berklee College of Music in Boston, but disenrolled and moved to Atlanta in 1997 with Clay Cook. Together, they formed</p>
+    </section>
+
+    <!-- Artist List -->
+    <section class="container playlist__artist">
+      <h3 class="playlist__title">Artist List</h3>
+      <div class="artist__list">
+        <span class="search__pills">John Mayer</span>
+        <span class="search__pills">Bob Dylan</span>
+        <span class="search__pills">Bon Jovi</span>
+        <span class="search__pills">John Mayer</span>
+        <span class="search__pills">John Mayer</span>
+      </div>
+    </section>
+
+    <!-- Genre List -->
+    <section class="container playlist__artist">
+      <h3 class="playlist__title">Genre List</h3>
+      <div class="artist__list">
+        <span class="search__pills">Sad</span>
+        <span class="search__pills">Kill Me</span>
+        <span class="search__pills">Sleepy</span>
+        <span class="search__pills">Well</span>
+        <span class="search__pills">Sike</span>
+      </div>
+    </section>
+
+    <!-- Track List -->
+    <section class="container playlist__tracks">
+      <h3 class="playlist__title">Track List</h3>
+
+      <table class="track__table">
+        <tr>
+          <th>Song</th>
+          <th>Artist</th>
+          <th>Duration</th>
+        </tr>
+        <tr>
+          <td>Gravity</td>
+          <td>John Mayer</td>
+          <td>3:30</td>
+        </tr>
+        <tr>
+          <td>Slow Dancing in a burning room</td>
+          <td>John Mayer</td>
+          <td>3:30</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Review List -->
+    <section class="container playlist__review">
+      <h3 class="playlist__title">User Reviews</h3>
+      <div class="review__list">
+        <div class="review__card">
+          <div class="review__card__header">
+            <img src="images/user1.jpg" alt="User" />
+            <div>
+              <h5>John Doe</h5>
+              <p>5/5</p>
+            </div>
+          </div>
+          <p class="review__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+        </div>
+        <div class="review__card">
+          <div class="review__card__header">
+            <img src="images/user2.jpg" alt="User" />
+            <div>
+              <h5>Jane Doe</h5>
+              <p>4/5</p>
+            </div>
+          </div>
+          <p class="review__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer>
+      <div class="footer__top">
+        <!-- Footer Details Container -->
+        <div class="footer__top__container">
+          <!-- Footer Logo Column -->
+          <div class="footer__logo">
+            <div>
+              <img src="images/logo-white.svg" alt="logo" class="footer__image" />
+              <p class="footer__details">Dive into a world of endless music.</p>
+            </div>
+            <!-- Social Container -->
+            <div class="footer__socials">
+              <div class="footer__title">Get connected with us</div>
+              <div class="footer__socials__list">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img src="images/instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <img src="images/facebook.png" alt="Facebook" />
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank">
+                  <img src="images/tiktok.png" alt="Tiktok" />
+                </a>
+                <a href="https://www.twitter.com/" target="_blank">
+                  <img src="images/twitter.png" alt="Twitter" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__col">
+            <div class="footer__title">Quick Links</div>
+            <div class="footer__list">
+              <a href="#">About Us</a>
+              <a href="#">Register</a>
+              <a href="#">Contact</a>
+              <a href="#">Our Products</a>
+              <a href="#">Pricing</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Genres</div>
+            <div class="footer__list">
+              <a href="#">Rock</a>
+              <a href="#">Jazz</a>
+              <a href="#">Hip Hop</a>
+              <a href="#">Hard Rock</a>
+              <a href="#">Soft Rock</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__title">Explore</div>
+            <div class="footer__list">
+              <a href="#">Blogs</a>
+              <a href="#">Reviews</a>
+              <a href="#">Pricing</a>
+              <a href="#">Our Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

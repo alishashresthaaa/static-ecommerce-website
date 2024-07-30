@@ -1,0 +1,48 @@
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  width: auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-grey-ligh);
+  background-color: var(--color-primary-main);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-weight: 900;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 15px;
+}
+
+.swiper-button-prev::after {
+  margin-right: 2px;
+}
+
+.swiper-button-next::after {
+  margin-left: 2px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.title-container h1 {
+  font-size: 20px;
+}
