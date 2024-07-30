@@ -1,6 +1,7 @@
-import { ARTISTS, GENRES, SONGS } from "./constants.js";
+import { ARTISTS, GENRES, PRICE_PER_SONG, SONGS } from "./constants.js";
+import { getRandomInt } from "./utils.js";
 
-function shufflePlaylist(array) {
+var shuffleSongs = function (array) {
   let currentIndex = array.length;
 
   // While there remain elements to shuffle...
@@ -15,11 +16,17 @@ function shufflePlaylist(array) {
       array[currentIndex],
     ];
   }
-}
+};
 
-const generatePlaylist = function (artists = null, genres = null, limit = 50) {
+var generatePlaylist = function (
+  artists = [],
+  genres = [],
+  limit = null,
+  count = 10
+) {
+  let playlists = [];
   let playlist = SONGS.filter((song) => {
-    if (!artists && !genres) {
+    if (artists.length == 0 && genres.length == 0) {
       return true;
     }
     return (
@@ -27,61 +34,113 @@ const generatePlaylist = function (artists = null, genres = null, limit = 50) {
       genres.includes(song.genre)
     );
   });
-  shufflePlaylist(playlist);
-  return playlist.slice(0, limit);
+
+  for (let i = 0; i < count; i++) {
+    shuffleSongs(playlist);
+
+    var realLimit = limit ? limit : getRandomInt(10, 25);
+    playlists.push({
+      playlist: playlist.slice(0, realLimit),
+      price: PRICE_PER_SONG * realLimit,
+    });
+  }
+  console.log(playlists);
+  return playlists;
 };
 
-const getPlaylistItem = function (song) {
-  let $playlistItem = $("<div>", { class: "playlist-item" });
-  let $songImage = $("<img>", {
-    src: song.image,
-    alt: song.title,
-    class: "song-image",
+var getPlaylistImage = function (playlist) {
+  var $playlistImage = $("<div>", {
+    class: "playlist__img__grid",
   });
-  $playlistItem.append($songImage);
-
-  let $songInfo = $("<div>", { class: "song-info" });
-  let $songTitle = $("<a>", {
-    class: "song-title",
-    text: song.title,
+  const imagesSet = new Set(playlist.map((song) => song.image));
+  const images = [...imagesSet].slice(0, 4);
+  $.each(images, function (index, image) {
+    $playlistImage.append(
+      $("<img>", {
+        src: image,
+        alt: "playlist image",
+        class: "song_image",
+      })
+    );
   });
-  $songInfo.append($songTitle);
-
-  let $album = $("<div>", { class: "song-album", text: song.album });
-  $songInfo.append($album);
-
-  let $artist = $("<div>", {
-    class: "song-artist",
-    text: song.artists.join(", "),
-  });
-  $songInfo.append($artist);
-
-  $playlistItem.append($songInfo);
-
-  let $audioPreview = $("<div>", { class: "audio-preview" });
-  $playlistItem.append($audioPreview);
-
-  return $playlistItem;
+  return $playlistImage;
 };
 
-const populatePlaylist = function (playlist) {
-  let playlistDiv = $("#playlist");
-  playlistDiv.empty();
+var getPlaylistItem = function (playlist) {
+  var $playlist = $("<div>", {
+    class: "playlist__item",
+  });
+  $playlist.append(getPlaylistImage(playlist.playlist));
+  var $playlistContent = $("<div>", {
+    class: "playlist__card__content",
+  });
 
-  $.each(playlist, function (index, song) {
-    playlistDiv.append(getPlaylistItem(song));
+  $playlistContent.append(
+    $("<div>", {
+      class: "playlist__price",
+      text: `Price: ${playlist.price.toLocaleString("en-US", {
+        style: "currency",
+        currency: "CAD",
+      })}`,
+    })
+  );
+
+  var $playlistTracks = $("<div>", { class: "playlist__tracks" });
+  $.each(playlist.playlist.slice(0, 3), function (index, song) {
+    $playlistTracks.append(
+      $("<div>", {
+        class: "playlist__track",
+      }).append(
+        $("<span>", {
+          text: `${song.title} - ${song.artists.join(", ")}`,
+        })
+      )
+    );
+  });
+  $playlistTracks.append(
+    $("<div>", {
+      class: "playlist__track",
+    }).append(
+      $("<span>", {
+        text: `+ ${playlist.playlist.length - 3} more`,
+      })
+    )
+  );
+  $playlistContent.append($playlistTracks);
+
+  $playlistContent.append(
+    $("<button>", {
+      class: "btn btn-primary playlist__btn",
+      text: "Add to cart",
+    })
+  );
+  $playlist.append($playlistContent);
+  return $playlist;
+};
+
+var populatePlaylists = function (artists, genres) {
+  const playlists = generatePlaylist(artists, genres);
+  var $playlists = $("#playlist");
+
+  $playlists.empty();
+  playlists.forEach((element) => {
+    const playlistItem = getPlaylistItem(element);
+    $playlists.append(playlistItem);
   });
 };
 
 $(document).ready(function () {
-  var selectedGenres = [];
-  var selectedArtists = [];
+  const urlParams = new URLSearchParams(window.location.search);
+  var selectedArtists = urlParams.getAll("artist");
+  var selectedGenres = urlParams.getAll("genre");
 
   var populateGenres = function () {
     let genresDiv = $("#genres");
     $.each(GENRES, function (index, value) {
       let $genre = $("<div>", {
-        class: "genre search__pills",
+        class: `genre search__pills${
+          selectedGenres.includes(value) ? " selected" : ""
+        }`,
         text: value,
       }).on(`click`, function () {
         toggleGenre($(this), value);
@@ -90,11 +149,12 @@ $(document).ready(function () {
     });
 
     let artistsDiv = $("#artists");
-
     $.each(ARTISTS, function (index, value) {
       let $artist = $("<div>", {
         id: value,
-        class: "artist search__pills",
+        class: `artist search__pills${
+          selectedArtists.includes(value) ? " selected" : ""
+        }`,
         text: value,
       }).on(`click`, function () {
         toggleArtists($(this), value);
@@ -102,8 +162,6 @@ $(document).ready(function () {
       artistsDiv.append($artist);
     });
   };
-
-  populateGenres();
 
   var toggleGenre = function ($element, value) {
     if (selectedGenres.includes(value)) {
@@ -125,14 +183,24 @@ $(document).ready(function () {
     }
   };
 
-  var handleGenerate = function () {
-    const playlist = generatePlaylist(selectedArtists, selectedGenres);
-    populatePlaylist(playlist);
+  // Populate genres and playlists
+  populateGenres();
+  // Populate default playlists
+  populatePlaylists(selectedArtists, selectedGenres);
+
+  var handleSearch = function () {
+    const queryParams = new URLSearchParams();
+    selectedArtists.forEach((artist) => queryParams.append("artist", artist));
+    selectedGenres.forEach((genre) => queryParams.append("genre", genre));
+
+    const queryString = queryParams.toString();
+    const url = new URL(window.location.href);
+    url.search = queryString;
+    const newUrl = url.toString();
+    window.history.pushState(null, null, newUrl);
+    console.log(selectedArtists, selectedGenres);
+    populatePlaylists(selectedArtists, selectedGenres);
   };
 
-  $("#generate").on("click", handleGenerate);
-  $("#lucky").on("click", function () {
-    const playlist = generatePlaylist();
-    populatePlaylist(playlist);
-  });
+  $("#search").on("click", handleSearch);
 });
