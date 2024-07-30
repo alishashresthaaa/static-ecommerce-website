@@ -1,247 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-  <body>
-    <!-- Navigation Bar -->
-    <header>
-      <nav class="nav__container">
-        <div class="nav__left">
-          <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
-          <ul class="nav__list">
-            <li class="nav__item"><a href="index.html">Home</a></li>
-            <li class="nav__item"><a href="search.html">Search</a></li>
-            <li class="nav__item"><a href="#">Pricing</a></li>
-            <li class="nav__item"><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="nav__right">
-          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
-        </div>
-      </nav>
-    </header>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
 
-    <section class="container search__container">
-      <div class="search__left">
-        <div class="search__section">
-          <h2>Search By Genres</h2>
-          <div id="genres" class="search__options"></div>
-        </div>
-        <div class="search__section">
-          <h2>Search By Artist</h2>
-          <div id="artists" class="search__options"></div>
-        </div>
-        <div class="search__section">
-          <h2>Search By Mood Board</h2>
-          <select id="mood" class="search__select">
-            <option value="">Select Mood</option>
-            <option value="happy">Happy</option>
-            <option value="sad">Sad</option>
-            <option value="angry">Angry</option>
-            <option value="relaxed">Relaxed</option>
-            <option value="energetic">Energetic</option>
-          </select>
-        </div>
-        <div class="search__section">
-          <h2>Search By Price Range</h2>
-          <select name="" id="price_range" class="search__select">
-            <option value="">Select Price Range</option>
-            <option value="0-10">$0 - $10</option>
-            <option value="10-20">$10 - $20</option>
-            <option value="20-30">$20 - $30</option>
-            <option value="30-40">$30 - $40</option>
-            <option value="40-50">$40 - $50</option>
-          </select>
-        </div>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="nav__container">
+      <div class="nav__left">
+        <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="search.html">Search</a></li>
+          <li class="nav__item"><a href="#">Pricing</a></li>
+          <li class="nav__item"><a href="#">FAQ</a></li>
+        </ul>
       </div>
-      <div class="search__right">
-        <div class="search__list__grid" id="playlist">
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
+      <div class="nav__right">
+        <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container search__container">
+    <div class="search__left">
+      <div class="search__section">
+        <h2>Search By Genres</h2>
+        <div id="genres" class="search__options"></div>
+      </div>
+      <div class="search__section">
+        <h2>Search By Artist</h2>
+        <div id="artists" class="search__options"></div>
+      </div>
+      <div class="search__section">
+        <h2>Search By Mood Board</h2>
+        <select id="mood" class="search__select">
+          <option value="">Select Mood</option>
+          <option value="happy">Happy</option>
+          <option value="sad">Sad</option>
+          <option value="angry">Angry</option>
+          <option value="relaxed">Relaxed</option>
+          <option value="energetic">Energetic</option>
+        </select>
+      </div>
+      <div class="search__section">
+        <h2>Search By Price Range</h2>
+        <select name="" id="price_range" class="search__select">
+          <option value="">Select Price Range</option>
+          <option value="0-10">$0 - $10</option>
+          <option value="10-20">$10 - $20</option>
+          <option value="20-30">$20 - $30</option>
+          <option value="30-40">$30 - $40</option>
+          <option value="40-50">$40 - $50</option>
+        </select>
+      </div>
+      <div>
+        <button class="btn btn-primary" id="search">Search</button>
+      </div>
+    </div>
+    <div class="search__right">
+      <div class="search__list__grid" id="playlist">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Component -->
+  <footer>
+    <div class="footer__top">
+      <!-- Footer Details Container -->
+      <div class="footer__top__container">
+        <!-- Footer Logo Column -->
+        <div class="footer__logo">
+          <div>
+            <img src="images/logo-white.svg" alt="logo" class="footer__image" />
+            <p class="footer__details">Dive into a world of endless music.</p>
+          </div>
+          <!-- Social Container -->
+          <div class="footer__socials">
+            <div class="footer__title">Get connected with us</div>
+            <div class="footer__socials__list">
+              <a href="https://www.instagram.com/" target="_blank">
+                <img src="images/instagram.png" alt="Instagram" />
+              </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img src="images/facebook.png" alt="Facebook" />
+              </a>
+              <a href="https://www.tiktok.com/" target="_blank">
+                <img src="images/tiktok.png" alt="Tiktok" />
+              </a>
+              <a href="https://www.twitter.com/" target="_blank">
+                <img src="images/twitter.png" alt="Twitter" />
+              </a>
             </div>
           </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
+        </div>
+
+        <div class="footer__col">
+          <div class="footer__title">Quick Links</div>
+          <div class="footer__list">
+            <a href="#">About Us</a>
+            <a href="#">Register</a>
+            <a href="#">Contact</a>
+            <a href="#">Our Products</a>
+            <a href="#">Pricing</a>
           </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">Genres</div>
+          <div class="footer__list">
+            <a href="#">Rock</a>
+            <a href="#">Jazz</a>
+            <a href="#">Hip Hop</a>
+            <a href="#">Hard Rock</a>
+            <a href="#">Soft Rock</a>
           </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">Explore</div>
+          <div class="footer__list">
+            <a href="#">Blogs</a>
+            <a href="#">Reviews</a>
+            <a href="#">Pricing</a>
+            <a href="#">Our Services</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
+  </footer>
 
-    <!-- Footer Component -->
-    <footer>
-      <div class="footer__top">
-        <!-- Footer Details Container -->
-        <div class="footer__top__container">
-          <!-- Footer Logo Column -->
-          <div class="footer__logo">
-            <div>
-              <img src="images/logo-white.svg" alt="logo" class="footer__image" />
-              <p class="footer__details">Dive into a world of endless music.</p>
-            </div>
-            <!-- Social Container -->
-            <div class="footer__socials">
-              <div class="footer__title">Get connected with us</div>
-              <div class="footer__socials__list">
-                <a href="https://www.instagram.com/" target="_blank">
-                  <img src="images/instagram.png" alt="Instagram" />
-                </a>
-                <a href="https://www.facebook.com/" target="_blank">
-                  <img src="images/facebook.png" alt="Facebook" />
-                </a>
-                <a href="https://www.tiktok.com/" target="_blank">
-                  <img src="images/tiktok.png" alt="Tiktok" />
-                </a>
-                <a href="https://www.twitter.com/" target="_blank">
-                  <img src="images/twitter.png" alt="Twitter" />
-                </a>
-              </div>
-            </div>
-          </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="module" src="js/constants.js"></script>
+  <script type="module" src="js/search.js"></script>
+  <script src="js/main.js"></script>
+</body>
 
-          <div class="footer__col">
-            <div class="footer__title">Quick Links</div>
-            <div class="footer__list">
-              <a href="#">About Us</a>
-              <a href="#">Register</a>
-              <a href="#">Contact</a>
-              <a href="#">Our Products</a>
-              <a href="#">Pricing</a>
-            </div>
-          </div>
-          <div class="footer__col">
-            <div class="footer__title">Genres</div>
-            <div class="footer__list">
-              <a href="#">Rock</a>
-              <a href="#">Jazz</a>
-              <a href="#">Hip Hop</a>
-              <a href="#">Hard Rock</a>
-              <a href="#">Soft Rock</a>
-            </div>
-          </div>
-          <div class="footer__col">
-            <div class="footer__title">Explore</div>
-            <div class="footer__list">
-              <a href="#">Blogs</a>
-              <a href="#">Reviews</a>
-              <a href="#">Pricing</a>
-              <a href="#">Our Services</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="module" src="js/constants.js"></script>
-    <script type="module" src="js/search.js"></script>
-    <script src="js/main.js"></script>
-  </body>
 </html>

@@ -48,6 +48,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=d5gf9dXbPi0",
+    duration: "3:32",
   },
   {
     title: "LUNCH",
@@ -58,6 +59,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=MB3VkzPdgLA",
+    duration: "3:23",
   },
   {
     title: "CHIHIRO",
@@ -68,6 +70,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=BY_XwvKogC8",
+    duration: "5:24",
   },
   {
     title: "WILDFLOWER",
@@ -78,6 +81,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=xAWDqdpOlu8",
+    duration: "4:48",
   },
   {
     title: "L\u2019AMOUR DE MA VIE",
@@ -88,6 +92,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=am5FI9DkO80",
+    duration: "5:35",
   },
   {
     title: "BLUE",
@@ -98,6 +103,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=_IjWFq1c5M4",
+    duration: "5:44",
   },
   {
     title: "THE GREATEST",
@@ -108,6 +114,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=xozgvccBHk8",
+    duration: "4:46",
   },
   {
     title: "THE DINER",
@@ -118,6 +125,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=UKkObvtycq8",
+    duration: "3:07",
   },
   {
     title: 'What Was I Made For? [From The Motion Picture "Barbie"]',
@@ -128,6 +136,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=cW8VLC9nnTo",
+    duration: "4:09",
   },
   {
     title: "SKINNY",
@@ -138,6 +147,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=GcY-5alayP8",
+    duration: "3:40",
   },
   {
     title: "lovely (with Khalid)",
@@ -148,6 +158,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=V1Pl8CzNzCw",
+    duration: "3:21",
   },
   {
     title: "BITTERSUITE",
@@ -158,6 +169,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=5qIUoTIHwac",
+    duration: "4:59",
   },
   {
     title: "when the party's over",
@@ -168,6 +180,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=pbMwTqkKSps",
+    duration: "3:14",
   },
   {
     title: "Happier Than Ever",
@@ -178,6 +191,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=5GJWxDKyk3A",
+    duration: "5:16",
   },
   {
     title: "hotline (edit)",
@@ -188,6 +202,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=VpEITQDQRec",
+    duration: "1:01",
   },
   {
     title: "TV",
@@ -198,6 +213,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=_JGGLJMpVks",
+    duration: "4:42",
   },
   {
     title: "everything i wanted",
@@ -208,6 +224,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=EgBJmlPo8Xw",
+    duration: "4:48",
   },
   {
     title: "bad guy",
@@ -218,6 +235,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=DyDfgMOUjCI",
+    duration: "3:26",
   },
   {
     title: "Bored",
@@ -228,6 +246,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=cnGW8NR-toE",
+    duration: "3:16",
   },
   {
     title: "i love you",
@@ -238,6 +257,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=mhmGwTDpPf0",
+    duration: "5:00",
   },
   {
     title: "Cruel Summer",
@@ -248,6 +268,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=ic8j13piAhQ",
+    duration: "3:00",
   },
   {
     title: "Fortnight (feat. Post Malone)",
@@ -258,6 +279,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=q3zqJs7JUCQ",
+    duration: "4:10",
   },
   {
     title: "I Can Do It With a Broken Heart",
@@ -268,6 +290,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=i8_w_m6HLJ0",
+    duration: "3:43",
   },
   {
     title: "Lover",
@@ -278,6 +301,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=-BjZmE2gtdo",
+    duration: "3:59",
   },
   {
     title: "Down Bad",
@@ -288,6 +312,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=EVbtjaWXQVg",
+    duration: "4:26",
   },
   {
     title: "Guilty as Sin?",
@@ -298,6 +323,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=OOYlWF6V8t8",
+    duration: "4:19",
   },
   {
     title: "imgonnagetyouback",
@@ -308,6 +334,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=SBGdvxi2JmU",
+    duration: "3:45",
   },
   {
     title: "So High School",
@@ -318,6 +345,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=w-FkV0EM_CU",
+    duration: "3:55",
   },
   {
     title: "Don\u2019t Blame Me",
@@ -327,7 +355,8 @@ const SONGS = [
     spotify: "https://api.spotify.com/v1/tracks/1R0a2iXumgCiFb7HEZ7gUE",
     preview: null,
     genre: "Pop",
-    youtube_link: "https://www.youtube.com/watch?v=kRJKB291Z1g",
+    youtube_link: "https://www.youtube.com/watch?v=1tuNQVWYLj8",
+    duration: "4:36",
   },
   {
     title: "Who\u2019s Afraid of Little Old Me?",
@@ -338,6 +367,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=vOZFiX6hDXQ",
+    duration: "5:39",
   },
   {
     title: "The Smallest Man Who Ever Lived",
@@ -348,6 +378,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Atdzfj8LcuY",
+    duration: "4:10",
   },
   {
     title: "Anti-Hero",
@@ -358,6 +389,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=b1kbLwvqugk",
+    duration: "5:10",
   },
   {
     title: "But Daddy I Love Him",
@@ -368,6 +400,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=U2W173hRfyA",
+    duration: "5:45",
   },
   {
     title: "So Long, London",
@@ -378,6 +411,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=CCUr2pNJft4",
+    duration: "4:28",
   },
   {
     title: "august",
@@ -388,6 +422,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=nn_0zPAfyo8",
+    duration: "4:24",
   },
   {
     title: "One Dance",
@@ -398,6 +433,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=GVUxTKZgqcQ",
+    duration: "2:55",
   },
   {
     title: "Love Me",
@@ -408,6 +444,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=KY44zvhWhp4",
+    duration: "4:25",
   },
   {
     title: "Push Ups",
@@ -418,6 +455,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=DMvaSqDnHl8",
+    duration: "3:54",
   },
   {
     title: "Family Matters",
@@ -428,6 +466,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=ZkXG3ZrXlbc",
+    duration: "7:38",
   },
   {
     title: "Rich Baby Daddy (feat. Sexyy Red & SZA)",
@@ -438,6 +477,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=UcsSdIXHCWM",
+    duration: "6:31",
   },
   {
     title: "Jimmy Cooks (feat. 21 Savage)",
@@ -448,6 +488,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=V7UgPHjN9qE",
+    duration: "3:39",
   },
   {
     title: "Passionfruit",
@@ -458,6 +499,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=COz9lDCFHjw",
+    duration: "4:59",
   },
   {
     title: "IDGAF (feat. Yeat)",
@@ -468,6 +510,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=fCRCLsJQWUQ",
+    duration: "4:21",
   },
   {
     title: "First Person Shooter (feat. J. Cole)",
@@ -478,6 +521,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Xty2gi5cMa8",
+    duration: "5:01",
   },
   {
     title: "Going Bad (feat. Drake)",
@@ -489,6 +533,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/d99e58e0b5eed07a7fb99f29838dbfdd08178093?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=S1gp0m4B5p8",
+    duration: "4:25",
   },
   {
     title: "Headlines",
@@ -499,6 +544,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=cimoNqiulUE",
+    duration: "4:04",
   },
   {
     title: "Best I Ever Had",
@@ -509,6 +555,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Zfp3KfYH0xA",
+    duration: "4:18",
   },
   {
     title: "God's Plan",
@@ -519,6 +566,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=xpVfcZ0ZcFM",
+    duration: "5:57",
   },
   {
     title: "Knife Talk (with 21 Savage ft. Project Pat)",
@@ -529,6 +577,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=XqpQpt_cmhE",
+    duration: "4:05",
   },
   {
     title: "Spin Bout U",
@@ -539,6 +588,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=T8nbNQpRwNo",
+    duration: "3:50",
   },
   {
     title: "Teenage Fever",
@@ -549,6 +599,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=e8HtwsnuTIw",
+    duration: "3:40",
   },
   {
     title: "Fair Trade (with Travis Scott)",
@@ -559,6 +610,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=THVbtGqEO1o",
+    duration: "4:52",
   },
   {
     title: "Hold On, We're Going Home",
@@ -569,6 +621,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=GxgqpCdOKak",
+    duration: "7:02",
   },
   {
     title: "Rich Flex",
@@ -579,6 +632,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=I4DjHHVHWAE",
+    duration: "4:00",
   },
   {
     title: "Wants and Needs (feat. Lil Baby)",
@@ -589,6 +643,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=cnqUrYjqGaU",
+    duration: "3:15",
   },
   {
     title: "Shivers",
@@ -600,6 +655,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/08cec59d36ac30ae9ce1e2944f206251859844af?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Il0S8BoucSA",
+    duration: "3:58",
   },
   {
     title: "Perfect",
@@ -611,6 +667,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/4e30857a3c7da3f8891483643e310bb233afadd2?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
+    duration: "4:40",
   },
   {
     title: "Shape of You",
@@ -622,6 +679,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/7339548839a263fd721d01eb3364a848cad16fa7?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+    duration: "4:24",
   },
   {
     title: "Bad Habits",
@@ -633,6 +691,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/22f3a86c8a83e364db595007f9ac1d666596a335?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=orJSJGHjBLI",
+    duration: "4:01",
   },
   {
     title: "Castle on the Hill",
@@ -644,6 +703,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/f3cb6f2e07da189bbace23509fd9c03d63949292?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=K0ibBPhiaG0",
+    duration: "4:48",
   },
   {
     title: "End Game",
@@ -654,6 +714,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=dfnCAmr569k",
+    duration: "4:12",
   },
   {
     title: "Thinking out Loud",
@@ -665,6 +726,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/7b5d54ffb3c4e5c28adafe19532de22508d62851?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=lp-EO5I60KA",
+    duration: "4:57",
   },
   {
     title: "Everything Has Changed (feat. Ed Sheeran) (Taylor\u2019s Version)",
@@ -675,6 +737,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=eMcMbWl0fDk",
+    duration: "4:09",
   },
   {
     title: "Galway Girl",
@@ -686,6 +749,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/9b7635464dc2caea3837fcc5680d0f5f5d39ab03?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=87gWaABqGYs",
+    duration: "3:20",
   },
   {
     title: "Photograph",
@@ -697,6 +761,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/d90f4e5f15d8ed411307945560b1db8cca6b253b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=KKQl-pIRQMY",
+    duration: "4:20",
   },
   {
     title: "Bam Bam (feat. Ed Sheeran)",
@@ -708,6 +773,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/1bd8b56f5623c6eee74601848b0abdca40688743?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=-8VfKZCOo_I",
+    duration: "4:17",
   },
   {
     title: "Eyes Closed",
@@ -719,6 +785,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/7cd2576f2d27799fe8c515c4e0fc880870a5cc88?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=u6wOyMUs74I",
+    duration: "3:35",
   },
   {
     title: "The A Team",
@@ -730,6 +797,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/1cab73cd0e33cec8fe9a0ffe7319170862f37f8a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=UAWcs5H-qgQ",
+    duration: "4:50",
   },
   {
     title: "Beautiful People (feat. Khalid)",
@@ -741,6 +809,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/2b06c65cce16bd4ef3280275951b612cbc423411?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=mj0XInqZMHY",
+    duration: "3:48",
   },
   {
     title: "South of the Border (feat. Camila Cabello & Cardi B)",
@@ -752,6 +821,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/89e5e2e241343cf318aa033a70c938a205bbda8b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=UPOT2tgY9QQ",
+    duration: "4:46",
   },
   {
     title: "Happier",
@@ -763,6 +833,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/f4944de04b857647b920811fae9a1abfb27d7f8b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=iWZmdoY1aTE",
+    duration: "3:36",
   },
   {
     title: "I Don't Care (with Justin Bieber)",
@@ -774,6 +845,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/03dbc7b6fcafda4f5c223036f0ca919f2b65da25?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=y83x7MgzWOA",
+    duration: "3:43",
   },
   {
     title: "Collard Greens",
@@ -784,6 +856,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=_L2vJEb6lVE",
+    duration: "4:44",
   },
   {
     title: "Bad Blood (feat. Kendrick Lamar) (Taylor's Version)",
@@ -794,6 +867,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=QcIy9NiNbmo",
+    duration: "4:05",
   },
   {
     title: "Mona Lisa (feat. Kendrick Lamar)",
@@ -804,6 +878,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=ybfgomoY8Xs",
+    duration: "5:31",
   },
   {
     title: "Doves In The Wind (feat. Kendrick Lamar)",
@@ -815,6 +890,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/607cb83912cafdaefade9ff240670b9e5679edae?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Zg165-mZ7x8",
+    duration: "4:30",
   },
   {
     title: "Pray For Me",
@@ -825,6 +901,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=XR7Ev14vUh8",
+    duration: "3:29",
   },
   {
     title: "Don't Wanna Know (feat. Kendrick Lamar)",
@@ -835,6 +912,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=OxPv8mSTv9U",
+    duration: "3:34",
   },
   {
     title: "Sidewalks",
@@ -844,7 +922,8 @@ const SONGS = [
     spotify: "https://api.spotify.com/v1/tracks/4h90qkbnW1Qq6pBhoPvwko",
     preview: null,
     genre: "Pop",
-    youtube_link: "https://www.youtube.com/watch?v=sK-T-cmznY8",
+    youtube_link: "https://www.youtube.com/watch?v=uxBganA7KnY",
+    duration: "4:02",
   },
   {
     title: "AMERICA HAS A PROBLEM (feat. Kendrick Lamar)",
@@ -856,6 +935,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/0b8bf8974dd4b122e5425f039feade0ed8d15202?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Q0E4wVF2a4k",
+    duration: "4:28",
   },
   {
     title: "Pray For Me (with Kendrick Lamar)",
@@ -866,6 +946,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=XR7Ev14vUh8",
+    duration: "3:29",
   },
   {
     title: "Hair Down",
@@ -877,6 +958,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/4392133e96eb79ee75d19d45f077a20df3beea43?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=BQqEMLOOMCo",
+    duration: "3:41",
   },
   {
     title: "The Greatest (feat. Kendrick Lamar)",
@@ -888,6 +970,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/873fb7b286131f05434bc7c56899c513f61adb2a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=sG6aWhZnbfw",
+    duration: "3:33",
   },
   {
     title: "Freedom (feat. Kendrick Lamar)",
@@ -899,6 +982,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/f2a53e4860ce9c6c18c3cf70cc7600ca9d5b22a9?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=bWtcsj6W_Vw",
+    duration: "4:50",
   },
   {
     title: "Bad Blood",
@@ -909,6 +993,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=QcIy9NiNbmo",
+    duration: "4:05",
   },
   {
     title: "Nosetalgia",
@@ -919,6 +1004,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=UgGZJxI-fFA",
+    duration: "3:49",
   },
   {
     title: "Dedication (feat. Kendrick Lamar)",
@@ -930,6 +1016,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/c6d5be758dcafdd649b14a2f50ba69b9b223b062?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=RXmfYM6dSFg",
+    duration: "4:06",
   },
   {
     title: "Babylon (feat. Kendrick Lamar)",
@@ -941,6 +1028,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/d70fe9bb2950da095d40e1f64e65f7ebc2e46af6?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=SWQp83aCxg4",
+    duration: "4:05",
   },
   {
     title: "Fragile",
@@ -957,6 +1045,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/f6a5e609b4a19e23a8d072a545e835edc50ff08e?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=oEEIzTCy6LU",
+    duration: "4:08",
   },
   {
     title: "Buried Alive Interlude",
@@ -967,6 +1056,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=kGO6a0T7f8w",
+    duration: "2:31",
   },
   {
     title:
@@ -980,6 +1070,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/86431007a8e05aa3f52b54f0ed00dd72319aca82?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Okn0WpJqgHE",
+    duration: "3:50",
   },
   {
     title: "Memories Back Then (feat. B.o.B, Kendrick Lamar & Kris Stephens)",
@@ -991,6 +1082,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/6750325eab56f0fc1a10b00be42c6edb98acaee4?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=a2Gh3VdnXQs",
+    duration: "4:57",
   },
   {
     title: "Set Fire to the Rain",
@@ -1002,6 +1094,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/6fc68c105e091645376471727960d2ba3cd0ee01?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=a2giXO6eyuI",
+    duration: "4:03",
   },
   {
     title: "Someone Like You",
@@ -1013,6 +1106,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/a79d612cac9b64e900ae937234e2838a88ebc415?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=hLQl3WQQoQ0",
+    duration: "4:45",
   },
   {
     title: "Rolling in the Deep",
@@ -1024,6 +1118,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/d2d7e717c72a4fa08b3a8b22722c7369e8aa587d?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=rYEDA3JcQqw",
+    duration: "3:54",
   },
   {
     title: "Skyfall",
@@ -1035,6 +1130,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/d5c38cc8a0f4b3e01a5a688497d6b0e89da5f1c8?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=DeumyOzKqgI",
+    duration: "4:50",
   },
   {
     title: "Easy On Me",
@@ -1046,6 +1142,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/a0cd8077c79a4aa3dcaa68bbc5ecdeda46e8d13f?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=X-yIEMduRXk",
+    duration: "3:46",
   },
   {
     title: "Make You Feel My Love",
@@ -1057,6 +1154,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/3d9582dbaa291a0bdf96e750281595574f0de3ad?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=0put0_a--Ng",
+    duration: "4:07",
   },
   {
     title: "When We Were Young",
@@ -1068,6 +1166,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b35676526fa76530da3e9b880a64305e761bc2ce?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=DDWKuo3gXMQ",
+    duration: "5:43",
   },
   {
     title: "Love In The Dark",
@@ -1079,6 +1178,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/71fccaf81d5bd85928d35ac65e311709f841e4b6?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=-hzFTJDJGkQ",
+    duration: "4:46",
   },
   {
     title: "Chasing Pavements",
@@ -1090,6 +1190,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/209e4b33acb8fd535c65ab403087a6c0c3dabc65?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=08DjMT-qR9g",
+    duration: "3:41",
   },
   {
     title: "Hello",
@@ -1101,6 +1202,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/27069a2e4ff7be549a241052b7e3233ac835e1f6?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=YQHsXMglC9A",
+    duration: "6:07",
   },
   {
     title: "Send My Love (To Your New Lover)",
@@ -1112,6 +1214,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/454f693eeb9b383539f5d26ecdc7cd44c6d20292?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=fk4BbF7B29w",
+    duration: "3:45",
   },
   {
     title: "Water Under the Bridge",
@@ -1123,6 +1226,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/8040cf7551127a31796b5e5af369910edae39a68?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=NgNqpsWE-o0",
+    duration: "4:01",
   },
   {
     title: "All I Ask",
@@ -1134,6 +1238,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/7f9fc461d85095d621f1bffb033a15b7f8d24eb6?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=jb5g4UFHmfQ",
+    duration: "4:32",
   },
   {
     title: "Oh My God",
@@ -1145,6 +1250,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/da3141fbf42b7fe6d809a87d75d8537056381970?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=niG3YMU6jFk",
+    duration: "3:53",
   },
   {
     title: "Rumour Has It",
@@ -1156,6 +1262,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b2064057c1d5e811103e04ec682e52d2d3e5759e?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=C1G3jmtoOfk",
+    duration: "3:44",
   },
   {
     title: "I Drink Wine",
@@ -1167,6 +1274,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/59ab0f0898400fba01a4429cac432ccadda2bfb8?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=jDvYDzFOK9A",
+    duration: "7:05",
   },
   {
     title: "Turning Tables",
@@ -1178,6 +1286,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/f27742a6b5948be886fe872189affb9dae35190c?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=3SojhAemf34",
+    duration: "4:10",
   },
   {
     title: "Amour plastique",
@@ -1189,6 +1298,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/79a6f788cf29b7f246bc9b1f289ce64bad3bc7bb?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=5NjJLFI_oYs",
+    duration: "3:53",
   },
   {
     title: "Million Years Ago",
@@ -1200,6 +1310,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b689bfb32895d9e883cebb8635584767a1c65de2?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Db9ciJPIaEU",
+    duration: "3:48",
   },
   {
     title: "One Of The Girls (with JENNIE, Lily Rose Depp)",
@@ -1210,6 +1321,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Mx92lTYxrJQ",
+    duration: "4:19",
   },
   {
     title: "Blinding Lights",
@@ -1220,6 +1332,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
+    duration: "4:23",
   },
   {
     title: "Starboy",
@@ -1230,6 +1343,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=34Na4j8AVgA",
+    duration: "4:34",
   },
   {
     title: "The Hills",
@@ -1240,6 +1354,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=yzTuBuRdAyA",
+    duration: "3:55",
   },
   {
     title: "Stargirl Interlude",
@@ -1250,6 +1365,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=TkxVOa6u59M",
+    duration: "1:52",
   },
   {
     title: "Or Nah (feat. The Weeknd, Wiz Khalifa & DJ Mustard) - Remix",
@@ -1261,6 +1377,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/95329030db6af65082fd00f5ac7b122f324c5ad5?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=TUj0otkJEBo",
+    duration: "4:25",
   },
   {
     title:
@@ -1272,6 +1389,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=K6WCcBP4lSs",
+    duration: "3:36",
   },
   {
     title: "Die For You",
@@ -1282,6 +1400,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=uPD0QOGTmMI",
+    duration: "4:41",
   },
   {
     title: "Call Out My Name",
@@ -1292,6 +1411,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=M4ZoCHID9GI",
+    duration: "3:59",
   },
   {
     title: "Save Your Tears",
@@ -1302,6 +1422,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=XXYlFuWEuKI",
+    duration: "4:09",
   },
   {
     title: "Can't Feel My Face",
@@ -1312,6 +1433,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=KEI4qSrkPAs",
+    duration: "3:39",
   },
   {
     title: "Coming Down",
@@ -1322,6 +1444,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=WVg1mbxTkFo",
+    duration: "5:01",
   },
   {
     title: "I Was Never There",
@@ -1332,6 +1455,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=OlStmta0Vh4",
+    duration: "4:02",
   },
   {
     title: "Often",
@@ -1342,6 +1466,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=JPIhUaONiLU",
+    duration: "4:10",
   },
   {
     title: "The Party & The After Party",
@@ -1352,6 +1477,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=yI-zb_aP0So",
+    duration: "7:45",
   },
   {
     title: "Earned It (Fifty Shades Of Grey)",
@@ -1362,6 +1488,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=waU75jdUnYw",
+    duration: "4:36",
   },
   {
     title: "Heartless",
@@ -1372,6 +1499,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=1DpH-icPpl0",
+    duration: "4:10",
   },
   {
     title: "Is There Someone Else?",
@@ -1382,6 +1510,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=1XqIWr_WqM4",
+    duration: "4:15",
   },
   {
     title: "Moth To A Flame (with The Weeknd)",
@@ -1392,6 +1521,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=u9n7Cw-4_HQ",
+    duration: "4:14",
   },
   {
     title: "Dynamite",
@@ -1403,6 +1533,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/98e266fea9df84fa3e5ca84934c513211e89489b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=gdZLi9oWNZg",
+    duration: "3:44",
   },
   {
     title: "Left and Right (Feat. Jung Kook of BTS)",
@@ -1414,6 +1545,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/9e4342eefa4f33df4e9b199e60dbce0f59e46eff?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=a7GITgqwDVg",
+    duration: "2:40",
   },
   {
     title: "Boy With Luv (feat. Halsey)",
@@ -1425,6 +1557,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/c5e4b03bcf18d2b137370569baeb74a9dfce7e63?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=XsX3ATc3FbA",
+    duration: "4:13",
   },
   {
     title: "Run BTS",
@@ -1436,6 +1569,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/abc4f797c5378fe6f4d664af3032c3d17e3a935f?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=aqW4xXUgmno",
+    duration: "3:30",
   },
   {
     title: "Butter",
@@ -1447,6 +1581,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/4d63fe1638aa41592706f835bd076443b09d8afa?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=WMweEpGlu_U",
+    duration: "3:03",
   },
   {
     title: "FAKE LOVE",
@@ -1458,6 +1593,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/24ec465728ed83e2113589cd0fdab7f0de11bf7a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=7C2z4GqqS5E",
+    duration: "5:19",
   },
   {
     title: "My Universe",
@@ -1469,6 +1605,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/0790eb03d0d2b6aac7c9c762bc2bf1f3649dd7ca?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=3YqPKLZF_WU",
+    duration: "4:43",
   },
   {
     title: "Spring Day",
@@ -1480,6 +1617,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/e2504a289eb9462a6d08e17ae9ce1fade272ab1f?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=xEeFrLSkMm8",
+    duration: "5:29",
   },
   {
     title: "Life Goes On",
@@ -1491,6 +1629,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/fd53b34cdf00c5cbee869e035a7438e699c016c7?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=-5q5mZbe3V8",
+    duration: "3:51",
   },
   {
     title: "Blood Sweat & Tears",
@@ -1502,6 +1641,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/585efc683a5dec9b84540a1322f06a31a0b4777d?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=hmE9f-TEutc",
+    duration: "6:04",
   },
   {
     title: "Euphoria",
@@ -1513,6 +1653,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/af20f36301df394eeca1794397a853c2d38bd5f3?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=kX0vO4vlJuU",
+    duration: "8:53",
   },
   {
     title: "Filter",
@@ -1524,6 +1665,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/d55bcdfb25b5bec54b0f3ccdd33123d0acf9062b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=dNUnnb8F-Cw",
+    duration: "3:01",
   },
   {
     title: "Pied Piper",
@@ -1535,6 +1677,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/6d820f1430155da5ebdd9925d9616d8e0300274e?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=VEZ_Ui6d9AM",
+    duration: "4:06",
   },
   {
     title: "Permission to Dance",
@@ -1546,6 +1689,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/d4eb140d131417cc1526bb791f0383eef18cf6da?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=CuklIb9d3fI",
+    duration: "5:00",
   },
   {
     title: "Take Two",
@@ -1557,6 +1701,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/ef43da30a06fcad16898e9fff1cadd0ccf953fc9?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=owjVpYCmwcg",
+    duration: "4:05",
   },
   {
     title: "Just One Day",
@@ -1568,6 +1713,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b85cf0429d7c933b36ef5a755ef78582f6595cf2?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=DTcKkcyS410",
+    duration: "4:09",
   },
   {
     title: "I Need U",
@@ -1579,6 +1725,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/d57fb5fa762ade6783c44d2479d3bcd373fef1a8?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=jjskoRh8GTE",
+    duration: "5:33",
   },
   {
     title: "dimple",
@@ -1590,6 +1737,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/e8b344f7b8d49ba1f86a9baae120a4522a56fbe7?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=BGQveM9aiBM",
+    duration: "3:17",
   },
   {
     title: "Thunder",
@@ -1600,6 +1748,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=fKopy74weus",
+    duration: "3:25",
   },
   {
     title: "Believer",
@@ -1610,6 +1759,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=7wtfhZwyrcc",
+    duration: "3:37",
   },
   {
     title: "Demons",
@@ -1620,6 +1770,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=mWRsgZuwf_8",
+    duration: "3:57",
   },
   {
     title: "Radioactive",
@@ -1630,6 +1781,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=ktvTqknDobU",
+    duration: "4:22",
   },
   {
     title: "Whatever It Takes",
@@ -1640,6 +1792,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=gOsM-DYAEhY",
+    duration: "3:40",
   },
   {
     title:
@@ -1659,6 +1812,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b606811412cc3e1a52fc34c44d7bebe633efc1b9?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=-59jGD4WrmE",
+    duration: "4:58",
   },
   {
     title: "Bones",
@@ -1669,6 +1823,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=TO-_3tck2tg",
+    duration: "2:46",
   },
   {
     title: "Natural",
@@ -1679,6 +1834,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=0I647GU3Jsc",
+    duration: "3:10",
   },
   {
     title: "On Top Of The World",
@@ -1689,6 +1845,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=w5tWYmIOWGk",
+    duration: "4:02",
   },
   {
     title: "Enemy (with JID) - from the series Arcane League of Legends",
@@ -1699,6 +1856,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=D9G1VOjN_84",
+    duration: "3:34",
   },
   {
     title: "Wake Up",
@@ -1709,6 +1867,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=q392mSz4VeY",
+    duration: "3:02",
   },
   {
     title: "It's Time",
@@ -1719,6 +1878,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=sENM2wA_FTg",
+    duration: "4:07",
   },
   {
     title: "Bad Liar",
@@ -1729,6 +1889,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=I-QfPUz1es8",
+    duration: "4:44",
   },
   {
     title: "Warriors",
@@ -1739,6 +1900,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=fmI_Ndrxy14",
+    duration: "2:51",
   },
   {
     title: "Nice to Meet You",
@@ -1749,6 +1911,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=NeUfmyu5t8Q",
+    duration: "3:34",
   },
   {
     title: "Born To Be Yours",
@@ -1759,6 +1922,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=_G-k6TQYUek",
+    duration: "3:21",
   },
   {
     title: "Despacito",
@@ -1769,6 +1933,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=kJQP7kiw5Fk",
+    duration: "4:42",
   },
   {
     title: "Despacito - Remix",
@@ -1779,6 +1944,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=kJQP7kiw5Fk",
+    duration: "4:42",
   },
   {
     title: "\u00c9chame La Culpa",
@@ -1789,6 +1955,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=TyHvyGVs42U",
+    duration: "3:31",
   },
   {
     title: "No Me Doy Por Vencido",
@@ -1800,6 +1967,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=8hRGBcr_gJc",
+    duration: "3:54",
   },
   {
     title: "Llegaste T\u00fa",
@@ -1810,6 +1978,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=weKJWqw8-3g",
+    duration: "3:54",
   },
   {
     title: "Aqui Estoy Yo",
@@ -1821,6 +1990,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=EsfSuL-VFBw",
+    duration: "4:08",
   },
   {
     title: "Tanto",
@@ -1832,6 +2002,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/1cce181df18a8f6cd70b78fee5429afe1acee3b5?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=ridGylKQ0WY",
+    duration: "3:49",
   },
   {
     title: "Imposible",
@@ -1842,6 +2013,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=De4FqIkvHX0",
+    duration: "3:14",
   },
   {
     title: "Coraz\u00f3n En La Maleta",
@@ -1852,6 +2024,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=oX0jcZQ16ew",
+    duration: "3:59",
   },
   {
     title: "San Juan",
@@ -1862,6 +2035,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=c_X2PJTzXp4",
+    duration: "3:30",
   },
   {
     title: "Andaluc\u00eda",
@@ -1872,6 +2046,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=wTwfHMXzTfg",
+    duration: "3:30",
   },
   {
     title: "Baby (feat. MARINA & Luis Fonsi)",
@@ -1883,6 +2058,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/c45f4e03fa675407e6076845a56b3fac5a794dd2?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=hlznpxNGFGQ",
+    duration: "4:08",
   },
   {
     title: "\u00bfQui\u00e9n Te Dijo Eso?",
@@ -1893,6 +2069,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=lAszIVE3qO8",
+    duration: "4:55",
   },
   {
     title: "Santa Marta",
@@ -1903,6 +2080,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=CpsTPSqd5dE",
+    duration: "3:27",
   },
   {
     title: "Roma",
@@ -1913,6 +2091,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=NOebfEFJW6Y",
+    duration: "3:35",
   },
   {
     title: "Calypso",
@@ -1923,6 +2102,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Hnj_EMDUfjY",
+    duration: "4:24",
   },
   {
     title: "Imag\u00edname Sin Ti",
@@ -1933,6 +2113,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=ZPrQXK2JzLw",
+    duration: "3:58",
   },
   {
     title: "I Like It",
@@ -1944,6 +2125,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/0fe3542d88da43dd131627df756ac1ce318713fd?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=xTlNMmZKwpA",
+    duration: "4:17",
   },
   {
     title: "Eyes Closed (feat. J Balvin)",
@@ -1954,6 +2136,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=WoeFMTbR5Ps",
+    duration: "3:20",
   },
   {
     title: "Loco Contigo (feat. J. Balvin & Tyga)",
@@ -1964,6 +2147,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=zNl00mOSnJI",
+    duration: "3:10",
   },
   {
     title: "Downtown",
@@ -1975,6 +2159,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/52f35e35768bc9362b63ab150be7e3642d4caa59?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=wlS6Ix7mA0w",
+    duration: "3:20",
   },
   {
     title: "Baila Baila Baila - Remix",
@@ -1986,6 +2171,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/7ec7696734ef5048d630c701b15af0c52eccd162?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=CsSgg_iZHz4",
+    duration: "3:57",
   },
   {
     title: "Que Calor",
@@ -1997,6 +2183,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/739d62016c50c956736488df6707f3a000eddaaa?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=ZBBS4imv1qo",
+    duration: "2:56",
   },
   {
     title: "Una Locura",
@@ -2008,6 +2195,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/de0997f9dc453b0eaf335c94fff35bd343757acc?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=EszBkjtG7wA",
+    duration: "3:59",
   },
   {
     title: "Hey Ma (with Pitbull & J Balvin feat. Camila Cabello)",
@@ -2019,6 +2207,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/4c1a536c33394fff087ef9732c8ad34b4b0aacc8?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=JLY8tFp8RBg",
+    duration: "3:43",
   },
   {
     title: "RITMO (Bad Boys For Life)",
@@ -2030,6 +2219,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/64c05499bdba99707ec710ad367a712d1e0e4688?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=EzKkl64rRbM",
+    duration: "3:39",
   },
   {
     title: "Agua (with J Balvin)",
@@ -2041,6 +2231,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=QLz9VaksClg",
+    duration: "2:57",
   },
   {
     title: "COLMILLO",
@@ -2052,6 +2243,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/3552faaf1d3fc51bb3a5741d85213e05123eb7f2?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=HkG1m9sSojI",
+    duration: "4:59",
   },
   {
     title: "Relaci\u00f3n - Remix",
@@ -2063,6 +2255,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/1429eb3afd3dcd7d306954c2b6fb840a8c40b320?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=XseIJg8Vyj0",
+    duration: "4:10",
   },
   {
     title:
@@ -2075,6 +2268,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Tztc73r8348",
+    duration: "2:45",
   },
   {
     title: "Say My Name",
@@ -2086,6 +2280,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/08d9f01f54c783b1a6ae7999d22013345c253b45?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=ft4jcPSLJfY",
+    duration: "3:31",
   },
   {
     title: "Mood (Remix) feat. Justin Bieber, J Balvin & iann dior",
@@ -2097,6 +2292,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/bfbb5296353e2597588364f16c112720b2a67a69?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=JOHN4EnFqAU",
+    duration: "3:18",
   },
   {
     title: "Indeciso",
@@ -2107,6 +2303,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=y-BFrPQPGjM",
+    duration: "4:21",
   },
   {
     title: "Quiero Repetir",
@@ -2118,6 +2315,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/66fd5d68e5942ddf7f3bf68a044962bd985c6fde?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=zkOU-IBGsR0",
+    duration: "3:20",
   },
   {
     title: "Contra La Pared",
@@ -2128,6 +2326,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=-gCe4WrmOIk",
+    duration: "3:56",
   },
   {
     title: "You Stay (feat. Meek Mill, J Balvin, Lil Baby & Jeremih)",
@@ -2139,6 +2338,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/26fcfd1d786422e355cb3ea4ffe3d418e15784d8?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=HNW5_q08gkA",
+    duration: "4:54",
   },
   {
     title: "Nothing Else Matters vs F*CKING SOCIETY - Hardwell Mashup",
@@ -2150,6 +2350,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/5d1f43f490ad10c19fa02015482a1499eda49adb?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=xwZWPZo1j1Y",
+    duration: "3:11",
   },
   {
     title: "About You",
@@ -2160,6 +2361,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=ECOVP88gTZY",
+    duration: "4:05",
   },
   {
     title: "Small Song",
@@ -2189,7 +2391,8 @@ const SONGS = [
     preview:
       "https://p.scdn.co/mp3-preview/d1e834f35c307fbad3f77dc1cce7e74a79022f0a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
-    youtube_link: "https://www.youtube.com/watch?v=R2UpH3Gi2Es",
+    youtube_link: "https://www.youtube.com/watch?v=3ArJlad2q74",
+    duration: "2:59",
   },
   {
     title: "Hips Don't Lie (feat. Wyclef Jean)",
@@ -2201,6 +2404,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/374b492571c9ba59c2c4b455ab79ee7501adab93?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=DUT5rEU6pqM",
+    duration: "3:39",
   },
   {
     title: "Shakira: Bzrp Music Sessions, Vol. 53",
@@ -2212,6 +2416,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/64e90f49942deb7dd92610fb8ef64b30524e6009?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=CocEMWdc7Ck",
+    duration: "3:38",
   },
   {
     title: "Whenever, Wherever",
@@ -2223,6 +2428,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/93dc52d836150fba41afeb6df2e9167875c7d8fb?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=weRHyjj34ZE",
+    duration: "3:17",
   },
   {
     title: "Dia de Enero",
@@ -2234,6 +2440,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/83bcb423223de882523c1274505b43e2ef2715f4?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=BPidLpADlaM",
+    duration: "2:54",
   },
   {
     title: "She Wolf",
@@ -2245,6 +2452,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/43a384c6842dfeeecb60e0af890490130a091b41?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=booKP974B0k",
+    duration: "3:51",
   },
   {
     title: "Chantaje (feat. Maluma)",
@@ -2256,6 +2464,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/1b18b5e5619d1db1737af48066862554546b6ad0?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=6Mgqbai3fKo",
+    duration: "3:20",
   },
   {
     title: "Antologia",
@@ -2267,6 +2476,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/e9f218aacf324d3b5626bae3b1e2d8e5cbf2c7b7?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=onlZQ0jKUZc",
+    duration: "4:02",
   },
   {
     title: "Try Everything",
@@ -2277,6 +2487,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=c6rP-YP4c5I",
+    duration: "3:23",
   },
   {
     title: "Inevitable",
@@ -2288,6 +2499,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/c577ddfbb418097b09625806ed51f2cc1a4bb5d2?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=nYbcVK2jjXc",
+    duration: "3:21",
   },
   {
     title: "(Entre Par\u00e9ntesis)",
@@ -2299,6 +2511,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/72437a8e9219304a222a0dbd1abea76da8ecba64?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=PEgoHBnZXzE",
+    duration: "2:50",
   },
   {
     title: "La Bicicleta",
@@ -2310,6 +2523,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/6c11e10bf650a09d004aa64ce8b65be3b3c9e901?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=-UV0QGLmYys",
+    duration: "3:58",
   },
   {
     title: "La Tortura (feat. Alejandro Sanz)",
@@ -2321,6 +2535,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/5a18716291099508a1ef4a092b80d511914f2009?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Dsp_8Lm1eSk",
+    duration: "3:45",
   },
   {
     title: "Beautiful Liar",
@@ -2332,6 +2547,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/703336bdbcf410c0f4f687b11273f4f7106905a4?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=QrOe2h9RtWI",
+    duration: "3:29",
   },
   {
     title: "Can't Remember to Forget You (feat. Rihanna)",
@@ -2343,6 +2559,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/0537ddabd29926b78d4773f32d31db65ee415020?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=o3mP3mJDL2k",
+    duration: "3:26",
   },
   {
     title: "Punter\u00eda",
@@ -2354,6 +2571,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/177c6049d38d8c8074696851b27d8be88a019394?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=SHnDwYgGKkY",
+    duration: "3:08",
   },
   {
     title: 'Try Everything - From "Zootropolis"',
@@ -2364,6 +2582,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=230sI_WxO7Y",
+    duration: "3:17",
   },
   {
     title: "Te Felicito",
@@ -2375,6 +2594,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/6b4b2be03b14bf758835c8f28f35834da35cc1c3?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=4I25nV9hXGA",
+    duration: "3:16",
   },
   {
     title:
@@ -2387,6 +2607,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/cc2a3f1a4fdc93976183754b371a29174f5adf29?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=pRpeEdMmmQ0",
+    duration: "3:31",
   },
   {
     title: "El Jefe",
@@ -2398,6 +2619,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/25ce803e5e38643cec3dc035aae3e7f03c7b4655?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=7oTlx5YC2P4",
+    duration: "3:07",
   },
   {
     title: "Monoton\u00eda",
@@ -2409,6 +2631,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/f482b8d4735ff006289dac829bdfb9cdeb707624?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=j5y6xLpRwx4",
+    duration: "3:05",
   },
   {
     title:
@@ -2426,6 +2649,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/4c8ac62aafea585d39f55180d0ad9862ea0f4c23?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=a1iXlyRa47A",
+    duration: "4:25",
   },
   {
     title: "Nothing Else Matters",
@@ -2444,6 +2668,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/bcf490a6ab50d1ac61ebaa5b349dd97e51fe413c?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=DqoQY9bobow",
+    duration: "6:34",
   },
   {
     title: "Don't Let the Sun Go Down on Me",
@@ -2455,6 +2680,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/e64bb3e1d9ab34e4d791dd5131c2a203eb05b674?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=RsKqMNDoR4o",
+    duration: "5:47",
   },
   {
     title: "Save Rock And Roll",
@@ -2465,6 +2691,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=9cnBxSB1jUE",
+    duration: "6:21",
   },
   {
     title: "Sine From Above (with Elton John)",
@@ -2475,6 +2702,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=O9GUJ7Wqy3A",
+    duration: "4:06",
   },
   {
     title: "Merry Christmas",
@@ -2486,6 +2714,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/f6001be7e7f10a802e17f684315e1c337b8347fd?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Q_yuO8UNGmY",
+    duration: "3:30",
   },
   {
     title: "I'm Not Gonna Miss You (with Elton John)",
@@ -2496,6 +2725,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Jn1qkf8vVQU",
+    duration: "3:05",
   },
   {
     title: "Crocodile Rock",
@@ -2506,6 +2736,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=C8qfImA63Cc",
+    duration: "3:27",
   },
   {
     title: "Perfect Day",
@@ -2516,6 +2747,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=JYmBO4HpA0s",
+    duration: "3:47",
   },
   {
     title: "Deep Inside",
@@ -2526,6 +2758,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Mrk4uJHW-Ec",
+    duration: "4:00",
   },
   {
     title: "Caroline (feat. Elton John)",
@@ -2536,7 +2769,8 @@ const SONGS = [
     preview:
       "https://p.scdn.co/mp3-preview/bc72a2f3d7587457edf1b1e605c00dfacef25036?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
-    youtube_link: "https://www.youtube.com/watch?v=JreQ1hSQXHk",
+    youtube_link: "https://www.youtube.com/watch?v=fttL8X9-vx0",
+    duration: "3:36",
   },
   {
     title:
@@ -2549,6 +2783,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/4c292d4745c550e0342cad45bf798e8cf2cf3e12?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=4mMMq8CnKwI",
+    duration: "5:52",
   },
   {
     title:
@@ -2566,6 +2801,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=llCckgienuU",
+    duration: "4:11",
   },
   {
     title: "Chosen Family (with Elton John)",
@@ -2577,6 +2813,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/0792c88c1f276fc2a333aaee61f1105298d33222?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=GTDRg5G77x4",
+    duration: "4:46",
   },
   {
     title: "That's What Friends Are For",
@@ -2592,6 +2829,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=HyTpu6BmE88",
+    duration: "4:31",
   },
   {
     title: "Crazy In Love (feat. Jay-Z)",
@@ -2603,6 +2841,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/023ccc9c406cafc5a3e3b4dd524b9092b45dacbf?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=ViwtNLUqkMY",
+    duration: "3:57",
   },
   {
     title: "TEXAS HOLD 'EM",
@@ -2614,6 +2853,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/0a69f787920bde0a0e1d17af762695ad3cc9d99b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=238Z4YaAr1g",
+    duration: "3:58",
   },
   {
     title: "Telephone",
@@ -2624,6 +2864,7 @@ const SONGS = [
     preview: null,
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=EVBsypHzF3U",
+    duration: "9:31",
   },
   {
     title: "BODYGUARD",
@@ -2635,6 +2876,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/1da0bd44d3c5dadcc394efad4b2eee23bff8126e?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=7HV_Rv858YM",
+    duration: "4:11",
   },
   {
     title: "CUFF IT",
@@ -2646,6 +2888,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/1799de9ff42644af9773b6353358e54615696f19?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=yrtWLyp5gLI",
+    duration: "3:53",
   },
   {
     title: "LEVII'S JEANS",
@@ -2657,6 +2900,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/3ee1c747118bde8fd7471af338586a5c77ad6c16?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=esnhbIbQHgM",
+    duration: "4:29",
   },
   {
     title: "II MOST WANTED",
@@ -2668,6 +2912,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/9f68b9be0f19f9bca56d05b8111a3112f2c43cdd?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=SyXfJi2KZ-A",
+    duration: "3:38",
   },
   {
     title: "Love On Top",
@@ -2679,6 +2924,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b33aaf728bc4a9357d00b4460ba81fde8a1407b2?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Ob7vObnFUJc",
+    duration: "3:17",
   },
   {
     title: "Drunk in Love (feat. Jay-Z)",
@@ -2690,6 +2936,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/f8dd787b30a5c412e67f9bd8abde1033f8b784b6?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=p1JPKLa-Ofc",
+    duration: "6:22",
   },
   {
     title: "YA YA",
@@ -2701,6 +2948,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/25e992dea95d98cbfe3d27799705dd324a392575?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=Ma8X2iMdv8U",
+    duration: "4:46",
   },
   {
     title: "Halo",
@@ -2712,6 +2960,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/6fd951cef00937cd2b7165a14f10d5e69239e5f7?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=bnVUHWCynig",
+    duration: "3:45",
   },
   {
     title: "Haunted",
@@ -2723,6 +2972,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/20a4362340c923cacdbf95ec8275651e77e34fd3?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=K4r4lysSgLE",
+    duration: "5:22",
   },
   {
     title: "SWEET \u2605 HONEY \u2605 BUCKIIN'",
@@ -2734,6 +2984,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/24201038f84362ecafd1be4bbb9c4de53581cf9f?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=9DIBZX_v0-U",
+    duration: "5:09",
   },
   {
     title: "SPAGHETTII",
@@ -2745,6 +2996,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/269881d309fe75ac5d67dec06062d61d6e3dec9b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=MxNMvZ5BhSU",
+    duration: "2:44",
   },
   {
     title: "Partition",
@@ -2756,6 +3008,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/c0ad9df628580f6f426a2a81b45227c1dbe800bb?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=pZ12_E5R3qc",
+    duration: "3:50",
   },
   {
     title: "JOLENE",
@@ -2767,6 +3020,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/67b8b2bcb39dbacf989dd2571b83a3c8d4d2228c?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=x9XHMK3nWr4",
+    duration: "3:19",
   },
   {
     title: "Baby Boy (feat. Sean Paul)",
@@ -2778,6 +3032,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/37ba481ac4415f51185a2a27520857d4e346bc05?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=8ucz_pm3LX8",
+    duration: "4:10",
   },
   {
     title: "Formation",
@@ -2789,6 +3044,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/83a981212e667395f5a7c9fbf3799557396e6ca2?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop",
     youtube_link: "https://www.youtube.com/watch?v=WDZJPJV__bQ",
+    duration: "4:48",
   },
   {
     title: "Don\u2019t Let The Sun Go Down On Me",
@@ -2799,6 +3055,7 @@ const SONGS = [
     preview: null,
     genre: "Country/Pop",
     youtube_link: "https://www.youtube.com/watch?v=rfCxaV5g4V4",
+    duration: "5:48",
   },
   {
     title: "I'm Not Gonna Miss You",
@@ -2809,6 +3066,7 @@ const SONGS = [
     preview: null,
     genre: "Country/Pop",
     youtube_link: "https://www.youtube.com/watch?v=U8TsAh-zYFI",
+    duration: "2:57",
   },
   {
     title: "You're Still The One - Live From Miami/1999",
@@ -2819,6 +3077,7 @@ const SONGS = [
     preview: null,
     genre: "Country/Pop",
     youtube_link: "https://www.youtube.com/watch?v=K8k_OlRFYbQ",
+    duration: "6:37",
   },
   {
     title: "Why You Always Hatin?",
@@ -2829,6 +3088,7 @@ const SONGS = [
     preview: null,
     genre: "Hip Hop/Rap",
     youtube_link: "https://www.youtube.com/watch?v=HkVS79y4p4Y",
+    duration: "4:14",
   },
   {
     title: "P power (feat. Drake)",
@@ -2840,6 +3100,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/8d1b59e1a9f98677adccd557f7389e87d6aabd4c?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Hip Hop/Rap",
     youtube_link: "https://www.youtube.com/watch?v=taIPXM8ICwo",
+    duration: "3:14",
   },
   {
     title: "Oh U Went (feat. Drake)",
@@ -2851,6 +3112,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/e0bc5b4bd0c08137d5a0179a355baf99804e0e91?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Hip Hop/Rap",
     youtube_link: "https://www.youtube.com/watch?v=tGTKY1dpo_E",
+    duration: "3:07",
   },
   {
     title: "Churchill Downs",
@@ -2862,6 +3124,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/e5292dde07a8c09e6a55673a9411d2a1ccf7249d?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Hip Hop/Rap",
     youtube_link: "https://www.youtube.com/watch?v=GGOyFnrZRt0",
+    duration: "5:11",
   },
   {
     title: "Power",
@@ -2872,6 +3135,7 @@ const SONGS = [
     preview: null,
     genre: "Hip Hop/Rap",
     youtube_link: "https://www.youtube.com/watch?v=c3W3QDSET1I",
+    duration: "5:28",
   },
   {
     title: "The Alcott (feat. Taylor Swift)",
@@ -2883,6 +3147,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/a0ccf80738592298db66ecb376d482930b58e5c4?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Folk",
     youtube_link: "https://www.youtube.com/watch?v=wCqoNu36y2o",
+    duration: "4:28",
   },
   {
     title: "Let Her Go (feat. Ed Sheeran) - Anniversary Edition",
@@ -2894,6 +3159,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/7b0b05ee33a6ae3fee1644716f1b01d3a9ae9fab?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Folk",
     youtube_link: "https://www.youtube.com/watch?v=HTcL9WkB_wg",
+    duration: "4:46",
   },
   {
     title: "Let Her Go (feat. Ed Sheeran) - Anniversary Edition Acoustic",
@@ -2905,6 +3171,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/4866a5b3db8c6ea6161f24cef6063e549cd6e4e5?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Folk",
     youtube_link: "https://www.youtube.com/watch?v=HTcL9WkB_wg",
+    duration: "4:46",
   },
   {
     title: "Un-thinkable (I'm Ready) (feat. Drake) - Remix",
@@ -2916,6 +3183,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/2e3aa6a72a6fa32a29ad0ab582fced922258497a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=AEZLbq5o4AE",
+    duration: "4:38",
   },
   {
     title: "Mr. Wrong",
@@ -2926,6 +3194,7 @@ const SONGS = [
     preview: null,
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=eS-y2R9cmnQ",
+    duration: "4:08",
   },
   {
     title: "The One",
@@ -2936,6 +3205,7 @@ const SONGS = [
     preview: null,
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=mPGoO1GewtM",
+    duration: "3:23",
   },
   {
     title: "The One - Main",
@@ -2946,6 +3216,7 @@ const SONGS = [
     preview: null,
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=mPGoO1GewtM",
+    duration: "3:23",
   },
   {
     title: "Or Nah - Remix",
@@ -2957,6 +3228,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/394affa19a4fbb94c369957f1f88d1cc270de809?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=TUj0otkJEBo",
+    duration: "4:25",
   },
   {
     title: "Or Nah (Remix) [feat. The Weekend, Wiz Khalifa & DJ Mustard]",
@@ -2968,6 +3240,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/394affa19a4fbb94c369957f1f88d1cc270de809?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=TUj0otkJEBo",
+    duration: "4:25",
   },
   {
     title: "LA (feat. Kendrick Lamar, Brandy & James Fauntleroy)",
@@ -2979,6 +3252,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/a1f11d7f312c55c5c76f34b65e3e1af612b7d085?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=fHNcZp5tusY",
+    duration: "4:30",
   },
   {
     title: "Give It 2 U",
@@ -2989,6 +3263,7 @@ const SONGS = [
     preview: null,
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=TH8m6J3gPH0",
+    duration: "4:31",
   },
   {
     title: "Crime",
@@ -2999,6 +3274,7 @@ const SONGS = [
     preview: null,
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=-BiGUKDdaUM",
+    duration: "3:38",
   },
   {
     title: "Give It 2 U - Remix",
@@ -3009,6 +3285,7 @@ const SONGS = [
     preview: null,
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=bo_boB_VgVA",
+    duration: "4:18",
   },
   {
     title: "Crime - Vice Remix",
@@ -3019,6 +3296,7 @@ const SONGS = [
     preview: null,
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=CBL0UK5DT8o",
+    duration: "3:54",
   },
   {
     title: "Give It 2 U - Norman Doray & Rob Adans Remix (Radio Edit)",
@@ -3029,6 +3307,7 @@ const SONGS = [
     preview: null,
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=q1n9G9OcDO8",
+    duration: "3:55",
   },
   {
     title: "Can I Get It",
@@ -3040,6 +3319,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/117b02d5d1194420959da4ca930d7982962e3831?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=w6VpznmUoaM",
+    duration: "3:32",
   },
   {
     title: "Spicy (feat. J Balvin, YG, Tyga & Post Malone) - Remix",
@@ -3051,6 +3331,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/483a5d5635f9bce942a9b539c2090ddf982a4275?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=E_95Zi9BZVw",
+    duration: "3:42",
   },
   {
     title:
@@ -3068,6 +3349,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/1fe1ed057855c56acaae2872f4f04917123e5d0a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=HyTpu6BmE88",
+    duration: "4:31",
   },
   {
     title: "Put It In a Love Song (feat. Beyonc\u00e9 Knowles)",
@@ -3079,6 +3361,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/15d0fbf446ce09515dadba0b1bac99f48afed693?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=8afv17Ff0_8",
+    duration: "3:16",
   },
   {
     title: "Love A Woman",
@@ -3089,6 +3372,7 @@ const SONGS = [
     preview: null,
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=c_kzy-hShso",
+    duration: "4:32",
   },
   {
     title: "Crazy Feelings",
@@ -3100,6 +3384,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/480a35107bbaa0e0ac3289be59782eca8b1ae9eb?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=4JMVTEbAbc8",
+    duration: "4:35",
   },
   {
     title: "Nothing out There for Me (feat. Beyonc\u00e9 Knowles)",
@@ -3111,6 +3396,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/e688c5cf070c04e64c53d1705aebe25d837c88a9?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Pop/Soul",
     youtube_link: "https://www.youtube.com/watch?v=mvDY5ti98NA",
+    duration: "3:06",
   },
   {
     title: "Blessings",
@@ -3121,6 +3407,7 @@ const SONGS = [
     preview: null,
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=M6t47RI4bns",
+    duration: "5:12",
   },
   {
     title: "The Zone",
@@ -3131,6 +3418,7 @@ const SONGS = [
     preview: null,
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=tfrWuiQ4QNc",
+    duration: "5:16",
   },
   {
     title: "I Invented Sex (feat. Drake)",
@@ -3142,6 +3430,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/fef5576f494311ed93dcd42f20567aa130b61fe5?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=qvvHJnYt5m0",
+    duration: "4:08",
   },
   {
     title: "Mine (feat. Drake)",
@@ -3153,6 +3442,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/2e9dfadcef5c4439f1c4ce374261e9d4a230853a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=IDvu1ehPq0g",
+    duration: "5:00",
   },
   {
     title: "Fall For Your Type (feat. Drake)",
@@ -3164,6 +3454,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/613b1d96ac54cb6410ea12546c017fac91404a70?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=m9fUYcxP1UA",
+    duration: "4:51",
   },
   {
     title: "Dark Times",
@@ -3174,6 +3465,7 @@ const SONGS = [
     preview: null,
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=pkAAIGFNYw4",
+    duration: "4:21",
   },
   {
     title: "NILE",
@@ -3185,6 +3477,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/406ac96ede6f79e9984b6162ad82eac06d8b82d9?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=qX1vVxCuYH8",
+    duration: "1:49",
   },
   {
     title: "Sidewalks (feat. Kendrick Lamar)",
@@ -3195,6 +3488,7 @@ const SONGS = [
     preview: null,
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=sK-T-cmznY8",
+    duration: "3:52",
   },
   {
     title: "That\u2019s Me Right There",
@@ -3205,6 +3499,7 @@ const SONGS = [
     preview: null,
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=8tEyAAniu5U",
+    duration: "4:56",
   },
   {
     title: "Reminder",
@@ -3215,6 +3510,7 @@ const SONGS = [
     preview: null,
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=JZjAg6fK-BQ",
+    duration: "3:51",
   },
   {
     title: "Wave Your Flag",
@@ -3225,6 +3521,7 @@ const SONGS = [
     preview: null,
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=vy2OM3e5tUE",
+    duration: "3:40",
   },
   {
     title: "Mi Gente - Homecoming Live",
@@ -3236,6 +3533,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/1f6b3f5b340ce18e4fc5eddafc39aac260e9504f?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=m_XBum42iOw",
+    duration: "2:57",
   },
   {
     title:
@@ -3249,6 +3547,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/dcb882cb6ccaf8286a6a5d9a4b7ed42c5f4ac893?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=hgnoQsuhWKE",
+    duration: "4:12",
   },
   {
     title: "Say My Name (feat. Bebe Rexha & J Balvin) - Lucas & Steve Remix",
@@ -3260,6 +3559,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/c926c5fa7a252d9ce0e09507b45d7246d03a2d01?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=KSiX5-_5OaM",
+    duration: "3:10",
   },
   {
     title: "Colombia Heights (Te Llamo) (feat. J Balvin)",
@@ -3271,6 +3571,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/309c92e1622a5dbed2c046200b3ff6d49cdc1616?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=aEGEoDM7Fck",
+    duration: "3:54",
   },
   {
     title: "Pirate",
@@ -3282,6 +3583,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b8d8a3d67c2fc3e2c2fbd6db53c5634aa46071d5?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=lJOvKdlShl0",
+    duration: "2:44",
   },
   {
     title: "Say My Name (feat. Bebe Rexha & J Balvin) - Corey James Remix",
@@ -3293,6 +3595,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b44777bfbf5d7a653d8d42c736c7e9a30e4462dd?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=vIjdyLRtaKg",
+    duration: "3:06",
   },
   {
     title: "Say My Name - Sidney Samson Remix",
@@ -3304,6 +3607,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/85c81e41318af7834ade80eb374c9f0b0e48d4e1?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=7bQutzmqgfY",
+    duration: "3:13",
   },
   {
     title:
@@ -3316,6 +3620,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/9e24a683acf0c22a0bba60fbcb7bb7a4da9815d6?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=smtxFfGlbaY",
+    duration: "4:31",
   },
   {
     title: "Perdido",
@@ -3326,6 +3631,7 @@ const SONGS = [
     preview: null,
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=eFBloH3vgUs",
+    duration: "2:47",
   },
   {
     title: "Beautiful Liar - Remix",
@@ -3337,6 +3643,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/84cad2aeb1c190dcd405c779c420b5112895aa9f?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=cb_Ibodq9fQ",
+    duration: "3:01",
   },
   {
     title: "Beautiful Liar - Freemasons Remix Edit",
@@ -3348,6 +3655,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/30c42f9f96130a822c129fe3c329876cc53a3a97?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=wu5D4dyCVGA",
+    duration: "3:30",
   },
   {
     title: "Beautiful Liar - Freemasons Club Remix",
@@ -3359,6 +3667,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/c5cedac0e9efb181b6b1ce46a38b6aae3ba8092e?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=-bM8HDYcxtY",
+    duration: "7:32",
   },
   {
     title: "Menaklukkan Dunia",
@@ -3370,6 +3679,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/8c4d21225568076effad56e6cdcdb38323ac3290?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=wfgJMYsRz_I",
+    duration: "3:30",
   },
   {
     title: "TYRANT",
@@ -3381,6 +3691,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/32c70c11c2d3286ae0b8d8d339b9ea0d9ff12f78?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "R&B/Pop",
     youtube_link: "https://www.youtube.com/watch?v=bgtuQptR1U4",
+    duration: "4:21",
   },
   {
     title: "Churchill Downs (feat. Drake)",
@@ -3392,6 +3703,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/e5292dde07a8c09e6a55673a9411d2a1ccf7249d?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "K-Pop",
     youtube_link: "https://www.youtube.com/watch?v=GGOyFnrZRt0",
+    duration: "5:11",
   },
   {
     title: "Textbook Stuff (feat. Kendrick Lamar)",
@@ -3403,6 +3715,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b02e0c0716d30d24ed0daf32c531797b66842f02?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "K-Pop",
     youtube_link: "https://www.youtube.com/watch?v=dekYReelicc",
+    duration: "4:08",
   },
   {
     title: "Black Swan",
@@ -3414,6 +3727,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/eb4a5251d0154164a42c4f5617bdabbdb20b10ba?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "K-Pop",
     youtube_link: "https://www.youtube.com/watch?v=0lapF4DQPKQ",
+    duration: "3:38",
   },
   {
     title: "IDOL",
@@ -3425,6 +3739,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/93b4dfb9190f85c0ee0cd927794f5d0b7911017d?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "K-Pop",
     youtube_link: "https://www.youtube.com/watch?v=pBuZEGYXA6E",
+    duration: "3:52",
   },
   {
     title: "ON",
@@ -3436,6 +3751,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/398d6c00c422b1d401c8c3a4239d2c03f5a824c2?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "K-Pop",
     youtube_link: "https://www.youtube.com/watch?v=gwMa6gpoE9I",
+    duration: "4:59",
   },
   {
     title: "MIC Drop (Steve Aoki Remix) (Full Length Edition)",
@@ -3447,6 +3763,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/420a4783eef9251c66f5fe285089e48fdd5bcbe8?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "K-Pop",
     youtube_link: "https://www.youtube.com/watch?v=zz1MkneRm6A",
+    duration: "5:08",
   },
   {
     title: "Rock the Bells (feat. Kendrick Lamar)",
@@ -3458,6 +3775,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/32582b1cd8c6d19e6fcf65d73f852af39be7130b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Alternative Rock",
     youtube_link: "https://www.youtube.com/watch?v=HyjXE_1HFaM",
+    duration: "2:34",
   },
   {
     title: "Sigue",
@@ -3468,6 +3786,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=8pIzxS_G8-g",
+    duration: "2:46",
   },
   {
     title: "Bobo",
@@ -3478,6 +3797,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=0GvLP2C2w9U",
+    duration: "5:05",
   },
   {
     title: "LA CANCI\u00d3N",
@@ -3487,7 +3807,8 @@ const SONGS = [
     spotify: "https://api.spotify.com/v1/tracks/4mw9ytp48GVL3vOWY8GYk1",
     preview: null,
     genre: "Reggaeton/Latin Pop",
-    youtube_link: "https://www.youtube.com/watch?v=osTJc5e1Cyo",
+    youtube_link: "https://www.youtube.com/watch?v=LxOTsiV4tkQ",
+    duration: "4:11",
   },
   {
     title: "Azul",
@@ -3498,6 +3819,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=gLPh8J3cbhg",
+    duration: "3:32",
   },
   {
     title: 'Agua - Music From "Sponge On The Run" Movie',
@@ -3508,6 +3830,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=QLz9VaksClg",
+    duration: "2:57",
   },
   {
     title: "Morado",
@@ -3518,6 +3841,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=d5ZVaWxkAaQ",
+    duration: "3:45",
   },
   {
     title: "UN DIA (ONE DAY)",
@@ -3528,6 +3852,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=BjhW3vBA1QU",
+    duration: "4:10",
   },
   {
     title: "Ginza",
@@ -3538,6 +3863,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=zZjSX01P5dE",
+    duration: "3:49",
   },
   {
     title: "Rosa",
@@ -3548,6 +3874,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=poEvIHHMW7c",
+    duration: "3:50",
   },
   {
     title: "Qu\u00e9 M\u00e1s Pues?",
@@ -3558,6 +3885,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=zisuhZqTeH4",
+    duration: "3:37",
   },
   {
     title: "UN PESO",
@@ -3568,6 +3896,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=7o2_OnTFmmA",
+    duration: "4:39",
   },
   {
     title: "Amarillo",
@@ -3578,6 +3907,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=KHAgoT4FZbc",
+    duration: "2:46",
   },
   {
     title: "TQG",
@@ -3588,6 +3918,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton/Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=jZGpkLElSu8",
+    duration: "3:37",
   },
   {
     title: "MIA",
@@ -3599,6 +3930,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/16d353203889bd30097912a96e2788a097e5e328?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=OSUxrSe5GbI",
+    duration: "3:31",
   },
   {
     title: "MIA (feat. Drake)",
@@ -3610,6 +3942,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/a8eee26c6dc69a5f1d0e1bb50d3545a48d142b39?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=OSUxrSe5GbI",
+    duration: "3:31",
   },
   {
     title: "Haw\u00e1i - Remix",
@@ -3621,6 +3954,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/34baf30abf14111ead12dd1bea521f13bc8b9d1a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=91vECNhvmMY",
+    duration: "3:44",
   },
   {
     title: "Bora Bora",
@@ -3632,6 +3966,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/0d81297d6a916ef39d14d6fc4fddd041987a1c13?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=By9EIuW0kJ4",
+    duration: "2:52",
   },
   {
     title: "Pa' Lante",
@@ -3642,6 +3977,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=HGaiXKLQA48",
+    duration: "2:58",
   },
   {
     title: "Yo No Te Olvido",
@@ -3652,6 +3988,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=mqQk567LI_s",
+    duration: "2:51",
   },
   {
     title: "Yo Te Quiero - Remix",
@@ -3662,6 +3999,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=DPpuXdD2394",
+    duration: "3:20",
   },
   {
     title: "D\u00f3nde Est\u00e1s (feat. Luis Fonsi)",
@@ -3673,6 +4011,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/df7ea2137b89cdab8d3c23380eee1086fa99891a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=pd40ph4B9hQ",
+    duration: "3:26",
   },
   {
     title: "Despacito (Live)",
@@ -3684,6 +4023,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/ea36826a57278d33e956f75aeb4e5d3c36d2489a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=hXAGmW9vrsI",
+    duration: "3:36",
   },
   {
     title: "Por Si Vuelves",
@@ -3695,6 +4035,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/779b69479bf27cf08ea4156be57a35e1c934b302?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=4s0GXZEVW30",
+    duration: "4:03",
   },
   {
     title: "Doble Play",
@@ -3705,6 +4046,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=2n6Yo5E3eRA",
+    duration: "3:25",
   },
   {
     title: "No Me Conoce - Remix",
@@ -3715,6 +4057,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=w2C6RhQBYlg",
+    duration: "5:06",
   },
   {
     title: "QUE PRETENDES",
@@ -3725,6 +4068,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=kPc3Pe42bGI",
+    duration: "3:45",
   },
   {
     title: "X",
@@ -3736,6 +4080,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/6745d4cf983eef46735f94db5a3336010546254b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=_I_D_8Z4sJE",
+    duration: "3:12",
   },
   {
     title: "Mi Gente",
@@ -3746,6 +4091,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=wnJ6LuUFpMo",
+    duration: "3:06",
   },
   {
     title: "Ay Vamos",
@@ -3756,6 +4102,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=TapXs54Ah3E",
+    duration: "4:27",
   },
   {
     title: "Polvo de tu Vida",
@@ -3766,6 +4113,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=eZDCC_zvSEs",
+    duration: "2:57",
   },
   {
     title: "Bonita",
@@ -3775,7 +4123,8 @@ const SONGS = [
     spotify: "https://api.spotify.com/v1/tracks/0atfY1ew83Ql9nNnJiD2t5",
     preview: null,
     genre: "Reggaeton",
-    youtube_link: "https://www.youtube.com/watch?v=q3Uq1xiRdBU",
+    youtube_link: "https://www.youtube.com/watch?v=eAqeed4INns",
+    duration: "6:06",
   },
   {
     title: "Otra vez (feat. J Balvin)",
@@ -3787,6 +4136,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/59b4a74a5a1c46c14ca7e63ab2b00f39108c8696?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=6R5i6wQCOCQ",
+    duration: "3:33",
   },
   {
     title: "China",
@@ -3798,6 +4148,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/a1d1a41e97fbfa5ca69605d4bd8260ab493aee7d?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=0VR3dfZf9Yg",
+    duration: "5:02",
   },
   {
     title: "Si Tu Novio Te Deja Sola",
@@ -3808,6 +4159,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=Km4BayZykwE",
+    duration: "4:06",
   },
   {
     title: "Rojo",
@@ -3818,6 +4170,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=_tG70FWd1Ds",
+    duration: "4:46",
   },
   {
     title: "Gaga",
@@ -3828,6 +4181,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=diIuJI3ddm4",
+    duration: "3:09",
   },
   {
     title: "Ahora Dice",
@@ -3838,6 +4192,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=c73Cu3TQnlg",
+    duration: "4:41",
   },
   {
     title: "Wherever I May Roam",
@@ -3849,6 +4204,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/bb0c84577c4406db0df457d67e302dcd674b1681?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=rTU8wYALhnI",
+    duration: "2:44",
   },
   {
     title: "Tutu - Remix",
@@ -3860,6 +4216,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/af77851370a512d58a2e1cba39ddfa18f23d2d9b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=Kp_wKopYVsk",
+    duration: "2:45",
   },
   {
     title: "Mi Gente (feat. Beyonc\u00e9)",
@@ -3870,6 +4227,7 @@ const SONGS = [
     preview: null,
     genre: "Reggaeton",
     youtube_link: "https://www.youtube.com/watch?v=APHgDFRpCi0",
+    duration: "3:35",
   },
   {
     title: "Honey in the Rock",
@@ -3881,6 +4239,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/0354c2e49d9dd16cf5a05a600e2cdd78d5c5717d?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Indie Rock",
     youtube_link: "https://www.youtube.com/watch?v=lQCGHJ0XuUM",
+    duration: "3:55",
   },
   {
     title: "Why'd You Only Call Me When You're High - String Quartet Version",
@@ -3892,6 +4251,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/612cd98ad4fdc5fa011c11463b1eb33e7f6bb405?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Indie Rock",
     youtube_link: "https://www.youtube.com/watch?v=8jHymPXo1mE",
+    duration: "2:42",
   },
   {
     title: "Feeling Good",
@@ -3902,6 +4262,7 @@ const SONGS = [
     preview: null,
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=oHRNrgDIJfo",
+    duration: "3:03",
   },
   {
     title: "I Put A Spell On You",
@@ -3912,6 +4273,7 @@ const SONGS = [
     preview: null,
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=WCjzNfJLHa0",
+    duration: "2:34",
   },
   {
     title: "My Baby Just Cares for Me (2013 - Remaster)",
@@ -3923,6 +4285,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/20f474f1742d04f1ed09a73e0d90fbade0c265d7?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=dynCPhxoMgY",
+    duration: "3:40",
   },
   {
     title: "Don't Let Me Be Misunderstood",
@@ -3933,6 +4296,7 @@ const SONGS = [
     preview: null,
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=RtgJjYvv0dU",
+    duration: "2:46",
   },
   {
     title: "Feeling Good - Austin Millz Remix",
@@ -3943,6 +4307,7 @@ const SONGS = [
     preview: null,
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=TRouyjyviDc",
+    duration: "2:32",
   },
   {
     title: "Sinnerman",
@@ -3952,7 +4317,8 @@ const SONGS = [
     spotify: "https://api.spotify.com/v1/tracks/5xRP5iyVdGglqlY4Vcjhkx",
     preview: null,
     genre: "Jazz/Soul",
-    youtube_link: "https://www.youtube.com/watch?v=QH3Fx41Jpl4",
+    youtube_link: "https://www.youtube.com/watch?v=4IACZdwwJI4",
+    duration: "10:20",
   },
   {
     title: "Baltimore",
@@ -3964,6 +4330,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/fa8474c1fe46461fc542a872b3e1875f438baa2c?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=ztCgNQg9FCQ",
+    duration: "4:43",
   },
   {
     title: "I Wish I Knew How It Would Feel to Be Free",
@@ -3975,6 +4342,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b6cb6b1dfca83eee8f7e852143b8fe6084027164?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=inNBpizpZkE",
+    duration: "3:11",
   },
   {
     title: "I Want a Little Sugar In My Bowl",
@@ -3986,6 +4354,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/bc4ff36f08110d89f9be739e75e0bb2c645ec195?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=Sg384whVQzc",
+    duration: "2:35",
   },
   {
     title: "Love Me Or Leave Me",
@@ -3996,6 +4365,7 @@ const SONGS = [
     preview: null,
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=dAvQ-ltLGdk",
+    duration: "4:07",
   },
   {
     title: "Here Comes the Sun",
@@ -4007,6 +4377,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/60a5ee8085ff77f6ff097e822987104b3bab4a6a?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=T9gMsdNQSUM",
+    duration: "3:36",
   },
   {
     title: "I Shall Be Released",
@@ -4018,6 +4389,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/877cd03477979fcc2f77e9c8a3b668f6dda5b156?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=YV8KskUf3lQ",
+    duration: "3:55",
   },
   {
     title: "To Love Somebody",
@@ -4029,6 +4401,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/8eba445cbc8615385cd4bcbd9616b693352f0440?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=bDK0YEQAZ_g",
+    duration: "2:43",
   },
   {
     title: "Strange Fruit",
@@ -4039,6 +4412,7 @@ const SONGS = [
     preview: null,
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=BnuEMdUUrZQ",
+    duration: "3:33",
   },
   {
     title: "Lilac Wine",
@@ -4049,6 +4423,7 @@ const SONGS = [
     preview: null,
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=o7TuGz5H7kE",
+    duration: "4:16",
   },
   {
     title: "Take Care Of Business",
@@ -4059,6 +4434,7 @@ const SONGS = [
     preview: null,
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=IwKrTBcURU8",
+    duration: "2:08",
   },
   {
     title: "Ne Me Quitte Pas",
@@ -4069,6 +4445,7 @@ const SONGS = [
     preview: null,
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=0Q7w7gk1JhQ",
+    duration: "3:36",
   },
   {
     title: "Do I Move You?",
@@ -4080,6 +4457,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/0be2c6ab0663b85d2ad69a340366f02e20734696?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=31bD7QCiV1Q",
+    duration: "2:49",
   },
   {
     title: "Nobody Knows You When You're Down And Out",
@@ -4090,6 +4468,7 @@ const SONGS = [
     preview: null,
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=Izh-mmqa108",
+    duration: "2:44",
   },
   {
     title: "Sorry Seems To Be The Hardest Word",
@@ -4101,6 +4480,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/3e0fb2eb2c4997ce0addd79ea1fc34b46ef35989?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Jazz/Soul",
     youtube_link: "https://www.youtube.com/watch?v=U-Qcll0gTDE",
+    duration: "4:00",
   },
   {
     title: "Off Poppin Gone Remix (feat. Drakeo the Ruler, Fenix Flexin)",
@@ -4112,6 +4492,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/1e0a8c324e679ea6712a5a3310ae1f472ad684c3?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=AZC2hR_6JlY",
+    duration: "4:11",
   },
   {
     title: "Noche de Novela",
@@ -4123,6 +4504,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/398bbc166b9148895655717752740a256ceb73ac?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=SuU0999Seaw",
+    duration: "3:35",
   },
   {
     title: "Noche de novela",
@@ -4134,6 +4516,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/398bbc166b9148895655717752740a256ceb73ac?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=SuU0999Seaw",
+    duration: "3:35",
   },
   {
     title: "No Me Doy Por Vencido - Banda Version",
@@ -4144,6 +4527,7 @@ const SONGS = [
     preview: null,
     genre: "Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=R_iZwrOpqnI",
+    duration: "3:52",
   },
   {
     title: "Que Quieres De Mi",
@@ -4154,6 +4538,7 @@ const SONGS = [
     preview: null,
     genre: "Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=1X_yQ8m0Q2o",
+    duration: "4:58",
   },
   {
     title: "Ma\u00f1ana es Too Late",
@@ -4165,6 +4550,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/24832cc1099d34144841b953be82f578a3d29228?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=QsuTjx_yosA",
+    duration: "3:32",
   },
   {
     title: "La Bicicleta - Versi\u00f3n Pop",
@@ -4176,6 +4562,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/24c4a2cf821f5b8550b176ecbcc05540ef318788?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=JQwbJoy3Dd4",
+    duration: "3:56",
   },
   {
     title: "Ciega, Sordomuda",
@@ -4187,6 +4574,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/611a956236faae89cc1507c7e835507797a9d2a7?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=B3gbisdtJnA",
+    duration: "4:27",
   },
   {
     title: "Mi verdad (feat. Shakira)",
@@ -4198,6 +4586,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/c6d9bb00958af8656eff1be206497ce175078baa?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Latin Pop",
     youtube_link: "https://www.youtube.com/watch?v=ZuupMrAhGXw",
+    duration: "4:34",
   },
   {
     title: "Shake It Out - The Weeknd Remix",
@@ -4213,6 +4602,7 @@ const SONGS = [
     preview: null,
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=UD7XGEWrqts",
+    duration: "4:41",
   },
   {
     title: "Sail (feat. Kendrick Lamar & Ab Soul) - TDE Remix",
@@ -4224,6 +4614,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/492c8f09dcbfb3a5fd59b511af4fa37792eaa1bd?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=nJNv4gt1sEE",
+    duration: "4:01",
   },
   {
     title: "Let Us Move On (feat. Kendrick Lamar)",
@@ -4235,6 +4626,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/331c71e5260708c6ef26040f5923c1d650b8f9e9?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=NnrswAX5qFo",
+    duration: "4:21",
   },
   {
     title:
@@ -4247,6 +4639,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/9ae523d7c75c675b29edd77e246f65943aee6ad0?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=lTpJIdT1pIk",
+    duration: "4:33",
   },
   {
     title: "Champion - Remix",
@@ -4257,6 +4650,7 @@ const SONGS = [
     preview: null,
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=X7rzi4T9YSY",
+    duration: "3:31",
   },
   {
     title: "Take Me to the Beach",
@@ -4267,6 +4661,7 @@ const SONGS = [
     preview: null,
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=7HLrviPwEaU",
+    duration: "2:48",
   },
   {
     title: "Shots - Broiler Remix",
@@ -4277,6 +4672,7 @@ const SONGS = [
     preview: null,
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=DTMo_wEwMnw",
+    duration: "4:21",
   },
   {
     title: "Dos Veces",
@@ -4287,6 +4683,7 @@ const SONGS = [
     preview: null,
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=imNgds4vxbs",
+    duration: "2:35",
   },
   {
     title: "Ahora T\u00fa",
@@ -4298,6 +4695,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/d2d105cc66812e719eb16831fbf444f90a4b9151?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=gXUzSNg6uI8",
+    duration: "3:51",
   },
   {
     title: "Right Where I'm Supposed to Be",
@@ -4316,6 +4714,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/f8dfca37767f7a09f4afaeca5940c69954ccc4c0?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=AVbcMxeCwro",
+    duration: "5:04",
   },
   {
     title: "Cuenta conmigo (feat. Luis Fonsi)",
@@ -4327,6 +4726,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/3bc9ecc2d5ed8c64b4bab7ca6288642170d42b97?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=UEQVoRugAbU",
+    duration: "4:15",
   },
   {
     title: "Tu Eres Para Mi (You Belong To Me)",
@@ -4337,6 +4737,7 @@ const SONGS = [
     preview: null,
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=Q7L73tg1USE",
+    duration: "2:51",
   },
   {
     title: "Aqui Estoy Yo - Live At The Royal Albert Hall / 2012",
@@ -4347,6 +4748,7 @@ const SONGS = [
     preview: null,
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=9JInvSR_2VQ",
+    duration: "4:13",
   },
   {
     title: "Mi Verdad (feat. Shakira)",
@@ -4358,6 +4760,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/6367e10c3947711401c54f9c0b665a1b993e00eb?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=ZuupMrAhGXw",
+    duration: "4:34",
   },
   {
     title: "Gracias a la vida",
@@ -4379,6 +4782,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/37cac5c29a24cd4bda89cb0cc358d6b3409ef1ed?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=_7-vTDV_aSA",
+    duration: "4:35",
   },
   {
     title: "Hasta el infinito (feat. Shakira Mart\u00ednez)",
@@ -4390,6 +4794,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/b8031c1d99f44ea51fdac98f339b1b12e9a15eb8?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=4YTLOyxQe_E",
+    duration: "3:30",
   },
   {
     title: "Mi verdad",
@@ -4401,6 +4806,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/c6d9bb00958af8656eff1be206497ce175078baa?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=ZuupMrAhGXw",
+    duration: "4:34",
   },
   {
     title: "La diosa de Madrid",
@@ -4412,6 +4818,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/e2a25061a9d053543b536ddbd4cd1fc567c619d1?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=6s6Sys57WxY",
+    duration: "3:34",
   },
   {
     title: "Do'a",
@@ -4423,6 +4830,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/9e634899de35e42ca9b1c55e871813da8c445844?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=6xeeRaGPvdw",
+    duration: "4:46",
   },
   {
     title: "Alone Again, Naturally (feat. Elton John)",
@@ -4434,6 +4842,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/157b00255f322c10c1d5f7863d710279102f529b?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=pasSfvAjbn8",
+    duration: "3:26",
   },
   {
     title: "In Private (feat. Elton John) - 2017 Remaster",
@@ -4445,6 +4854,7 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/9a22ea6ba7382f12e50858ea2b78d15129336534?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=YHlhdk5E3YY",
+    duration: "4:13",
   },
   {
     title: "Believe / Song for Guy (feat. Elton John)",
@@ -4456,7 +4866,9 @@ const SONGS = [
       "https://p.scdn.co/mp3-preview/4e97c6e766a2b35f23ed5fc00a486067d5b38178?cid=8e2f81a6a81142deabb4be534be4e553",
     genre: "Rock/Pop",
     youtube_link: "https://www.youtube.com/watch?v=0azWI9nhQ_Q",
+    duration: "3:00",
   },
 ];
 
-export { ARTISTS, GENRES, SONGS };
+const PRICE_PER_SONG = 1.5;
+export { ARTISTS, GENRES, PRICE_PER_SONG, SONGS };

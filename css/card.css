@@ -78,3 +78,36 @@
   font-weight: 700;
   color: var(--color-white);
 }
+
+.playlist__img__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 250px;
+  min-height: 250px;
+}
+
+.playlist__img__grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.playlist__tracks {
+  padding: 10px 0;
+}
+
+.playlist__track {
+  padding: 4px 0;
+  border-top: solid 1px var(--color-grey-light);
+  display: flex;
+  align-items: center;
+}
+
+.playlist__track span {
+  display: inline-block;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
