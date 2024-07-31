@@ -1,4 +1,4 @@
-import { setLoggedInUser, getLoggedUser } from "./db/local_storage.js";
+import { setLoggedInUser, getLoggedUser, logout } from "./db/local_storage.js";
 import { openDB, updateUserProfile } from "./db/indexed_db.js";
 
 const $ = function (id) {
@@ -7,6 +7,10 @@ const $ = function (id) {
 
 function redirectToHome() {
   window.location.href = "index.html";
+}
+
+function redirectLogin() {
+  window.location.href = "login.html";
 }
 
 let profileName = $("profile-name");
@@ -64,6 +68,11 @@ window.onload = function () {
   const user = getLoggedUser();
   initProfile(user);
   $("update-button").onclick = updateProfile;
+
+  $("logout-button").onclick = function () {
+    logout();
+    redirectLogin();
+  };
 };
 
 window.redirectToHome = redirectToHome;

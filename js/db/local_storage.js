@@ -27,4 +27,8 @@ function isLoggedIn() {
   return localStorage.getItem(LOGGED_IN_USER) !== null;
 }
 
-export { setLoggedInUser, getLoggedUser, isLoggedIn };
+function logout() {
+  localStorage.removeItem(LOGGED_IN_USER);
+}
+
+export { setLoggedInUser, getLoggedUser, isLoggedIn, logout };
