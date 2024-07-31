@@ -3,39 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <title>mytunes - search</title>
+    <title>Profile Page</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
-
   <body>
-    <!-- Navigation Bar -->
     <header>
       <nav class="nav__container">
         <div class="nav__left">
-          <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
+          <img
+            src="images/logo.svg"
+            alt="Logo"
+            class="nav__logo"
+            onclick="redirectToHome()"
+          />
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html">Home</a></li>
             <li class="nav__item"><a href="search.html">Search</a></li>
-            <li class="nav__item"><a href="#">Pricing</a></li>
+            <li class="nav__item"><a href="">Pricing</a></li>
             <li class="nav__item"><a href="#">FAQ</a></li>
           </ul>
         </div>
-        <div class="nav__right" id="loginContent" style="display: none">
-          <button
-            class="btn btn-primary"
-            type="button"
-            onclick="redirectToLogin()"
-          >
-            Sign in / Register
-          </button>
-        </div>
-        <div
-          class="nav__right"
-          id="viewProfile"
-          style="display: none"
-          onclick="redirectToProfile()"
-        >
+        <div class="nav__right" id="viewProfile">
           <div class="profile-image profile-image-mini">
             <img
               src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
@@ -46,48 +34,53 @@
       </nav>
     </header>
 
-    <section class="container search__container">
-      <div class="search__left">
-        <div class="search__section">
-          <h2>Search By Genres</h2>
-          <div id="genres" class="search__options"></div>
+    <!-- Profile Content -->
+    <div class="profile-container">
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <div class="profile-image">
+          <img
+            src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
+            alt="Profile Image"
+          />
         </div>
-        <div class="search__section">
-          <h2>Search By Artist</h2>
-          <div id="artists" class="search__options"></div>
-        </div>
-        <div class="search__section">
-          <h2>Search By Mood Board</h2>
-          <select id="mood" class="search__select">
-            <option value="">Select Mood</option>
-            <option value="happy">Happy</option>
-            <option value="sad">Sad</option>
-            <option value="angry">Angry</option>
-            <option value="relaxed">Relaxed</option>
-            <option value="energetic">Energetic</option>
-          </select>
-        </div>
-        <div class="search__section">
-          <h2>Search By Price Range</h2>
-          <select name="" id="price_range" class="search__select">
-            <option value="">Select Price Range</option>
-            <option value="0-10">$0 - $10</option>
-            <option value="10-20">$10 - $20</option>
-            <option value="20-30">$20 - $30</option>
-            <option value="30-40">$30 - $40</option>
-            <option value="40-50">$40 - $50</option>
-          </select>
-        </div>
-        <div>
-          <button class="btn btn-primary" id="search">Search</button>
-        </div>
+        <br />
+        <h1 id="profile-name"></h1>
+        <p id="profile-email"></p>
+        <p id="member-since"></p>
+        <br />
       </div>
-      <div class="search__right">
-        <div class="search__list__grid" id="playlist">
-          <!-- Populate list here -->
-        </div>
+
+      <div class="profile-info">
+        <form>
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" required />
+
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" required />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" />
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="address">Address:</label>
+          <textarea id="address" name="address"></textarea>
+
+          <button
+            id="update-button"
+            class="btn btn-primary btn-full"
+            style="width: 250px"
+          >
+            Update Profile
+          </button>
+        </form>
       </div>
-    </section>
+    </div>
 
     <!-- Footer Component -->
     <footer>
@@ -97,7 +90,11 @@
           <!-- Footer Logo Column -->
           <div class="footer__logo">
             <div>
-              <img src="images/logo-white.svg" alt="logo" class="footer__image" />
+              <img
+                src="images/logo-white.svg"
+                alt="logo"
+                class="footer__image"
+              />
               <p class="footer__details">Dive into a world of endless music.</p>
             </div>
             <!-- Social Container -->
@@ -151,12 +148,12 @@
           </div>
         </div>
       </div>
-      <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
+      <div class="footer__bottom">
+        All Rights Reserved &copy; 2024 Music Place
+      </div>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="module" src="js/constants.js"></script>
-    <script type="module" src="js/search.js"></script>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="./js/db/local_storage.js"></script>
+    <script type="module" src="./js/db/indexed_db.js"></script>
+    <script type="module" src="./js/profile.js"></script>
   </body>
 </html>
