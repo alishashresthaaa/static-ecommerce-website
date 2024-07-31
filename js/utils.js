@@ -15,7 +15,10 @@ var shuffleSongs = function (array) {
     currentIndex--;
 
     // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
   }
 };
 
@@ -25,13 +28,20 @@ var toggleMobileMenu = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector(".hamburger__menu").addEventListener("click", toggleMobileMenu);
+  document
+    .querySelector(".hamburger__menu")
+    .addEventListener("click", toggleMobileMenu);
   document.querySelector(".nav__logo").addEventListener("click", function () {
     window.location.href = "/";
   });
-  document.querySelector(".header__login").addEventListener("click", function () {
-    window.location.href = "login.html";
-  });
+
+  if (document.querySelector(".header__login")) {
+    document
+      .querySelector(".header__login")
+      .addEventListener("click", function () {
+        window.location.href = "login.html";
+      });
+  }
 });
 
 export { getRandomInt, shuffleSongs, toggleMobileMenu };
