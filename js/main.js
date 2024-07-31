@@ -57,4 +57,13 @@ window.redirectToLogin = redirectToLogin;
 window.redirectToHome = redirectToHome;
 window.redirectToProfile = redirectToProfile;
 
+AOS.init({
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  delay:12,
+  duration: 700,
+  easing: "ease",
+  once: false,
+  anchorPlacement: "top-bottom",
+});
+
 export { loadImage };

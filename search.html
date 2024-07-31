@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>mytunes - search</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -102,7 +100,7 @@
           <button class="btn btn-primary" id="search">Search</button>
         </div>
       </div>
-      <div class="search__right">
+      <div class="search__right" data-aos="fade-left">
         <div class="search__list__grid" id="playlist">
           <!-- Populate list here -->
         </div>
@@ -120,12 +118,8 @@
           <p class="footer__details">All rights reserved.</p>
           <div class="footer__socials">
             <h2 class="footer__title">socials</h2>
-            <a href="https://www.instagram.com/" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/" target="_blank">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
+            <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
+            <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook"></i> </a>
             <a href="https://www.tiktok.com/" target="_blank">
               <i class="fa-brands fa-tiktok"></i>
             </a>
@@ -173,19 +167,12 @@
       <div class="footer__bottom">
         <div class="footer__bottom__container">
           <div class="footer__title">Disclaimer</div>
-          <div class="footer__desc">
-            This is a project for a fictional music streaming platform. All the
-            content and images used in this project are for educational purposes
-            only. This is a project for a fictional music streaming platform.
-            All the content and images used in this project are for educational
-            purposes only. This is a project for a fictional music streaming
-            platform. All the content and images used in this project are for
-            educational purposes only.
-          </div>
+          <div class="footer__desc">This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only. This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only. This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only.</div>
         </div>
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module" src="js/utils.js"></script>
     <script type="module" src="js/constants.js"></script>

@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <title>mytunes - Profile Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -53,7 +54,10 @@
 
     <!-- Profile Content -->
     <div class="profile-container">
-      <div style="display: flex; flex-direction: column; align-items: center">
+      <div
+        style="display: flex; flex-direction: column; align-items: center"
+        data-aos="fade-right"
+      >
         <div class="profile-image">
           <img
             id="profile-image"
@@ -76,8 +80,10 @@
         <br />
       </div>
 
-      <div class="profile-info">
-        <form>
+      <div class="profile-info" data-aos="fade-left">
+        <h2>Edit Profile</h2>
+        <p>View your profile and edit as necessary.</p>
+        <form style="margin-top: 20px">
           <label for="first-name">First Name:</label>
           <input type="text" id="first-name" name="first-name" required />
 
@@ -184,11 +190,11 @@
         </div>
       </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script type="module" src="js/db/local_storage.js"></script>
     <script type="module" src="js/db/indexed_db.js"></script>
-    <script type="module" src="js/main.js"></script>
     <script type="module" src="js/profile.js"></script>
+    <script type="module" src="js/main.js"></script>
     <script type="module" src="js/utils.js"></script>
   </body>
 </html>

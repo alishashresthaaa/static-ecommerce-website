@@ -1,0 +1,72 @@
+/* Accordion Styles */
+.faq__container {
+  height: max-content;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  width: max-content;
+}
+
+#accordion {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30px;
+  margin-left: 0px;
+}
+
+.ui-accordion {
+  border: 1px solid var(--color-grey-light);
+  border-radius: 5px;
+}
+
+.ui-accordion .ui-accordion-header {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+  cursor: pointer;
+  position: relative;
+}
+
+.ui-accordion .ui-accordion-header:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.ui-accordion .ui-accordion-header.ui-state-active {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 15px;
+  border-top: 1px solid var(--color-white-dark);
+  background-color: var(--color-white);
+  margin-bottom: 20px;
+  height: max-content;
+  padding: 20px;
+}
+
+.accordion-expand-collapse {
+  text-align: center;
+  margin: 10px 0;
+  display: none;
+}
+
+.ui-accordion-header i {
+  color: var(--color-white);
+  margin-right: 10px;
+}
+
+.accordion-arrow {
+  transition: transform 0.3s ease;
+  font-size: 1em;
+  float: right;
+}
+
+.ui-accordion .ui-accordion-header.ui-state-active .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-arrow {
+  color: var(--color-white);
+  font-size: 1em;
+}

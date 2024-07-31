@@ -8,6 +8,8 @@
 @import url(./playlist-detail.css);
 @import url(./profile.css);
 @import url(./cart.css);
+@import url(./pricing.css);
+@import url(./faq.css);
 
 /* Reset */
 * {
@@ -287,7 +289,13 @@ footer {
   display: flex;
   flex-direction: column;
   align-self: center;
-  gap: 10px;
+  gap: 15px;
+}
+
+.modal-content button {
+  width: max-content;
+  text-align: center;
+  margin: auto;
 }
 
 @keyframes fadeInFromTop {
