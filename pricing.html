@@ -6,6 +6,7 @@
     <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>mytunes - cart page</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -57,7 +58,7 @@
     <!-- Download our app -->
     <div class="download__bg__container">
       <div class="container download__container">
-        <div class="download__left">
+        <div class="download__left" data-aos="fade-right">
           <h2>Download Our App</h2>
           <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
           <div class="download__app__store">
@@ -65,7 +66,7 @@
             <img src="images/play_store_bg.svg" alt="Play Store" />
           </div>
         </div>
-        <div class="download__right">
+        <div class="download__right" data-aos="fade-left">
           <img src="images/scan.png" alt="Download" />
         </div>
       </div>
@@ -145,6 +146,7 @@
         <button class="btn btn-primary" id="closeDialog">Return to Page</button>
       </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module" src="js/pricing.js"></script>
     <script type="module" src="js/db/local_storage.js"></script>

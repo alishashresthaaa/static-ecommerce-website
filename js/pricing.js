@@ -34,7 +34,7 @@ function populateProductsList() {
   plans_list.forEach((plan) => {
     const product_features = plan.features.map((feature) => `<li>${feature}</li>`).join("");
     const product_element = `
-            <div class="products__item" id="item${plan.id}">
+            <div class="products__item" id="item${plan.id}" data-aos="fade-up">
                 <div class="products__item__header">
                     <span class="products__item__header__title">${plan.name}</span>
                     <span class="products__item__header__price">${plan.price}</span>

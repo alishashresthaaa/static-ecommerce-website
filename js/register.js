@@ -104,12 +104,12 @@ const successModal = $("successModal");
 
 const showModal = function () {
   overlay.style.display = "block";
-  successModal.style.display = "block";
+  successModal.style.opacity = "0";
 };
 
 const closeModal = function () {
   overlay.style.display = "none";
-  successModal.style.display = "none";
+  successModal.style.opacity = "0";
   window.location.href = "login.html";
 };
 
