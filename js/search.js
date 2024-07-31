@@ -107,5 +107,4 @@ $(document).ready(function () {
   $("#search").on("click", handleSearch);
 });
 
-
 export { generatePlaylist, populatePlaylists };

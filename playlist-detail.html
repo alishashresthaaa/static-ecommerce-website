@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <title>mytunes -playlist detail</title>
@@ -12,16 +13,29 @@
     <header>
       <nav class="nav__container">
         <div class="nav__left">
-          <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
+          <img src="images/logo.svg" alt="Logo" class="nav__logo" />
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html">Home</a></li>
-            <li class="nav__item"><a href="playlist.html">Search</a></li>
-            <li class="nav__item"><a href="">Pricing</a></li>
-            <li class="nav__item"><a href="#">FAQ</a></li>
+            <li class="nav__item"><a href="search.html">Search</a></li>
+            <li class="nav__item"><a href="pricing.html">Pricing</a></li>
+            <li class="nav__item"><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
+        <div class="hamburger__menu">
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+        </div>
+        <ul class="nav__list__mobile" id="nav_list__mobile">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="search.html">Search</a></li>
+          <li class="nav__item"><a href="pricing.html">Pricing</a></li>
+          <li class="nav__item"><a href="faq.html">FAQ</a></li>
+          <li class="nav__item"><a href="login.html">Login</a></li>
+          <li class="nav__item"><a href="register.html">Register</a></li>
+        </ul>
         <div class="nav__right">
-          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
+          <button class="btn btn-primary header__login" type="button">Sign in / Register</button>
         </div>
       </nav>
     </header>
@@ -134,71 +148,105 @@
       </div>
     </section>
 
+    <!-- Slider - More Playlist Like -->
+    <section class="container similar__playlist">
+      <div class="title-container">
+        <h1>More Playlist Like This</h1>
+        <a href="search.html">Show All</a>
+      </div>
+      <div class="swiper similar-playlist-swiper">
+        <div class="swiper-wrapper" id="similar-playlist">
+          <!-- Repeatable Slide Item -->
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <!-- Download our app -->
+    <div class="download__bg__container">
+      <div class="container download__container">
+        <div class="download__left">
+          <h2>Download Our App</h2>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+          <div class="download__app__store">
+            <img src="images/app_store_bg.svg" alt="App Store" />
+            <img src="images/play_store_bg.svg" alt="Play Store" />
+          </div>
+        </div>
+        <div class="download__right">
+          <img src="images/scan.png" alt="Download" />
+        </div>
+      </div>
+    </div>
     <!-- Footer Component -->
     <footer>
-      <div class="footer__top">
-        <!-- Footer Details Container -->
-        <div class="footer__top__container">
-          <!-- Footer Logo Column -->
-          <div class="footer__logo">
-            <div>
-              <img src="images/logo-white.svg" alt="logo" class="footer__image" />
-              <p class="footer__details">Dive into a world of endless music.</p>
-            </div>
-            <!-- Social Container -->
-            <div class="footer__socials">
-              <div class="footer__title">Get connected with us</div>
-              <div class="footer__socials__list">
-                <a href="https://www.instagram.com/" target="_blank">
-                  <img src="images/instagram.png" alt="Instagram" />
-                </a>
-                <a href="https://www.facebook.com/" target="_blank">
-                  <img src="images/facebook.png" alt="Facebook" />
-                </a>
-                <a href="https://www.tiktok.com/" target="_blank">
-                  <img src="images/tiktok.png" alt="Tiktok" />
-                </a>
-                <a href="https://www.twitter.com/" target="_blank">
-                  <img src="images/twitter.png" alt="Twitter" />
-                </a>
-              </div>
-            </div>
+      <div class="container footer__container">
+        <div class="footer__col">
+          <img src="images/logo-white.svg" alt="Logo" class="footer__logo" />
+          <p class="footer__details">support@basobaas.com</p>
+          <p class="footer__details">9801038835 / 9801038851</p>
+          <p class="footer__details">Copyright © 2024 Basobaas Nepal.</p>
+          <p class="footer__details">All rights reserved.</p>
+          <div class="footer__socials">
+            <h2 class="footer__title">socials</h2>
+            <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
+            <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook"></i> </a>
+            <a href="https://www.tiktok.com/" target="_blank">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
           </div>
-
-          <div class="footer__col">
-            <div class="footer__title">Quick Links</div>
-            <div class="footer__list">
-              <a href="#">About Us</a>
-              <a href="#">Register</a>
-              <a href="#">Contact</a>
-              <a href="#">Our Products</a>
-              <a href="#">Pricing</a>
-            </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">ARTIST</div>
+          <div class="footer__list">
+            <a href="search.html" class="footer__item">Adele</a>
+            <a href="search.html" class="footer__item">John Mayer</a>
+            <a href="search.html" class="footer__item">Bob Dylan</a>
+            <a href="search.html" class="footer__item">Taylor Swift</a>
           </div>
-          <div class="footer__col">
-            <div class="footer__title">Genres</div>
-            <div class="footer__list">
-              <a href="#">Rock</a>
-              <a href="#">Jazz</a>
-              <a href="#">Hip Hop</a>
-              <a href="#">Hard Rock</a>
-              <a href="#">Soft Rock</a>
-            </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">ARTIST</div>
+          <div class="footer__list">
+            <a href="search.html" class="footer__item">Adele</a>
+            <a href="search.html" class="footer__item">John Mayer</a>
+            <a href="search.html" class="footer__item">Bob Dylan</a>
+            <a href="search.html" class="footer__item">Taylor Swift</a>
+            <a href="search.html" class="footer__item">Adele</a>
+            <a href="search.html" class="footer__item">John Mayer</a>
+            <a href="search.html" class="footer__item">Bob Dylan</a>
+            <a href="search.html" class="footer__item">Taylor Swift</a>
           </div>
-          <div class="footer__col">
-            <div class="footer__title">Explore</div>
-            <div class="footer__list">
-              <a href="#">Blogs</a>
-              <a href="#">Reviews</a>
-              <a href="#">Pricing</a>
-              <a href="#">Our Services</a>
-            </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">EXPLORE</div>
+          <div class="footer__list">
+            <a href="search.html" class="footer__item">Search</a>
+            <a href="login.html" class="footer__item">Login</a>
+            <a href="register.html" class="footer__item">Register</a>
+            <a href="search.html" class="footer__item">Taylor Swift</a>
+            <a href="search.html" class="footer__item">Adele</a>
+            <a href="search.html" class="footer__item">John Mayer</a>
+            <a href="search.html" class="footer__item">Bob Dylan</a>
+            <a href="search.html" class="footer__item">Taylor Swift</a>
           </div>
         </div>
       </div>
-      <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
+      <div class="footer__bottom">
+        <div class="footer__bottom__container">
+          <div class="footer__title">Disclaimer</div>
+          <div class="footer__desc">This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only. This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only. This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only.</div>
+        </div>
+      </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/playlist-detail.js"></script>
   </body>
 </html>

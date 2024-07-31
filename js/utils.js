@@ -19,4 +19,19 @@ var shuffleSongs = function (array) {
   }
 };
 
-export { getRandomInt, shuffleSongs };
+var toggleMobileMenu = function () {
+  const menu = document.querySelector("#nav_list__mobile");
+  menu.classList.toggle("show");
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".hamburger__menu").addEventListener("click", toggleMobileMenu);
+  document.querySelector(".nav__logo").addEventListener("click", function () {
+    window.location.href = "/";
+  });
+  document.querySelector(".header__login").addEventListener("click", function () {
+    window.location.href = "login.html";
+  });
+});
+
+export { getRandomInt, shuffleSongs, toggleMobileMenu };

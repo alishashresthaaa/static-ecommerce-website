@@ -89,3 +89,4 @@ $(document).ready(function () {
   populateMostBought(ARTISTS, GENRES);
   populateTopSales(ARTISTS, GENRES);
 });
+

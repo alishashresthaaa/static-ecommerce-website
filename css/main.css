@@ -59,6 +59,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 12px 60px;
+  @media screen and (max-width: 768px) {
+    padding: 12px 20px;
+    
+  }
 }
 
 .nav__left {
@@ -66,6 +70,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    flex: 0 0 300px;
+  }
+  @media screen and (max-width: 480px) {
+    flex: 0 0 200px;
+  }
 }
 
 .nav__left .nav__logo {
@@ -77,76 +87,161 @@ header {
 .nav__list {
   display: flex;
   gap: 20px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav__right {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.hamburger__menu {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.hamburger__line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-primary-main);
+  margin: 5px;
+}
+
+.nav__list__mobile {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    transition: top 0.5s ease-in-out;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-nav);
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+  }
+}
+
+.show {
+  top: 60px;
 }
 
 /* Footer */
-.footer__bottom {
-  background-color: var(--color-secondary-main);
-  color: var(--color-grey-light);
-  text-align: center;
-  padding: 24px 0;
-  font-size: 12px;
+footer {
+  background-color: var(--color-primary-dark);
 }
 
-.footer__top {
-  padding: 40px 0;
-  background-color: var(--color-secondary-dark);
-  color: var(--color-grey-light);
-}
-
-.footer__top__container {
-  margin: auto;
-  padding: 20px 80px;
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 60px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-}
-
-.footer__logo {
-  flex: 0 0 230px;
-}
-
-.footer__logo .footer__socials {
-  margin-top: 32px;
-}
-
-.footer__socials__list a:hover {
-  background: unset;
-}
-
-.footer__logo .footer__image {
-  max-width: 50px;
-  width: 100%;
-  height: auto;
-}
-
-.footer__logo .footer__details {
-  font-size: 14px;
-}
-
-.footer__logo .footer__socials__list {
-  margin-top: 16px;
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+    padding: 40px 20px;
+  }
 }
 
 .footer__col {
-  flex: 0 0 152px;
+  flex: 0 0 25%;
+  color: var(--color-white);
+  @media screen and (max-width: 768px) {
+    flex: 0 0 30%;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    flex: 0 0 40%;
+  }
+}
+
+.footer__logo {
+  max-width: 150px;
+  height: auto;
+  width: 100%;
+}
+
+.footer__details {
+  font-size: 14px;
+}
+
+.footer__details {
+  color: var(--color-grey-light);
+  font-size: 12px;
+  margin-top: 12px;
 }
 
 .footer__title {
-  font-size: 14px;
-  font-weight: 700;
   text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.footer__socials {
+  margin-top: 30px;
+}
+
+.footer__socials i {
+  color: var(--color-white);
+  font-size: 20px;
+  margin-right: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    margin-right: 10px;
+    
+  }
+}
+
+.footer__socials a:hover {
+  background: unset;
+}
+
+.footer__socials i:hover {
+  color: var(--color-primary-main);
 }
 
 .footer__list {
-  margin-top: 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  align-items: flex-start;
-  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footer__list a,
+.footer__list a:hover {
+  color: var(--color-grey-dark);
+}
+
+.footer__bottom {
+  background-color: var(--color-footer);
+  color: var(--color-white);
+}
+
+.footer__bottom__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 60px;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.footer__desc {
+  font-size: 12px;
+  margin-top: 10px;
+  text-justify: justify-all;
 }

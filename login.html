@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/images/logo.svg" />
+    <script type="module" src="js/utils.js"></script>
     <link rel="stylesheet" href="css/main.css" />
     <title>mytunes - Login</title>
   </head>
@@ -12,13 +12,29 @@
     <header>
       <nav class="nav__container">
         <div class="nav__left">
-          <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
+          <img src="images/logo.svg" alt="Logo" class="nav__logo" />
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html">Home</a></li>
             <li class="nav__item"><a href="search.html">Search</a></li>
-            <li class="nav__item"><a href="">Pricing</a></li>
-            <li class="nav__item"><a href="#">FAQ</a></li>
+            <li class="nav__item"><a href="pricing.html">Pricing</a></li>
+            <li class="nav__item"><a href="faq.html">FAQ</a></li>
           </ul>
+        </div>
+        <div class="hamburger__menu">
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+        </div>
+        <ul class="nav__list__mobile" id="nav_list__mobile">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="search.html">Search</a></li>
+          <li class="nav__item"><a href="pricing.html">Pricing</a></li>
+          <li class="nav__item"><a href="faq.html">FAQ</a></li>
+          <li class="nav__item"><a href="login.html">Login</a></li>
+          <li class="nav__item"><a href="register.html">Register</a></li>
+        </ul>
+        <div class="nav__right">
+          <button class="btn btn-primary header__login" type="button">Sign in / Register</button>
         </div>
       </nav>
     </header>
@@ -55,6 +71,7 @@
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="js/utils.js"></script>
     <script src="js/login.js"></script>
   </body>
 </html>

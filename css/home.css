@@ -13,10 +13,16 @@
 .showcase__container__flex > .showcase__image {
   flex: 0 0 50%;
   align-self: flex-start;
+  @media screen and (max-width: 768px) {
+    flex: 0 0 100%;
+  }
 }
 
 .showcase__container__flex > .showcase__content {
   margin-top: 10%;
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .showcase__search {
@@ -32,9 +38,16 @@
   align-items: center;
   gap: 10px;
   position: absolute;
-  top: 65%;
-  transform: translateY(-65%);
+  top: 60%;
+  transform: translateY(-60%);
   width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    top: 100%;
+  }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 }
 
 .showcase__image img {
@@ -42,26 +55,39 @@
   height: calc(100vh - 110px);
   object-fit: none;
   border-radius: var(--border-radius-large);
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .showcase__content h2 {
   font-size: 72px;
   color: var(--color-secondary-main);
   font-weight: 900;
+  @media screen and (max-width: 768px) {
+    font-size: 48px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 36px;
+  }
 }
 .showcase__content p {
-  font-size: 30px;
+  font-size: 25px;
   color: var(--color-secondary-light);
-  line-height: 1;
-  font-weight: 600;
-  margin-top: 10px;
+  font-weight: 500;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 }
 
 /* Container */
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 60px;
+  padding: 60px;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
 }
 
 .about__bg__container,
@@ -77,6 +103,11 @@
   gap: 20px;
   width: 90%;
   margin: 0 auto;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .about__left,
@@ -95,6 +126,9 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  @media screen and (max-width: 480px) {
+    align-items: center;
+  }
 }
 
 .about__right .btn {
@@ -106,6 +140,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .service__item {
@@ -140,6 +178,9 @@
   max-width: 300px;
   height: auto;
   width: 100%;
+  @media screen and (max-width: 768px) {
+    width: 200px;
+  }
 }
 
 .download__left {
@@ -150,4 +191,14 @@
 
 .download__app__store img {
   cursor: pointer;
+}
+
+.most__bought {
+  margin-top: 0px;
+  @media screen and (max-width: 768px) {
+    margin-top: 60px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-top: 0px;
+  }
 }
