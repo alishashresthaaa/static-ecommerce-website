@@ -91,11 +91,16 @@ const registerNewUser = function (event) {
   };
   registerUser(user)
     .then(() => {
+      console.log("User added successfully");
       showModal();
     })
     .catch((error) => {
-      // todo: display error message
-      console.error("Error adding user", error);
+      console.log(error);
+      $("confirmPasswordError").textContent =
+        error.name === "ConstraintError"
+          ? "User with this email already exists."
+          : "Error adding user.";
+      $("confirmPassword").classList.add("input-error");
     });
 };
 
@@ -104,6 +109,7 @@ const successModal = $("successModal");
 
 const showModal = function () {
   overlay.style.display = "block";
+  successModal.style.display = "block";
   successModal.style.opacity = "0";
 };
 
