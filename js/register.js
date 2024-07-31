@@ -109,7 +109,8 @@ const successModal = $("successModal");
 
 const showModal = function () {
   overlay.style.display = "block";
-  successModal.style.opacity = "1";
+  successModal.style.display = "block";
+  successModal.style.opacity = "0";
 };
 
 const closeModal = function () {
