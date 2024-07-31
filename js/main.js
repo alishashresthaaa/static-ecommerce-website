@@ -77,12 +77,10 @@ $(document).ready(function () {
 
     // Additional logic based on user login status
     if (isUserLoggedIn) {
-      $loginContent.hide();
       $viewProfile.show();
-      $profileImage.attr("src", "https://ui-avatars.com/api/?background=random&name=" + user.firstName + "+" + user.lastName);
+      loadImage();
     } else {
       $loginContent.show();
-      $viewProfile.hide();
     }
   }
 
