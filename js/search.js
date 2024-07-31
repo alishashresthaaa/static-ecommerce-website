@@ -1,14 +1,23 @@
 import { ARTISTS, GENRES, PRICE_PER_SONG, SONGS } from "./constants.js";
 import { getPlaylistItem } from "./generateCard.js";
 import { getRandomInt, shuffleSongs } from "./utils.js";
+import { openDB } from "./db/indexed_db.js";
 
-var generatePlaylist = function (artists = [], genres = [], limit = null, count = 10) {
+var generatePlaylist = function (
+  artists = [],
+  genres = [],
+  limit = null,
+  count = 10
+) {
   let playlists = [];
   let playlist = SONGS.filter((song) => {
     if (artists.length == 0 && genres.length == 0) {
       return true;
     }
-    return artists.some((element) => song.artists.includes(element)) || genres.includes(song.genre);
+    return (
+      artists.some((element) => song.artists.includes(element)) ||
+      genres.includes(song.genre)
+    );
   });
 
   for (let i = 0; i < count; i++) {
@@ -36,6 +45,12 @@ var populatePlaylists = function (artists, genres, id = "playlist") {
 };
 
 $(document).ready(function () {
+  openDB()
+    .then(() => {
+      console.log("Database connected");
+    })
+    .catch((error) => console.log(error));
+
   const urlParams = new URLSearchParams(window.location.search);
   var selectedArtists = urlParams.getAll("artist");
   var selectedGenres = urlParams.getAll("genre");
@@ -44,7 +59,9 @@ $(document).ready(function () {
     let genresDiv = $("#genres");
     $.each(GENRES, function (index, value) {
       let $genre = $("<div>", {
-        class: `genre search__pills${selectedGenres.includes(value) ? " selected" : ""}`,
+        class: `genre search__pills${
+          selectedGenres.includes(value) ? " selected" : ""
+        }`,
         text: value,
       }).on(`click`, function () {
         toggleGenre($(this), value);
@@ -56,7 +73,9 @@ $(document).ready(function () {
     $.each(ARTISTS, function (index, value) {
       let $artist = $("<div>", {
         id: value,
-        class: `artist search__pills${selectedArtists.includes(value) ? " selected" : ""}`,
+        class: `artist search__pills${
+          selectedArtists.includes(value) ? " selected" : ""
+        }`,
         text: value,
       }).on(`click`, function () {
         toggleArtists($(this), value);
