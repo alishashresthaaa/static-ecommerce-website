@@ -45,13 +45,18 @@
         <p>You have <span id="total-items-count">0</span> items in cart.</p>
         <div class="cart__table__container">
           <table class="track__table" id="cartTable">
-            <tr>
-              <th>Artist List</th>
-              <th>Duration</th>
-              <th>Price</th>
-              <th>Total Songs</th>
-              <th>Remove</th>
-            </tr>
+            <thead>
+              <tr>
+                <th>Artist List</th>
+                <th>Duration</th>
+                <th>Price</th>
+                <th>Total Songs</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows will be added here -->
+            </tbody>
           </table>
         </div>
       </div>
@@ -66,8 +71,15 @@
             <p>Total Plyalist Items</p>
             <p id="total-track-items"></p>
           </div>
-          <p class="summary">Get your playlst delivered to you by date 20.20.2020 at your email address test@test.com</p>
-          <button class="btn btn-primary btn-full" id="placeOrder">Place Order</button>
+          <p class="summary">
+            Get your playlst delivered to you by date
+            <span id="dateTimeToday" style="font-weight: bold"></span> at your
+            email address
+            <span id="userEamil" style="font-weight: bold"></span>
+          </p>
+          <button class="btn btn-primary btn-full" id="buttonPlaceOrder">
+            Place Order
+          </button>
         </div>
 
         <div class="discount__container">

@@ -1,4 +1,16 @@
-import { openDB, getMyCartItems, removeCartItem } from "./db/indexed_db.js";
+import {
+  openDB,
+  getMyCartItems,
+  removeCartItem,
+  placeOrderItem,
+  clearCartItems,
+} from "./db/indexed_db.js";
+
+import { getLoggedUser } from "./db/local_storage.js";
+
+let cartItems = [];
+let totalCost = 0;
+let totalSongs = 0;
 
 const truncateText = function (text, limit) {
   return text.length > limit ? text.substring(0, limit) + "..." : text;
@@ -6,8 +18,11 @@ const truncateText = function (text, limit) {
 
 // Function to populate the table
 function populateTable(data) {
+  cartItems = data;
   const $table = $("#cartTable");
-  let totalCost = 0;
+  const $tableBody = $table.find("tbody");
+  // Clear all existing rows from the table body
+  $tableBody.empty();
 
   data.forEach((item) => {
     totalCost += item.price;
@@ -16,6 +31,7 @@ function populateTable(data) {
     let artists = [];
 
     const playlist = item.playlist;
+    totalSongs += playlist.length;
     if (playlist) {
       playlist.forEach((song) => {
         artists.push(song.artists);
@@ -68,21 +84,16 @@ function populateTable(data) {
       .addClass("fa-solid fa-trash")
       .on("click", function () {
         removeCartItem(item.id)
-          .then(() => {
-            $row.remove();
-            location.reload();
+          .then(getMyCartItems)
+          .then((playlists) => {
+            populateTable(playlists);
           })
-          //   .then(getMyCartItems)
-          //   .then((playlists) => {
-          //     $row.remove();
-          //     populateTable(playlists);
-          //   })
           .catch((error) => console.log("Error: ", error));
       });
     $removeCell.append($removeIcon);
     $row.append($removeCell);
 
-    $table.append($row);
+    $tableBody.append($row);
   });
 
   $("#sub-total").text("$ " + totalCost.toFixed(2));
@@ -109,23 +120,26 @@ const secondsToDuration = function (seconds) {
   return `${minutes}:${remainingSeconds.toString().padStart(2, "0")} Mins`;
 };
 
-// Function to handle place order button
-$("#placeOrder").on("click", function () {
-  // Show the modal
-  $("#successModal").fadeIn();
-
-  openDB()
-    .then((db) => {
-      const tx = db.transaction("cart", "readwrite");
-      const cartStore = tx.objectStore("cart");
-      cartStore.clear();
+function placeOrder() {
+  if (cartItems.length === 0) {
+    alert("Your cart is empty. Please add items to your cart.");
+    return;
+  }
+  const order = {
+    items: cartItems,
+    totalCost: totalCost,
+    totalSongs: totalSongs,
+  };
+  placeOrderItem(order)
+    .then(clearCartItems)
+    .then(() => {
+      $("#successModal").fadeIn();
     })
-    .catch((error) => console.log("Error: ", error));
-});
-
-$("#closeDialog").on("click", function () {
-  window.location.href = "orders.html";
-});
+    .catch((error) => {
+      console.log("Error: ", error);
+      alert("Error placing order. Please try again.");
+    });
+}
 
 $(document).ready(() => {
   openDB()
@@ -135,4 +149,22 @@ $(document).ready(() => {
       populateTable(playlists);
     })
     .catch((error) => console.log("Error: ", error));
+
+  $("#userEamil").text(getLoggedUser().email);
+
+  // Get the current date and time
+  let currentDate = new Date();
+  // Add one day to the current date
+  currentDate.setDate(currentDate.getDate() + 1);
+  // Format the date to YYYY-MM-DD
+  let formattedDate = currentDate.toISOString().split("T")[0];
+  // Display the formatted date and time
+  $("#dateTimeToday").text(formattedDate);
+
+  // On place order
+  $("#buttonPlaceOrder").on("click", placeOrder);
+
+  $("#closeDialog").on("click", function () {
+    window.location.href = "orders.html";
+  });
 });

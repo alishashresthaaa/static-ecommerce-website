@@ -1,13 +1,13 @@
 import { isLoggedIn, getLoggedUser } from "./db/local_storage.js";
 
-function redirectToLogin() {
+export function redirectToLogin() {
   window.location.href = "login.html";
 }
-function redirectToHome() {
+export function redirectToHome() {
   window.location.href = "index.html";
 }
 
-function redirectToProfile() {
+export function redirectToProfile() {
   window.location.href = "profile.html";
 }
 

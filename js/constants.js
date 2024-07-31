@@ -4851,6 +4851,6 @@ const SONGS = [
 ];
 
 const PRICE_PER_SONG = 1.5;
-const PROFILE_PLACEHOLDER =
-  "https://st4.depositphotos.com/4329009/19956/v/1600/depositphotos_199564354-stock-illustration-creative-vector-illustration-default-avatar.jpg";
-export { ARTISTS, GENRES, PRICE_PER_SONG, SONGS, PROFILE_PLACEHOLDER };
+const UNAUTHORIZED = "Unauthorized";
+
+export { ARTISTS, GENRES, PRICE_PER_SONG, SONGS, UNAUTHORIZED };

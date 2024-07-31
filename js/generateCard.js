@@ -1,4 +1,6 @@
+import { UNAUTHORIZED } from "./constants.js";
 import { addCartItem } from "./db/indexed_db.js";
+import { redirectToLogin } from "./main.js";
 
 // Image grid for playlist card
 var getPlaylistImage = function (playlist) {
@@ -80,8 +82,6 @@ var getPlaylistItem = function (playlist) {
     text: "Add to cart",
   }).on("click", function (event) {
     event.stopPropagation();
-    $(this).text("Added to cart").prop("disabled", true);
-    // $(this).prop("disabled", true);
     addToCart(playlist, $(this));
   });
 
@@ -94,16 +94,22 @@ var getPlaylistItem = function (playlist) {
 function addToCart(playlist, component) {
   addCartItem(playlist)
     .then(() => {
-      component.prop("disabled", true);
+      component.text("Added to cart").prop("disabled", true);
       console.log("Added to the database");
       $.toast({
-        hideAfter:4000,
+        hideAfter: 4000,
         heading: "Success",
         text: "Item added to cart",
         icon: "success",
-        position: "top-center",})
+        position: "top-center",
+      });
     })
-    .catch((error) => console.log("Error to add item ", error));
+    .catch((error) => {
+      if ((error.name = UNAUTHORIZED)) {
+        redirectToLogin();
+      }
+      console.log("Error to add item ", error);
+    });
 }
 
 var wrapPlaylistInSwiperSlide = function (playlist) {
