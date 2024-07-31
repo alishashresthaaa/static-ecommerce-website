@@ -1,8 +1,11 @@
 import { openDB, getMyCartItems, removeCartItem } from "./db/indexed_db.js";
-
+import { getLoggedUser } from "./db/local_storage.js";
 // Function to populate the table
 function populateTable(data) {
   const $table = $("#cartTable");
+  const $tableBody = $table.find("tbody");
+  // Clear all existing rows from the table body
+  $tableBody.empty();
   let totalCost = 0;
 
   data.forEach((item) => {
@@ -37,21 +40,20 @@ function populateTable(data) {
       .addClass("fa-solid fa-trash")
       .on("click", function () {
         removeCartItem(item.id)
-          .then(() => {
-            $row.remove();
-            location.reload();
+          // .then(() => {
+          //   $row.remove();
+          //   location.reload();
+          // })
+          .then(getMyCartItems)
+          .then((playlists) => {
+            populateTable(playlists);
           })
-          //   .then(getMyCartItems)
-          //   .then((playlists) => {
-          //     $row.remove();
-          //     populateTable(playlists);
-          //   })
           .catch((error) => console.log("Error: ", error));
       });
     $removeCell.append($removeIcon);
     $row.append($removeCell);
 
-    $table.append($row);
+    $tableBody.append($row);
   });
 
   $("#sub-total").text("$ " + totalCost.toFixed(2));
@@ -86,4 +88,15 @@ $(document).ready(() => {
       populateTable(playlists);
     })
     .catch((error) => console.log("Error: ", error));
+
+  $("#userEamil").text(getLoggedUser().email);
+
+  // Get the current date and time
+  let currentDate = new Date();
+  // Add one day to the current date
+  currentDate.setDate(currentDate.getDate() + 1);
+  // Format the date to YYYY-MM-DD
+  let formattedDate = currentDate.toISOString().split("T")[0];
+  // Display the formatted date and time
+  $("#dateTimeToday").text(formattedDate);
 });
