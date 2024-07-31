@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <title>mytunes - buy playlist</title>
   </head>
@@ -12,7 +15,12 @@
     <header>
       <nav class="nav__container">
         <div class="nav__left">
-          <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
+          <img
+            src="images/logo.svg"
+            alt="Logo"
+            class="nav__logo"
+            onclick="redirectToHome()"
+          />
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html">Home</a></li>
             <li class="nav__item"><a href="search.html">Search</a></li>
@@ -20,8 +28,27 @@
             <li class="nav__item"><a href="#">FAQ</a></li>
           </ul>
         </div>
-        <div class="nav__right">
-          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
+        <div class="nav__right" id="loginContent" style="display: none">
+          <button
+            class="btn btn-primary"
+            type="button"
+            onclick="redirectToLogin()"
+          >
+            Sign in / Register
+          </button>
+        </div>
+        <div
+          class="nav__right"
+          id="viewProfile"
+          style="display: none"
+          onclick="redirectToProfile()"
+        >
+          <div class="profile-image profile-image-mini">
+            <img
+              src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
+              alt="Profile Image"
+            />
+          </div>
         </div>
       </nav>
     </header>
@@ -68,10 +95,18 @@
               </div>
               <div class="playlist__card__content">
                 <p class="playlist__title">Best of John Mayer</p>
-                <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-                <p class="playlist__description">Total Songs: <span>15</span></p>
+                <p class="playlist__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore sequi minus tempore repellendus et consequuntur
+                  voluptate commodi inventore at officiis!
+                </p>
+                <p class="playlist__description">
+                  Total Songs: <span>15</span>
+                </p>
                 <p class="playlist__price">Price: <span>50</span></p>
-                <button class="btn btn-primary playlist__btn">Add to Cart</button>
+                <button class="btn btn-primary playlist__btn">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -91,7 +126,12 @@
       <div class="swiper genre-slider-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div style="background-image: url('https://api.basobaas.com/api/files/nnwe5fw5nlidq9l/6hwjupcab2mk03p/house_OBjLqtuhaI.jpg?thumb=180x0')" class="genre__card">
+            <div
+              style="
+                background-image: url('https://api.basobaas.com/api/files/nnwe5fw5nlidq9l/6hwjupcab2mk03p/house_OBjLqtuhaI.jpg?thumb=180x0');
+              "
+              class="genre__card"
+            >
               <div class="genre__card__overlay"></div>
               <span class="genre__card__title">Rock</span>
             </div>
@@ -117,10 +157,18 @@
               </div>
               <div class="playlist__card__content">
                 <p class="playlist__title">Best of John Mayer</p>
-                <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
-                <p class="playlist__description">Total Songs: <span>15</span></p>
+                <p class="playlist__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolore sequi minus tempore repellendus et consequuntur
+                  voluptate commodi inventore at officiis!
+                </p>
+                <p class="playlist__description">
+                  Total Songs: <span>15</span>
+                </p>
                 <p class="playlist__price">Price: <span>50</span></p>
-                <button class="btn btn-primary playlist__btn">Add to Cart</button>
+                <button class="btn btn-primary playlist__btn">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -139,7 +187,11 @@
           <!-- Footer Logo Column -->
           <div class="footer__logo">
             <div>
-              <img src="images/logo-white.svg" alt="logo" class="footer__image" />
+              <img
+                src="images/logo-white.svg"
+                alt="logo"
+                class="footer__image"
+              />
               <p class="footer__details">Dive into a world of endless music.</p>
             </div>
             <!-- Social Container -->
@@ -193,7 +245,9 @@
           </div>
         </div>
       </div>
-      <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
+      <div class="footer__bottom">
+        All Rights Reserved &copy; 2024 Music Place
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -216,7 +270,7 @@
         spaceBetween: 20,
       });
     </script>
-
-    <script src="js/main.js"></script>
+    <script type="module" src="./js/db/local_storage.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

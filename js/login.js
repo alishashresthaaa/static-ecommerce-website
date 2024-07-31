@@ -1,5 +1,5 @@
 import { openDB, getUser } from "./db/indexed_db.js";
-import { setLoggedInUser } from "./db/local_storage.js";
+import { setLoggedInUser, isLoggedIn } from "./db/local_storage.js";
 
 const $ = function (id) {
   return document.getElementById(id);
@@ -91,6 +91,10 @@ const authenticateUser = function (event) {
 };
 
 window.onload = function () {
+  if (isLoggedIn()) {
+    window.location.href = "index.html";
+  }
+
   openDB()
     .then(() => {
       console.log("Database opened successfully");

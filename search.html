@@ -13,7 +13,12 @@
     <header>
       <nav class="nav__container">
         <div class="nav__left">
-          <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
+          <img
+            src="images/logo.svg"
+            alt="Logo"
+            class="nav__logo"
+            onclick="redirectToHome()"
+          />
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html">Home</a></li>
             <li class="nav__item"><a href="search.html">Search</a></li>
@@ -21,8 +26,27 @@
             <li class="nav__item"><a href="#">FAQ</a></li>
           </ul>
         </div>
-        <div class="nav__right">
-          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
+        <div class="nav__right" id="loginContent" style="display: none">
+          <button
+            class="btn btn-primary"
+            type="button"
+            onclick="redirectToLogin()"
+          >
+            Sign in / Register
+          </button>
+        </div>
+        <div
+          class="nav__right"
+          id="viewProfile"
+          style="display: none"
+          onclick="redirectToProfile()"
+        >
+          <div class="profile-image profile-image-mini">
+            <img
+              src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
+              alt="Profile Image"
+            />
+          </div>
         </div>
       </nav>
     </header>
@@ -68,7 +92,11 @@
             </div>
             <div class="playlist__card__content">
               <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+              <p class="playlist__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                sequi minus tempore repellendus et consequuntur voluptate
+                commodi inventore at officiis!
+              </p>
               <p class="playlist__description">Total Songs: <span>15</span></p>
               <p class="playlist__price">Price: <span>50</span></p>
               <button class="btn btn-primary playlist__btn">Add to Cart</button>
@@ -80,7 +108,11 @@
             </div>
             <div class="playlist__card__content">
               <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+              <p class="playlist__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                sequi minus tempore repellendus et consequuntur voluptate
+                commodi inventore at officiis!
+              </p>
               <p class="playlist__description">Total Songs: <span>15</span></p>
               <p class="playlist__price">Price: <span>50</span></p>
               <button class="btn btn-primary playlist__btn">Add to Cart</button>
@@ -92,7 +124,11 @@
             </div>
             <div class="playlist__card__content">
               <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+              <p class="playlist__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                sequi minus tempore repellendus et consequuntur voluptate
+                commodi inventore at officiis!
+              </p>
               <p class="playlist__description">Total Songs: <span>15</span></p>
               <p class="playlist__price">Price: <span>50</span></p>
               <button class="btn btn-primary playlist__btn">Add to Cart</button>
@@ -104,7 +140,11 @@
             </div>
             <div class="playlist__card__content">
               <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+              <p class="playlist__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                sequi minus tempore repellendus et consequuntur voluptate
+                commodi inventore at officiis!
+              </p>
               <p class="playlist__description">Total Songs: <span>15</span></p>
               <p class="playlist__price">Price: <span>50</span></p>
               <button class="btn btn-primary playlist__btn">Add to Cart</button>
@@ -116,7 +156,11 @@
             </div>
             <div class="playlist__card__content">
               <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+              <p class="playlist__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                sequi minus tempore repellendus et consequuntur voluptate
+                commodi inventore at officiis!
+              </p>
               <p class="playlist__description">Total Songs: <span>15</span></p>
               <p class="playlist__price">Price: <span>50</span></p>
               <button class="btn btn-primary playlist__btn">Add to Cart</button>
@@ -128,7 +172,11 @@
             </div>
             <div class="playlist__card__content">
               <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+              <p class="playlist__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                sequi minus tempore repellendus et consequuntur voluptate
+                commodi inventore at officiis!
+              </p>
               <p class="playlist__description">Total Songs: <span>15</span></p>
               <p class="playlist__price">Price: <span>50</span></p>
               <button class="btn btn-primary playlist__btn">Add to Cart</button>
@@ -140,7 +188,11 @@
             </div>
             <div class="playlist__card__content">
               <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+              <p class="playlist__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                sequi minus tempore repellendus et consequuntur voluptate
+                commodi inventore at officiis!
+              </p>
               <p class="playlist__description">Total Songs: <span>15</span></p>
               <p class="playlist__price">Price: <span>50</span></p>
               <button class="btn btn-primary playlist__btn">Add to Cart</button>
@@ -152,7 +204,11 @@
             </div>
             <div class="playlist__card__content">
               <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+              <p class="playlist__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                sequi minus tempore repellendus et consequuntur voluptate
+                commodi inventore at officiis!
+              </p>
               <p class="playlist__description">Total Songs: <span>15</span></p>
               <p class="playlist__price">Price: <span>50</span></p>
               <button class="btn btn-primary playlist__btn">Add to Cart</button>
@@ -164,7 +220,11 @@
             </div>
             <div class="playlist__card__content">
               <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi minus tempore repellendus et consequuntur voluptate commodi inventore at officiis!</p>
+              <p class="playlist__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                sequi minus tempore repellendus et consequuntur voluptate
+                commodi inventore at officiis!
+              </p>
               <p class="playlist__description">Total Songs: <span>15</span></p>
               <p class="playlist__price">Price: <span>50</span></p>
               <button class="btn btn-primary playlist__btn">Add to Cart</button>
@@ -182,7 +242,11 @@
           <!-- Footer Logo Column -->
           <div class="footer__logo">
             <div>
-              <img src="images/logo-white.svg" alt="logo" class="footer__image" />
+              <img
+                src="images/logo-white.svg"
+                alt="logo"
+                class="footer__image"
+              />
               <p class="footer__details">Dive into a world of endless music.</p>
             </div>
             <!-- Social Container -->
@@ -236,12 +300,14 @@
           </div>
         </div>
       </div>
-      <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
+      <div class="footer__bottom">
+        All Rights Reserved &copy; 2024 Music Place
+      </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module" src="js/constants.js"></script>
     <script type="module" src="js/search.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

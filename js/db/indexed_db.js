@@ -71,6 +71,8 @@ function registerUser(user) {
  */
 function updateUserProfile(email, user) {
   return new Promise((resolve, reject) => {
+    console.log(email);
+    console.log(user);
     const transaction = db.transaction([STORE_NAME_USERS], "readwrite");
     const store = transaction.objectStore(STORE_NAME_USERS);
     const getUserRequest = store.get(email);
