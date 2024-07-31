@@ -58,7 +58,7 @@ function registerUser(user) {
     };
 
     request.onerror = (event) => {
-      reject(new Error(`Registration error: ${event.target.error}`));
+      reject(event.target.error);
     };
   });
 }
