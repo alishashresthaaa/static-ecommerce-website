@@ -37,7 +37,11 @@ var handleSearch = function () {
 
 // Generate random playlist
 var populateMostBought = function (artists, genres) {
-  const playlists = populatePlaylists(artists, genres, "most-bought-playlist").splice(0, 8);
+  const playlists = populatePlaylists(
+    artists,
+    genres,
+    "most-bought-playlist"
+  ).splice(0, 8);
   var $swiperWrapper = $("#most-bought-playlist");
   $swiperWrapper.empty();
   playlists.forEach((playlist) => {
@@ -59,7 +63,11 @@ var populateMostBought = function (artists, genres) {
 
 // Generate random playlist for our top sales
 var populateTopSales = function (artists, genres) {
-  const playlists = populatePlaylists(artists, genres, "top-sales-playlist").splice(0, 8);
+  const playlists = populatePlaylists(
+    artists,
+    genres,
+    "top-sales-playlist"
+  ).splice(0, 8);
   var $swiperWrapper = $("#top-sales-playlist");
   $swiperWrapper.empty();
   playlists.forEach((playlist) => {
@@ -89,4 +97,3 @@ $(document).ready(function () {
   populateMostBought(ARTISTS, GENRES);
   populateTopSales(ARTISTS, GENRES);
 });
-

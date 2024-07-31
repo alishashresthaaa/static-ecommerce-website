@@ -6,7 +6,6 @@ import {
   clearCartItems,
 } from "./db/indexed_db.js";
 
-// Your existing code
 import { getLoggedUser } from "./db/local_storage.js";
 
 let cartItems = [];
@@ -85,10 +84,6 @@ function populateTable(data) {
       .addClass("fa-solid fa-trash")
       .on("click", function () {
         removeCartItem(item.id)
-          // .then(() => {
-          //   $row.remove();
-          //   location.reload();
-          // })
           .then(getMyCartItems)
           .then((playlists) => {
             populateTable(playlists);
@@ -138,8 +133,7 @@ function placeOrder() {
   placeOrderItem(order)
     .then(clearCartItems)
     .then(() => {
-      alert("Order placed successfully!");
-        $("#successModal").fadeIn();
+      $("#successModal").fadeIn();
     })
     .catch((error) => {
       console.log("Error: ", error);
@@ -170,7 +164,7 @@ $(document).ready(() => {
   // On place order
   $("#buttonPlaceOrder").on("click", placeOrder);
 
-    $("#closeDialog").on("click", function () {
-        window.location.href = "orders.html";
-    });
+  $("#closeDialog").on("click", function () {
+    window.location.href = "orders.html";
+  });
 });
