@@ -1,12 +1,24 @@
-import { openDB, getMyCartItems, removeCartItem } from "./db/indexed_db.js";
+import {
+  openDB,
+  getMyCartItems,
+  removeCartItem,
+  placeOrderItem,
+} from "./db/indexed_db.js";
+
+// Your existing code
 import { getLoggedUser } from "./db/local_storage.js";
+
+let cartItems = [];
+let totalCost = 0;
+let totalSongs = 0;
+
 // Function to populate the table
 function populateTable(data) {
+  cartItems = data;
   const $table = $("#cartTable");
   const $tableBody = $table.find("tbody");
   // Clear all existing rows from the table body
   $tableBody.empty();
-  let totalCost = 0;
 
   data.forEach((item) => {
     totalCost += item.price;
@@ -15,6 +27,7 @@ function populateTable(data) {
     let artists = [];
 
     const playlist = item.playlist;
+    totalSongs += playlist.length;
     if (playlist) {
       playlist.forEach((song) => {
         artists.push(song.artists);
@@ -80,6 +93,28 @@ const secondsToDuration = function (seconds) {
   return `${minutes}:${remainingSeconds.toString().padStart(2, "0")} Mins`;
 };
 
+function placeOrder() {
+  if (cartItems.length === 0) {
+    alert("Your cart is empty. Please add items to your cart.");
+    return;
+  }
+  const order = {
+    items: cartItems,
+    totalCost: totalCost,
+    totalSongs: totalSongs,
+  };
+  placeOrderItem(order)
+    .then(() => {
+      alert("Order placed successfully!");
+      // todo - redirect to order page
+      // window.location.href = "order.html";
+    })
+    .catch((error) => {
+      console.log("Error: ", error);
+      alert("Error placing order. Please try again.");
+    });
+}
+
 $(document).ready(() => {
   openDB()
     .then(getMyCartItems)
@@ -99,4 +134,7 @@ $(document).ready(() => {
   let formattedDate = currentDate.toISOString().split("T")[0];
   // Display the formatted date and time
   $("#dateTimeToday").text(formattedDate);
+
+  // On place order
+  $("#buttonPlaceOrder").on("click", placeOrder);
 });

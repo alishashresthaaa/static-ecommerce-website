@@ -1,9 +1,10 @@
 import { getLoggedUser } from "./local_storage.js";
 
 const DB_NAME = "mytunesDB";
-const DB_VERSION = 2;
+const DB_VERSION = 4;
 const STORE_NAME_USERS = "users";
 const STORE_NAME_CART = "cartItems";
+const STORE_NAME_ORDER = "orderItems";
 
 let db;
 
@@ -26,6 +27,13 @@ function openDB() {
           autoIncrement: true,
         });
         cartStore.createIndex("email", "email", { unique: false });
+      }
+      if (!db.objectStoreNames.contains(STORE_NAME_ORDER)) {
+        const orderStore = db.createObjectStore(STORE_NAME_ORDER, {
+          keyPath: "id",
+          autoIncrement: true,
+        });
+        orderStore.createIndex("email", "email", { unique: false });
       }
     };
 
@@ -159,6 +167,35 @@ function addCartItem(cartItem) {
 }
 
 /**
+ * Adds an item to the order.
+ * @param {Object} orderItem - The order item to add.
+ * @returns {Promise<string>} A promise that resolves when the item is added.
+ */
+function placeOrderItem(order) {
+  return new Promise((resolve, reject) => {
+    const loggedInUser = getLoggedUser();
+    if (!loggedInUser) {
+      reject(new Error("User is not logged in"));
+      return;
+    }
+
+    const transaction = db.transaction([STORE_NAME_ORDER], "readwrite");
+    const store = transaction.objectStore(STORE_NAME_ORDER);
+    order.email = loggedInUser.email;
+    order.orderDate = new Date();
+    store.add(order);
+
+    transaction.oncomplete = () => {
+      resolve("Order is placed successfully");
+    };
+
+    transaction.onerror = (event) => {
+      reject(new Error(`Order placing error: ${event.target.error}`));
+    };
+  });
+}
+
+/**
  * Removes an item from the cart.
  * @param {number} cartItemId - The ID of the cart item to remove.
  * @returns {Promise<string>} A promise that resolves when the item is removed.
@@ -175,6 +212,33 @@ function removeCartItem(cartItemId) {
 
     request.onerror = (event) => {
       reject(new Error(`Remove cart item error: ${event.target.error}`));
+    };
+  });
+}
+
+/**
+ * Retrieves the cart items for the logged-in user.
+ * @returns {Promise<Array<Object>>} A promise that resolves with the cart items.
+ */
+function getMyOrders() {
+  return new Promise((resolve, reject) => {
+    const loggedInUser = getLoggedUser();
+    if (!loggedInUser) {
+      reject(new Error("User is not logged in"));
+      return;
+    }
+    const email = loggedInUser.email;
+    const transaction = db.transaction([STORE_NAME_ORDER], "readonly");
+    const store = transaction.objectStore(STORE_NAME_ORDER);
+    const index = store.index("email");
+    const request = index.getAll(email);
+
+    request.onsuccess = (event) => {
+      resolve(event.target.result);
+    };
+
+    request.onerror = (event) => {
+      reject(new Error(`Get cart items error: ${event.target.error}`));
     };
   });
 }
@@ -214,4 +278,6 @@ export {
   addCartItem,
   removeCartItem,
   getMyCartItems,
+  placeOrderItem,
+  getMyOrders,
 };
