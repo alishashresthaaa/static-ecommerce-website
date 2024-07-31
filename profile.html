@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>mytunes - Profile Page</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -23,11 +26,25 @@
           </ul>
         </div>
         <div class="nav__right" id="loginContent" style="display: none">
-          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            onclick="redirectToLogin()"
+          >
+            Sign in / Register
+          </button>
         </div>
-        <div class="nav__right" id="viewProfile" style="display: none" onclick="redirectToProfile()">
+        <div
+          class="nav__right"
+          id="viewProfile"
+          style="display: none"
+          onclick="redirectToProfile()"
+        >
           <div class="profile-image profile-image-mini">
-            <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="Profile Image" />
+            <img
+              src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
+              alt="Profile Image"
+            />
           </div>
         </div>
         <div class="hamburger__menu">
@@ -51,7 +68,10 @@
     <div class="profile-container">
       <div style="display: flex; flex-direction: column; align-items: center">
         <div class="profile-image">
-          <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="Profile Image" />
+          <img
+            src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
+            alt="Profile Image"
+          />
         </div>
         <br />
         <h1 id="profile-name"></h1>
@@ -81,7 +101,13 @@
           <label for="address">Address:</label>
           <textarea id="address" name="address"></textarea>
 
-          <button id="update-button" class="btn btn-primary btn-full" style="width: 250px">Update Profile</button>
+          <button
+            id="update-button"
+            class="btn btn-primary btn-full"
+            style="width: 250px"
+          >
+            Update Profile
+          </button>
         </form>
       </div>
     </div>
@@ -97,8 +123,12 @@
           <p class="footer__details">All rights reserved.</p>
           <div class="footer__socials">
             <h2 class="footer__title">socials</h2>
-            <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
-            <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook"></i> </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
             <a href="https://www.tiktok.com/" target="_blank">
               <i class="fa-brands fa-tiktok"></i>
             </a>
@@ -146,15 +176,23 @@
       <div class="footer__bottom">
         <div class="footer__bottom__container">
           <div class="footer__title">Disclaimer</div>
-          <div class="footer__desc">This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only. This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only. This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only.</div>
+          <div class="footer__desc">
+            This is a project for a fictional music streaming platform. All the
+            content and images used in this project are for educational purposes
+            only. This is a project for a fictional music streaming platform.
+            All the content and images used in this project are for educational
+            purposes only. This is a project for a fictional music streaming
+            platform. All the content and images used in this project are for
+            educational purposes only.
+          </div>
         </div>
       </div>
     </footer>
 
     <script type="module" src="js/db/local_storage.js"></script>
     <script type="module" src="js/db/indexed_db.js"></script>
-    <script type="module" src="js/profile.js"></script>
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/profile.js"></script>
     <script type="module" src="js/utils.js"></script>
   </body>
 </html>
