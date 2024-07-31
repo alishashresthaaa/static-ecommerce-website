@@ -1032,12 +1032,7 @@ const SONGS = [
   },
   {
     title: "Fragile",
-    artists: [
-      "Tech N9ne",
-      "Kendrick Lamar",
-      "\u00a1MAYDAY!",
-      "Kendall Morgan",
-    ],
+    artists: ["Tech N9ne", "Kendrick Lamar", "\u00a1MAYDAY!", "Kendall Morgan"],
     album: "Something Else",
     image: "https://i.scdn.co/image/ab67616d0000b2735021c52bfa5ca127b5d35d7f",
     spotify: "https://api.spotify.com/v1/tracks/7L3YDa0Fd8pmzpAyu6EKOS",
@@ -2636,12 +2631,7 @@ const SONGS = [
   {
     title:
       "That's What Friends Are For (with Elton John, Gladys Knight & Stevie Wonder)",
-    artists: [
-      "Dionne Warwick",
-      "Elton John",
-      "Gladys Knight",
-      "Stevie Wonder",
-    ],
+    artists: ["Dionne Warwick", "Elton John", "Gladys Knight", "Stevie Wonder"],
     album: "Friends",
     image: "https://i.scdn.co/image/ab67616d0000b2732c65840d117b54c8d2a6cd2a",
     spotify: "https://api.spotify.com/v1/tracks/1OzrlK57iLTIjmbZC1ppWM",
@@ -2817,12 +2807,7 @@ const SONGS = [
   },
   {
     title: "That's What Friends Are For",
-    artists: [
-      "Dionne Warwick",
-      "Elton John",
-      "Gladys Knight",
-      "Stevie Wonder",
-    ],
+    artists: ["Dionne Warwick", "Elton John", "Gladys Knight", "Stevie Wonder"],
     album: "Diamonds (Deluxe)",
     image: "https://i.scdn.co/image/ab67616d0000b273904e306cf32fa5dc93dd927a",
     spotify: "https://api.spotify.com/v1/tracks/13vqqi30qvTpWVC9JSC2aM",
@@ -3336,12 +3321,7 @@ const SONGS = [
   {
     title:
       "That's What Friends Are For (with Elton John, Gladys Knight & Stevie Wonder) - Remastered",
-    artists: [
-      "Dionne Warwick",
-      "Elton John",
-      "Gladys Knight",
-      "Stevie Wonder",
-    ],
+    artists: ["Dionne Warwick", "Elton John", "Gladys Knight", "Stevie Wonder"],
     album: "The Essential Gladys Knight & The Pips",
     image: "https://i.scdn.co/image/ab67616d0000b273226d142cf9ca1eae5856cb97",
     spotify: "https://api.spotify.com/v1/tracks/3Oc4iQ506DbtBJebgBGyn6",
@@ -4871,4 +4851,6 @@ const SONGS = [
 ];
 
 const PRICE_PER_SONG = 1.5;
-export { ARTISTS, GENRES, PRICE_PER_SONG, SONGS };
+const PROFILE_PLACEHOLDER =
+  "https://st4.depositphotos.com/4329009/19956/v/1600/depositphotos_199564354-stock-illustration-creative-vector-illustration-default-avatar.jpg";
+export { ARTISTS, GENRES, PRICE_PER_SONG, SONGS, PROFILE_PLACEHOLDER };
