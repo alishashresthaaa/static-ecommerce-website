@@ -18,6 +18,8 @@ const truncateText = function (text, limit) {
 
 // Function to populate the table
 function populateTable(data) {
+  totalCost = 0;
+  totalSongs = 0;
   cartItems = data;
   const $table = $("#cartTable");
   const $tableBody = $table.find("tbody");
@@ -122,7 +124,13 @@ const secondsToDuration = function (seconds) {
 
 function placeOrder() {
   if (cartItems.length === 0) {
-    alert("Your cart is empty. Please add items to your cart.");
+    $.toast({
+      hideAfter: 4000,
+      heading: "Error",
+      text: "Cart is empty. Please add items to cart.",
+      icon: "error",
+      position: "top-center",
+    });
     return;
   }
   const order = {
