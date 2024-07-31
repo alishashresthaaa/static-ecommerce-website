@@ -80,6 +80,7 @@ var getPlaylistItem = function (playlist) {
     text: "Add to cart",
   }).on("click", function (event) {
     event.stopPropagation();
+    $(this).text("Added to cart").prop("disabled", true);
     // $(this).prop("disabled", true);
     addToCart(playlist, $(this));
   });
@@ -95,6 +96,12 @@ function addToCart(playlist, component) {
     .then(() => {
       component.prop("disabled", true);
       console.log("Added to the database");
+      $.toast({
+        hideAfter:4000,
+        heading: "Success",
+        text: "Item added to cart",
+        icon: "success",
+        position: "top-center",})
     })
     .catch((error) => console.log("Error to add item ", error));
 }

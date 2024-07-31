@@ -13,6 +13,10 @@ let cartItems = [];
 let totalCost = 0;
 let totalSongs = 0;
 
+const truncateText = function (text, limit) {
+  return text.length > limit ? text.substring(0, limit) + "..." : text;
+};
+
 // Function to populate the table
 function populateTable(data) {
   cartItems = data;
@@ -37,7 +41,34 @@ function populateTable(data) {
     }
     const $row = $("<tr>");
 
-    const $artistCell = $("<td>").text(getArtistsName(artists));
+    const artistNames = getArtistsName(artists);
+    const truncatedArtists = truncateText(artistNames, 80);
+    const $artistCell = $("<td>");
+    const $artistContainer = $("<div>").addClass("artist-container");
+
+    const $artistNames = $("<span>")
+      .addClass("artist-names")
+      .text(truncatedArtists);
+    $artistContainer.append($artistNames);
+
+    if (artistNames.length > 80) {
+      const $toggleButton = $("<a>")
+        .addClass("toggle-button")
+        .text("Show all")
+        .on("click", function () {
+          if ($artistNames.text().endsWith("...")) {
+            $artistNames.text(artistNames);
+            $toggleButton.text("Show less");
+          } else {
+            $artistNames.text(truncatedArtists);
+            $toggleButton.text("Show all");
+          }
+        });
+
+      $artistContainer.append($toggleButton);
+    }
+
+    $artistCell.append($artistContainer);
     $row.append($artistCell);
 
     const $durationCell = $("<td>").text(secondsToDuration(duration));
@@ -108,8 +139,7 @@ function placeOrder() {
     .then(clearCartItems)
     .then(() => {
       alert("Order placed successfully!");
-      // todo - redirect to order page
-      // window.location.href = "order.html";
+        $("#successModal").fadeIn();
     })
     .catch((error) => {
       console.log("Error: ", error);
@@ -139,4 +169,8 @@ $(document).ready(() => {
 
   // On place order
   $("#buttonPlaceOrder").on("click", placeOrder);
+
+    $("#closeDialog").on("click", function () {
+        window.location.href = "orders.html";
+    });
 });

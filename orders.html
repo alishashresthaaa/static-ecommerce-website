@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <title>mytunes - Profile Page</title>
+    <title>mytunes - cart page</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -24,7 +24,10 @@
             <li class="nav__item"><a href="orders.html">My Orders</a></li>
           </ul>
         </div>
-        <div class="nav__right">
+        <div class="nav__right" id="loginContent" style="display: none">
+          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
+        </div>
+        <div class="nav__right" id="viewProfile" style="display: none" onclick="redirectToProfile()">
           <div class="profile-image profile-image-mini">
             <img id="profileImage" src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="Profile Image" />
           </div>
@@ -47,46 +50,37 @@
       </nav>
     </header>
 
-    <!-- Profile Content -->
-    <div class="profile-container">
-      <div style="display: flex; flex-direction: column; align-items: center" data-aos="fade-right">
-        <div class="profile-image">
-          <img id="profile-image" src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="Profile Image" />
-        </div>
-        <br />
-        <h1 id="profile-name"></h1>
-        <p id="profile-email"></p>
-        <p id="member-since"></p>
-        <br />
-        <button id="logout-button" class="btn btn-primary btn-full" style="width: 250px">Logout</button>
-        <br />
+    <!-- Order Container -->
+    <div class="container orders__container" data-aos="fade-up">
+      <h2>My Orders</h2>
+      <p>You have total <span id="total-items-count">2</span> orders.</p>
+      <div class="cart__table__container">
+        <table class="track__table" id="cartTable">
+          <tr>
+            <th>Order Id</th>
+            <th>Delivered On</th>
+            <th>Price</th>
+            <th>Total Songs</th>
+            <th>Total Playlists</th>
+          </tr>
+        </table>
       </div>
+    </div>
 
-      <div class="profile-info" data-aos="fade-left">
-        <h2>Edit Profile</h2>
-        <p>View your profile and edit as necessary.</p>
-        <form style="margin-top: 20px">
-          <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" name="first-name" required />
-
-          <label for="last-name">Last Name:</label>
-          <input type="text" id="last-name" name="last-name" required />
-
-          <label for="dob">Date of Birth:</label>
-          <input type="date" id="dob" name="dob" />
-
-          <label for="gender">Gender:</label>
-          <select id="gender" name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-
-          <label for="address">Address:</label>
-          <textarea id="address" name="address"></textarea>
-
-          <button id="update-button" class="btn btn-primary btn-full" style="width: 250px">Update Profile</button>
-        </form>
+    <!-- Download our app -->
+    <div class="download__bg__container">
+      <div class="container download__container">
+        <div class="download__left" data-aos="fade-right">
+          <h2>Download Our App</h2>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+          <div class="download__app__store">
+            <img src="images/app_store_bg.svg" alt="App Store" />
+            <img src="images/play_store_bg.svg" alt="Play Store" />
+          </div>
+        </div>
+        <div class="download__right" data-aos="fade-left">
+          <img src="images/scan.png" alt="Download" />
+        </div>
       </div>
     </div>
 
@@ -158,11 +152,12 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script type="module" src="js/db/local_storage.js"></script>
     <script type="module" src="js/db/indexed_db.js"></script>
-    <script type="module" src="js/profile.js"></script>
-    <script type="module" src="js/main.js"></script>
     <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

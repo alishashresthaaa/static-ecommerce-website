@@ -96,3 +96,8 @@
     width: 100%;
   }
 }
+
+.orders__container {
+  width: 70%;
+  margin-left: 0px;
+}
