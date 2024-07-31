@@ -1,3 +1,4 @@
+import { UNAUTHORIZED } from "../constants.js";
 import { getLoggedUser } from "./local_storage.js";
 
 const DB_NAME = "mytunesDB";
@@ -147,7 +148,7 @@ function addCartItem(cartItem) {
   return new Promise((resolve, reject) => {
     const loggedInUser = getLoggedUser();
     if (!loggedInUser) {
-      reject(new Error("User is not logged in"));
+      reject(new Error(UNAUTHORIZED));
       return;
     }
 

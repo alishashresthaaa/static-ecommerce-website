@@ -1,13 +1,13 @@
 import { isLoggedIn, getLoggedUser } from "./db/local_storage.js";
 
-function redirectToLogin() {
+export function redirectToLogin() {
   window.location.href = "login.html";
 }
-function redirectToHome() {
+export function redirectToHome() {
   window.location.href = "index.html";
 }
 
-function redirectToProfile() {
+export function redirectToProfile() {
   window.location.href = "profile.html";
 }
 
@@ -59,7 +59,7 @@ window.redirectToProfile = redirectToProfile;
 
 AOS.init({
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  delay:12,
+  delay: 12,
   duration: 700,
   easing: "ease",
   once: false,
