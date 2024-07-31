@@ -37,7 +37,15 @@ function populateTable(data) {
       .addClass("fa-solid fa-trash")
       .on("click", function () {
         removeCartItem(item.id)
-          .then(() => $row.remove())
+          .then(() => {
+            $row.remove();
+            location.reload();
+          })
+          //   .then(getMyCartItems)
+          //   .then((playlists) => {
+          //     $row.remove();
+          //     populateTable(playlists);
+          //   })
           .catch((error) => console.log("Error: ", error));
       });
     $removeCell.append($removeIcon);
@@ -48,6 +56,7 @@ function populateTable(data) {
 
   $("#sub-total").text("$ " + totalCost.toFixed(2));
   $("#total-track-items").text(data.length);
+  $("#total-items-count").text(data.length);
 }
 
 const getArtistsName = function (artists) {
