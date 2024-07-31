@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>mytunes - search</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -13,12 +13,7 @@
     <header>
       <nav class="nav__container">
         <div class="nav__left">
-          <img
-            src="images/logo.svg"
-            alt="Logo"
-            class="nav__logo"
-            onclick="redirectToHome()"
-          />
+          <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html">Home</a></li>
             <li class="nav__item"><a href="search.html">Search</a></li>
@@ -83,153 +78,13 @@
             <option value="40-50">$40 - $50</option>
           </select>
         </div>
+        <div>
+          <button class="btn btn-primary" id="search">Search</button>
+        </div>
       </div>
       <div class="search__right">
         <div class="search__list__grid" id="playlist">
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                sequi minus tempore repellendus et consequuntur voluptate
-                commodi inventore at officiis!
-              </p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                sequi minus tempore repellendus et consequuntur voluptate
-                commodi inventore at officiis!
-              </p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                sequi minus tempore repellendus et consequuntur voluptate
-                commodi inventore at officiis!
-              </p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                sequi minus tempore repellendus et consequuntur voluptate
-                commodi inventore at officiis!
-              </p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                sequi minus tempore repellendus et consequuntur voluptate
-                commodi inventore at officiis!
-              </p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                sequi minus tempore repellendus et consequuntur voluptate
-                commodi inventore at officiis!
-              </p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                sequi minus tempore repellendus et consequuntur voluptate
-                commodi inventore at officiis!
-              </p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                sequi minus tempore repellendus et consequuntur voluptate
-                commodi inventore at officiis!
-              </p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
-          <div class="playlist__card" onclick="redirect()">
-            <div class="playlist__card__image">
-              <img src="images/playlist/one.jpg" alt="Playlist Image" />
-            </div>
-            <div class="playlist__card__content">
-              <p class="playlist__title">Best of John Mayer</p>
-              <p class="playlist__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                sequi minus tempore repellendus et consequuntur voluptate
-                commodi inventore at officiis!
-              </p>
-              <p class="playlist__description">Total Songs: <span>15</span></p>
-              <p class="playlist__price">Price: <span>50</span></p>
-              <button class="btn btn-primary playlist__btn">Add to Cart</button>
-            </div>
-          </div>
+          <!-- Populate list here -->
         </div>
       </div>
     </section>
@@ -242,11 +97,7 @@
           <!-- Footer Logo Column -->
           <div class="footer__logo">
             <div>
-              <img
-                src="images/logo-white.svg"
-                alt="logo"
-                class="footer__image"
-              />
+              <img src="images/logo-white.svg" alt="logo" class="footer__image" />
               <p class="footer__details">Dive into a world of endless music.</p>
             </div>
             <!-- Social Container -->
@@ -300,9 +151,7 @@
           </div>
         </div>
       </div>
-      <div class="footer__bottom">
-        All Rights Reserved &copy; 2024 Music Place
-      </div>
+      <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

@@ -3,24 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>mytunes - buy playlist</title>
+    <title>mytunes - home</title>
   </head>
+
   <body>
     <!-- Navigation Bar -->
     <header>
       <nav class="nav__container">
         <div class="nav__left">
-          <img
-            src="images/logo.svg"
-            alt="Logo"
-            class="nav__logo"
-            onclick="redirectToHome()"
-          />
+          <img src="images/logo.svg" alt="Logo" class="nav__logo" onclick="redirectToHome()" />
           <ul class="nav__list">
             <li class="nav__item"><a href="index.html">Home</a></li>
             <li class="nav__item"><a href="search.html">Search</a></li>
@@ -66,7 +60,8 @@
         </div>
       </div>
 
-      <form action="#" class="showcase__search">
+      <!-- Action Form -->
+      <form action="search.html" id="search" class="showcase__search">
         <select name="artist" id="artist">
           <option value="">Select Artist</option>
           <!-- Add actual artist options here -->
@@ -75,109 +70,93 @@
           <option value="">Select Genre</option>
           <!-- Add actual genre options here -->
         </select>
-        <button class="btn btn-primary">Search</button>
+        <button class="btn btn-primary" type="submit">Search</button>
       </form>
     </section>
 
     <!-- Slider - Mood picks for you -->
-    <section class="container mood-slider">
+    <section class="container">
       <div class="title-container">
-        <h1>Most Buyed Playlist</h1>
-        <a href="#">Show All</a>
+        <h1>Most Bought Playlist</h1>
+        <a href="search.html">Show All</a>
       </div>
-      <div class="swiper mood-slider-swiper">
-        <div class="swiper-wrapper">
+      <div class="swiper most-bought-swiper">
+        <div class="swiper-wrapper" id="most-bought-playlist">
           <!-- Repeatable Slide Item -->
-          <div class="swiper-slide">
-            <div class="playlist__card">
-              <div class="playlist__card__image">
-                <img src="images/playlist/one.jpg" alt="Playlist Image" />
-              </div>
-              <div class="playlist__card__content">
-                <p class="playlist__title">Best of John Mayer</p>
-                <p class="playlist__description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolore sequi minus tempore repellendus et consequuntur
-                  voluptate commodi inventore at officiis!
-                </p>
-                <p class="playlist__description">
-                  Total Songs: <span>15</span>
-                </p>
-                <p class="playlist__price">Price: <span>50</span></p>
-                <button class="btn btn-primary playlist__btn">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- More swiper-slide items here -->
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
     </section>
 
-    <!-- Artist Categories -->
-    <section class="container genre-slider">
-      <div class="title-container">
-        <h1>Find playlist by genre</h1>
-        <a href="#">Show All</a>
-      </div>
-      <div class="swiper genre-slider-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div
-              style="
-                background-image: url('https://api.basobaas.com/api/files/nnwe5fw5nlidq9l/6hwjupcab2mk03p/house_OBjLqtuhaI.jpg?thumb=180x0');
-              "
-              class="genre__card"
-            >
-              <div class="genre__card__overlay"></div>
-              <span class="genre__card__title">Rock</span>
-            </div>
-          </div>
-          <!-- More swiper-slide items here -->
+    <!-- About Us -->
+    <div class="about__bg__container">
+      <div class="container about__container">
+        <div class="about__left">
+          <img src="images/about.png" alt="About" />
+        </div>
+        <div class="about__right">
+          <h2>About Us</h2>
+          <p>We are a music streaming platform that provides you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from. Our platform is designed to provide you with the best music experience.</p>
+          <p>We have a team of experts who curate the best music playlists for you. Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+
+          <button class="btn btn-primary" onclick="redirectToSearch()">Search</button>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Slider - Our top sales -->
-    <section class="container mood-slider">
+    <section class="container">
       <div class="title-container">
         <h1>Our Top Sales</h1>
-        <a href="#">Show All</a>
+        <a href="search.html">Show All</a>
       </div>
-      <div class="swiper mood-slider-swiper">
-        <div class="swiper-wrapper">
+      <div class="swiper top-sales-swiper">
+        <div class="swiper-wrapper" id="top-sales-playlist">
           <!-- Repeatable Slide Item -->
-          <div class="swiper-slide">
-            <div class="playlist__card">
-              <div class="playlist__card__image">
-                <img src="images/playlist/one.jpg" alt="Playlist Image" />
-              </div>
-              <div class="playlist__card__content">
-                <p class="playlist__title">Best of John Mayer</p>
-                <p class="playlist__description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolore sequi minus tempore repellendus et consequuntur
-                  voluptate commodi inventore at officiis!
-                </p>
-                <p class="playlist__description">
-                  Total Songs: <span>15</span>
-                </p>
-                <p class="playlist__price">Price: <span>50</span></p>
-                <button class="btn btn-primary playlist__btn">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- More swiper-slide items here -->
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
     </section>
+
+    <!-- About Us - Three Section -->
+    <div class="container">
+      <div class="service__container">
+        <div class="service__item">
+          <i class="fa-solid fa-star"></i>
+          <h3>Quality Music</h3>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+        </div>
+        <div class="service__item">
+          <i class="fa-solid fa-shield"></i>
+          <h3>Secure Payment</h3>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+        </div>
+        <div class="service__item">
+          <i class="fa-solid fa-phone"></i>
+          <h3>24/7 Support</h3>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download our app -->
+    <div class="download__bg__container">
+      <div class="container download__container">
+        <div class="download__left">
+          <h2>Download Our App</h2>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+          <div class="download__app__store">
+            <img src="images/app_store_bg.svg" alt="App Store" />
+            <img src="images/play_store_bg.svg" alt="Play Store" />
+          </div>
+        </div>
+        <div class="download__right">
+          <img src="images/scan.png" alt="Download" />
+        </div>
+      </div>
+    </div>
 
     <!-- Footer Component -->
     <footer>
@@ -187,11 +166,7 @@
           <!-- Footer Logo Column -->
           <div class="footer__logo">
             <div>
-              <img
-                src="images/logo-white.svg"
-                alt="logo"
-                class="footer__image"
-              />
+              <img src="images/logo-white.svg" alt="logo" class="footer__image" />
               <p class="footer__details">Dive into a world of endless music.</p>
             </div>
             <!-- Social Container -->
@@ -245,32 +220,12 @@
           </div>
         </div>
       </div>
-      <div class="footer__bottom">
-        All Rights Reserved &copy; 2024 Music Place
-      </div>
+      <div class="footer__bottom">All Rights Reserved &copy; 2024 Music Place</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const moodSlider = new Swiper(".mood-slider-swiper", {
-        direction: "horizontal",
-        loop: true,
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
-      const genreSlider = new Swiper(".genre-slider-swiper", {
-        direction: "horizontal",
-        loop: true,
-        slidesPerView: "auto",
-        spaceBetween: 20,
-      });
-    </script>
-    <script type="module" src="./js/db/local_storage.js"></script>
-    <script type="module" src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/home.js"></script>
   </body>
 </html>

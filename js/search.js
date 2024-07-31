@@ -1,87 +1,50 @@
-import { ARTISTS, GENRES, SONGS } from "./constants.js";
+import { ARTISTS, GENRES, PRICE_PER_SONG, SONGS } from "./constants.js";
+import { getPlaylistItem } from "./generateCard.js";
+import { getRandomInt, shuffleSongs } from "./utils.js";
 
-function shufflePlaylist(array) {
-  let currentIndex = array.length;
-
-  // While there remain elements to shuffle...
-  while (currentIndex != 0) {
-    // Pick a remaining element...
-    let randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
-  }
-}
-
-const generatePlaylist = function (artists = null, genres = null, limit = 50) {
+var generatePlaylist = function (artists = [], genres = [], limit = null, count = 10) {
+  let playlists = [];
   let playlist = SONGS.filter((song) => {
-    if (!artists && !genres) {
+    if (artists.length == 0 && genres.length == 0) {
       return true;
     }
-    return (
-      artists.some((element) => song.artists.includes(element)) ||
-      genres.includes(song.genre)
-    );
+    return artists.some((element) => song.artists.includes(element)) || genres.includes(song.genre);
   });
-  shufflePlaylist(playlist);
-  return playlist.slice(0, limit);
+
+  for (let i = 0; i < count; i++) {
+    shuffleSongs(playlist);
+
+    var realLimit = limit ? limit : getRandomInt(10, 25);
+    playlists.push({
+      playlist: playlist.slice(0, realLimit),
+      price: PRICE_PER_SONG * realLimit,
+    });
+  }
+  console.log(playlists);
+  return playlists;
 };
 
-const getPlaylistItem = function (song) {
-  let $playlistItem = $("<div>", { class: "playlist-item" });
-  let $songImage = $("<img>", {
-    src: song.image,
-    alt: song.title,
-    class: "song-image",
+var populatePlaylists = function (artists, genres, id = "playlist") {
+  const playlists = generatePlaylist(artists, genres);
+  var $playlists = $("#" + id);
+  $playlists.empty();
+  playlists.forEach((element) => {
+    const playlistItem = getPlaylistItem(element);
+    $playlists.append(playlistItem);
   });
-  $playlistItem.append($songImage);
-
-  let $songInfo = $("<div>", { class: "song-info" });
-  let $songTitle = $("<a>", {
-    class: "song-title",
-    text: song.title,
-  });
-  $songInfo.append($songTitle);
-
-  let $album = $("<div>", { class: "song-album", text: song.album });
-  $songInfo.append($album);
-
-  let $artist = $("<div>", {
-    class: "song-artist",
-    text: song.artists.join(", "),
-  });
-  $songInfo.append($artist);
-
-  $playlistItem.append($songInfo);
-
-  let $audioPreview = $("<div>", { class: "audio-preview" });
-  $playlistItem.append($audioPreview);
-
-  return $playlistItem;
-};
-
-const populatePlaylist = function (playlist) {
-  let playlistDiv = $("#playlist");
-  playlistDiv.empty();
-
-  $.each(playlist, function (index, song) {
-    playlistDiv.append(getPlaylistItem(song));
-  });
+  return playlists;
 };
 
 $(document).ready(function () {
-  var selectedGenres = [];
-  var selectedArtists = [];
+  const urlParams = new URLSearchParams(window.location.search);
+  var selectedArtists = urlParams.getAll("artist");
+  var selectedGenres = urlParams.getAll("genre");
 
   var populateGenres = function () {
     let genresDiv = $("#genres");
     $.each(GENRES, function (index, value) {
       let $genre = $("<div>", {
-        class: "genre search__pills",
+        class: `genre search__pills${selectedGenres.includes(value) ? " selected" : ""}`,
         text: value,
       }).on(`click`, function () {
         toggleGenre($(this), value);
@@ -90,11 +53,10 @@ $(document).ready(function () {
     });
 
     let artistsDiv = $("#artists");
-
     $.each(ARTISTS, function (index, value) {
       let $artist = $("<div>", {
         id: value,
-        class: "artist search__pills",
+        class: `artist search__pills${selectedArtists.includes(value) ? " selected" : ""}`,
         text: value,
       }).on(`click`, function () {
         toggleArtists($(this), value);
@@ -102,8 +64,6 @@ $(document).ready(function () {
       artistsDiv.append($artist);
     });
   };
-
-  populateGenres();
 
   var toggleGenre = function ($element, value) {
     if (selectedGenres.includes(value)) {
@@ -125,14 +85,27 @@ $(document).ready(function () {
     }
   };
 
-  var handleGenerate = function () {
-    const playlist = generatePlaylist(selectedArtists, selectedGenres);
-    populatePlaylist(playlist);
+  // Populate genres and playlists
+  populateGenres();
+  // Populate default playlists
+  populatePlaylists(selectedArtists, selectedGenres);
+
+  var handleSearch = function () {
+    const queryParams = new URLSearchParams();
+    selectedArtists.forEach((artist) => queryParams.append("artist", artist));
+    selectedGenres.forEach((genre) => queryParams.append("genre", genre));
+
+    const queryString = queryParams.toString();
+    const url = new URL(window.location.href);
+    url.search = queryString;
+    const newUrl = url.toString();
+    window.history.pushState(null, null, newUrl);
+    console.log(selectedArtists, selectedGenres);
+    populatePlaylists(selectedArtists, selectedGenres);
   };
 
-  $("#generate").on("click", handleGenerate);
-  $("#lucky").on("click", function () {
-    const playlist = generatePlaylist();
-    populatePlaylist(playlist);
-  });
+  $("#search").on("click", handleSearch);
 });
+
+
+export { generatePlaylist, populatePlaylists };
