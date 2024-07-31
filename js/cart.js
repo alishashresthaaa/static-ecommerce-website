@@ -1,5 +1,9 @@
 import { openDB, getMyCartItems, removeCartItem } from "./db/indexed_db.js";
 
+const truncateText = function (text, limit) {
+  return text.length > limit ? text.substring(0, limit) + "..." : text;
+};
+
 // Function to populate the table
 function populateTable(data) {
   const $table = $("#cartTable");
@@ -20,7 +24,34 @@ function populateTable(data) {
     }
     const $row = $("<tr>");
 
-    const $artistCell = $("<td>").text(getArtistsName(artists));
+    const artistNames = getArtistsName(artists);
+    const truncatedArtists = truncateText(artistNames, 80);
+    const $artistCell = $("<td>");
+    const $artistContainer = $("<div>").addClass("artist-container");
+
+    const $artistNames = $("<span>")
+      .addClass("artist-names")
+      .text(truncatedArtists);
+    $artistContainer.append($artistNames);
+
+    if (artistNames.length > 80) {
+      const $toggleButton = $("<a>")
+        .addClass("toggle-button")
+        .text("Show all")
+        .on("click", function () {
+          if ($artistNames.text().endsWith("...")) {
+            $artistNames.text(artistNames);
+            $toggleButton.text("Show less");
+          } else {
+            $artistNames.text(truncatedArtists);
+            $toggleButton.text("Show all");
+          }
+        });
+
+      $artistContainer.append($toggleButton);
+    }
+
+    $artistCell.append($artistContainer);
     $row.append($artistCell);
 
     const $durationCell = $("<td>").text(secondsToDuration(duration));
@@ -77,6 +108,24 @@ const secondsToDuration = function (seconds) {
   const remainingSeconds = seconds % 60;
   return `${minutes}:${remainingSeconds.toString().padStart(2, "0")} Mins`;
 };
+
+// Function to handle place order button
+$("#placeOrder").on("click", function () {
+  // Show the modal
+  $("#successModal").fadeIn();
+
+  openDB()
+    .then((db) => {
+      const tx = db.transaction("cart", "readwrite");
+      const cartStore = tx.objectStore("cart");
+      cartStore.clear();
+    })
+    .catch((error) => console.log("Error: ", error));
+});
+
+$("#closeDialog").on("click", function () {
+  window.location.href = "orders.html";
+});
 
 $(document).ready(() => {
   openDB()
