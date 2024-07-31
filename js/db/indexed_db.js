@@ -216,6 +216,24 @@ function removeCartItem(cartItemId) {
   });
 }
 
+function clearCartItems() {
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction([STORE_NAME_CART], "readwrite");
+    const objectStore = transaction.objectStore(STORE_NAME_CART);
+    const request = objectStore.clear();
+
+    request.onsuccess = () => {
+      console.log(`All data from cart has been cleared.`);
+      resolve();
+    };
+
+    request.onerror = (event) => {
+      console.error(`Failed to clear data from cart:`, event.target.error);
+      reject(event.target.error);
+    };
+  });
+}
+
 /**
  * Retrieves the cart items for the logged-in user.
  * @returns {Promise<Array<Object>>} A promise that resolves with the cart items.
@@ -277,6 +295,7 @@ export {
   getUser,
   addCartItem,
   removeCartItem,
+  clearCartItems,
   getMyCartItems,
   placeOrderItem,
   getMyOrders,

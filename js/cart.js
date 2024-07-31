@@ -3,6 +3,7 @@ import {
   getMyCartItems,
   removeCartItem,
   placeOrderItem,
+  clearCartItems,
 } from "./db/indexed_db.js";
 
 // Your existing code
@@ -104,6 +105,7 @@ function placeOrder() {
     totalSongs: totalSongs,
   };
   placeOrderItem(order)
+    .then(clearCartItems)
     .then(() => {
       alert("Order placed successfully!");
       // todo - redirect to order page
