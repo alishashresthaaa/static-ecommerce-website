@@ -1,3 +1,6 @@
+import { openDB, getUser } from "./db/indexed_db.js";
+import { setLoggedInUser, isLoggedIn } from "./db/local_storage.js";
+
 const $ = function (id) {
   return document.getElementById(id);
 };
@@ -47,8 +50,9 @@ const validateField = function (event) {
 };
 
 const authenticateUser = function (event) {
+  console.log("Authenticating user...");
   event.preventDefault(); // Prevent form submission
-
+  console.log("Authenticating user...");
   // Trigger validation for all fields
   validateField({ target: $("email") });
   validateField({ target: $("password") });
@@ -57,24 +61,48 @@ const authenticateUser = function (event) {
     return;
   }
 
-  let authenticated = false;
   const email = $("email").value.trim();
   const password = $("password").value.trim();
 
-  if (email === validEmail && password === validPassword) {
-    authenticated = true;
-  } else {
-    $("passwordError").textContent = "Username or password is incorrect.";
-    $("password").classList.add("input-error");
-  }
+  console.log("Authenticating user...", email, password);
+  getUser(email)
+    .then((user) => {
+      console.log("User found", user);
+      if (user && user.password === password) {
+        setLoggedInUser(user);
+        window.location.href = "index.html";
+      } else {
+        $("passwordError").textContent = "Username or password is incorrect.";
+        $("password").classList.add("input-error");
+      }
+    })
+    .catch((error) => {
+      console.error("Error getting user", error);
+      $("passwordError").textContent = "Username or password is incorrect.";
+      $("password").classList.add("input-error");
+    });
 
-  if (authenticated) {
-    // Replace this with actual form submission logic if needed
-    alert("Login successful!");
-  }
+  // if (email === validEmail && password === validPassword) {
+  //   authenticated = true;
+  // } else {
+  //   $("passwordError").textContent = "Username or password is incorrect.";
+  //   $("password").classList.add("input-error");
+  // }
 };
 
 window.onload = function () {
+  if (isLoggedIn()) {
+    window.location.href = "index.html";
+  }
+
+  openDB()
+    .then(() => {
+      console.log("Database opened successfully");
+    })
+    .catch((error) => {
+      console.error("Error opening database", error);
+    });
+
   const loginForm = $("loginForm");
   if (loginForm) {
     loginForm.onsubmit = authenticateUser;

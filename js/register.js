@@ -1,17 +1,8 @@
+import { openDB, registerUser } from "./db/indexed_db.js";
+
 const $ = function (id) {
   return document.getElementById(id);
 };
-
-$(document).ready(function() {
-  $('#togglePassword').click(function() {
-    const passwordField = $('#password');
-    const type = passwordField.attr('type') === 'password' ? 'text' : 'password';
-    passwordField.attr('type', type);
-    
-    // Toggle eye icon class
-    $(this).toggleClass('fa-eye fa-eye-slash');
-  });
-});
 
 let isValid = false;
 
@@ -79,7 +70,7 @@ const validateField = function (event) {
   isValid = document.querySelectorAll(".input-error").length === 0;
 };
 
-const registerUser = function (event) {
+const registerNewUser = function (event) {
   event.preventDefault(); // Prevent form submission
 
   if (!isValid) {
@@ -92,15 +83,52 @@ const registerUser = function (event) {
     return;
   }
 
-  $("registrationForm").submit();
+  const user = {
+    firstName: $("firstName").value.trim(),
+    lastName: $("lastName").value.trim(),
+    email: $("email").value.trim(),
+    password: $("password").value.trim(),
+  };
+  registerUser(user)
+    .then(() => {
+      showModal();
+    })
+    .catch((error) => {
+      // todo: display error message
+      console.error("Error adding user", error);
+    });
+};
+
+// Modal functionality
+const successModal = $("successModal");
+
+const showModal = function () {
+  overlay.style.display = "block";
+  successModal.style.display = "block";
+};
+
+const closeModal = function () {
+  overlay.style.display = "none";
+  successModal.style.display = "none";
   window.location.href = "login.html";
 };
 
 window.onload = function () {
+  openDB()
+    .then(() => {
+      console.log("Database opened successfully");
+    })
+    .catch((error) => {
+      console.error("Error opening database", error);
+    });
+
   const registrationForm = $("registrationForm");
   if (registrationForm) {
-    registrationForm.onsubmit = registerUser;
+    registrationForm.onsubmit = registerNewUser;
   }
+
+  $("closeDialog").onclick = closeModal;
+
   const firstNameInput = $("firstName");
   const lastNameInput = $("lastName");
   const emailInput = $("email");
