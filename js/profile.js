@@ -7,7 +7,7 @@ import {
 import { openDB, updateUserProfile } from "./db/indexed_db.js";
 import { loadImage } from "./main.js";
 
-const $ = function (id) {
+const getById = function (id) {
   return document.getElementById(id);
 };
 
@@ -19,16 +19,16 @@ function redirectLogin() {
   window.location.href = "login.html";
 }
 
-let profileImage = $("profile-image");
-let profileName = $("profile-name");
-let profileEmail = $("profile-email");
-let memberSince = $("member-since");
+let profileImage = getById("profile-image");
+let profileName = getById("profile-name");
+let profileEmail = getById("profile-email");
+let memberSince = getById("member-since");
 
-let firstName = $("first-name");
-let lastName = $("last-name");
-let dob = $("dob");
-let gender = $("gender");
-let address = $("address");
+let firstName = getById("first-name");
+let lastName = getById("last-name");
+let dob = getById("dob");
+let gender = getById("gender");
+let address = getById("address");
 
 function loadProfileImage() {
   const user = getLoggedUser();
@@ -65,13 +65,23 @@ function updateProfile(event) {
   user.address = address.value;
   console.log(user.email);
   updateUserProfile(user.email, user)
-    .then(() => {
-      alert("Profile updated successfully");
+    .then(() => {      
+      $.toast({
+        hideAfter:4000,
+        heading: "Success",
+        text: "Profile updated successfully",
+        icon: "success",
+        position: "top-center",});
       setLoggedInUser(user);
       initProfile(user);
     })
     .catch((error) => {
-      alert("Failed to update profile");
+      $.toast({
+        hideAfter:4000,
+        heading: "Error",
+        text: "Failed to update profile",
+        icon: "error",
+        position: "top-center",});
       console.error(error);
     });
 }
@@ -91,9 +101,8 @@ window.onload = function () {
   // Check if the user is logged in when the page loads
   const user = getLoggedUser();
   initProfile(user);
-  $("update-button").onclick = updateProfile;
-
-  $("logout-button").onclick = function () {
+  getById("update-button").onclick = updateProfile;
+  getById("logout-button").onclick = function () {
     logout();
     redirectLogin();
   };

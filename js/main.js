@@ -11,54 +11,88 @@ export function redirectToProfile() {
   window.location.href = "profile.html";
 }
 
-// Function to hide elements with the class 'nav__right'
-function hideNavRight() {
-  const logInContent = document.getElementById("loginContent");
-  logInContent.style.display = "none";
+function redirectToSearchPage() {
+  window.location.href = "search.html";
 }
 
-function showNavRight() {
-  const logInContent = document.getElementById("loginContent");
-  logInContent.style.display = "block";
-}
-
-function hideViewProfile() {
-  const viewProfile = document.getElementById("viewProfile");
-  viewProfile.style.display = "none";
-}
-
-function showViewProfile() {
-  const viewProfile = document.getElementById("viewProfile");
-  viewProfile.style.display = "block";
-}
 function loadImage() {
   const user = getLoggedUser();
-  const url =
-    "https://ui-avatars.com/api/?background=random&name=" +
-    user.firstName +
-    "+" +
-    user.lastName;
+  const url = "https://ui-avatars.com/api/?background=random&name=" + user.firstName + "+" + user.lastName;
 
   document.getElementById("profileImage").src = url;
 }
-window.onload = function () {
-  // Check if the user is logged in when the page loads
-  if (isLoggedIn()) {
-    hideNavRight();
-    showViewProfile();
-    loadImage();
-  } else {
-    showNavRight();
-    hideViewProfile;
+
+// Handle navigation bar based on user login status
+const NAVIGATION__LIST = [
+  { key: "home", name: "Home", value: "index.html" },
+  { key: "search", name: "Search", value: "search.html" },
+  { key: "pricing", name: "Pricing", value: "pricing.html" },
+  { key: "faq", name: "FAQ", value: "faq.html" },
+  { key: "cart", name: "Cart", value: "cart.html" },
+  { key: "orders", name: "My Orders", value: "orders.html" },
+  { key: "profile", name: "My Profile", value: "profile.html" },
+  { key: "login", name: "Login", value: "login.html" },
+  { key: "register", name: "Register", value: "register.html" },
+];
+
+$(document).ready(function () {
+  const $navList = $("#webNav");
+  const $mobileNavList = $("#nav_list__mobile");
+  const $loginContent = $("#loginContent");
+  const $viewProfile = $("#viewProfile");
+
+  // Determine which items to include based on login status
+  const isUserLoggedIn = isLoggedIn();
+
+  // Helper function to create navigation items
+  function createNavItem(navItem) {
+    const $li = $("<li>", { class: "nav__item" });
+    const $a = $("<a>", { href: navItem.value, text: navItem.name });
+
+    $li.append($a);
+    return $li;
   }
-};
+
+  // Function to update navigation for both web and mobile
+  function updateNavMenu() {
+    $navList.empty(); // Clear existing items
+    $mobileNavList.empty(); // Clear existing items
+
+    NAVIGATION__LIST.forEach(function (navItem) {
+      // Determine visibility based on login status
+      if (!isUserLoggedIn && ["cart", "orders", "profile"].includes(navItem.key)) {
+        return; // Skip these items if not logged in
+      }
+      if (isUserLoggedIn && ["login", "register"].includes(navItem.key)) {
+        return; // Skip login and register items if logged in
+      }
+
+      const $navItem = createNavItem(navItem);
+      // Append the item to the web navigation list if it's not "login" or "register"
+      if (navItem.key !== "login" && navItem.key !== "register" && navItem.key !== "profile") {
+        $navList.append($navItem);
+      }
+      $mobileNavList.append($navItem.clone()); // Add the same item to mobile nav
+    });
+
+    // Additional logic based on user login status
+    if (isUserLoggedIn) {
+      $viewProfile.show();
+      loadImage();
+    } else {
+      $loginContent.show();
+    }
+  }
+
+  updateNavMenu(); // Call function to update the navigation menus
+});
 
 window.redirectToLogin = redirectToLogin;
 window.redirectToHome = redirectToHome;
 window.redirectToProfile = redirectToProfile;
+window.redirectToSearchPage = redirectToSearchPage;
 
 AOS.init({
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
   delay: 12,
   duration: 700,
   easing: "ease",
