@@ -1,3 +1,5 @@
+import { addCartItem } from "./db/indexed_db.js";
+
 // Image grid for playlist card
 var getPlaylistImage = function (playlist) {
   var $playlistImage = $("<div>", {
@@ -32,10 +34,13 @@ var getPlaylistItem = function (playlist) {
   $playlistContent.append(
     $("<div>", {
       class: "playlist__price",
-      html: `<span class="card__key">Price: </span><span class="card__value">${playlist.price.toLocaleString("en-US", {
-        style: "currency",
-        currency: "CAD",
-      })}</span>`,
+      html: `<span class="card__key">Price: </span><span class="card__value">${playlist.price.toLocaleString(
+        "en-US",
+        {
+          style: "currency",
+          currency: "CAD",
+        }
+      )}</span>`,
     })
   );
 
@@ -70,15 +75,29 @@ var getPlaylistItem = function (playlist) {
   );
   $playlistContent.append($playlistTracks);
 
-  $playlistContent.append(
-    $("<button>", {
-      class: "btn btn-primary playlist__card__btn",
-      text: "Add to cart",
-    })
-  );
+  var $addToCartButton = $("<button>", {
+    class: "btn btn-primary playlist__card__btn",
+    text: "Add to cart",
+  }).on("click", function (event) {
+    event.stopPropagation();
+    // $(this).prop("disabled", true);
+    addToCart(playlist, $(this));
+  });
+
+  $playlistContent.append($addToCartButton);
   $playlist.append($playlistContent);
   return $playlist;
 };
+
+// Function to add the playlist to the cart
+function addToCart(playlist, component) {
+  addCartItem(playlist)
+    .then(() => {
+      component.prop("disabled", true);
+      console.log("Added to the database");
+    })
+    .catch((error) => console.log("Error to add item ", error));
+}
 
 var wrapPlaylistInSwiperSlide = function (playlist) {
   return $("<div>", {

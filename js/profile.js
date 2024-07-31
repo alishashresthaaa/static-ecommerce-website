@@ -1,5 +1,11 @@
-import { setLoggedInUser, getLoggedUser } from "./db/local_storage.js";
+import {
+  setLoggedInUser,
+  getLoggedUser,
+  logout,
+  isLoggedIn,
+} from "./db/local_storage.js";
 import { openDB, updateUserProfile } from "./db/indexed_db.js";
+import { loadImage } from "./main.js";
 
 const $ = function (id) {
   return document.getElementById(id);
@@ -9,6 +15,11 @@ function redirectToHome() {
   window.location.href = "index.html";
 }
 
+function redirectLogin() {
+  window.location.href = "login.html";
+}
+
+let profileImage = $("profile-image");
 let profileName = $("profile-name");
 let profileEmail = $("profile-email");
 let memberSince = $("member-since");
@@ -19,7 +30,20 @@ let dob = $("dob");
 let gender = $("gender");
 let address = $("address");
 
+function loadProfileImage() {
+  const user = getLoggedUser();
+  const url =
+    "https://ui-avatars.com/api/?background=random&name=" +
+    user.firstName +
+    "+" +
+    user.lastName;
+
+  profileImage.src = url;
+}
+
 function initProfile(user) {
+  loadImage();
+  loadProfileImage();
   profileName.textContent = user.firstName + " " + user.lastName;
   profileEmail.textContent = user.email;
   memberSince.textContent = user.memberSince || "Member since: 2024";
@@ -53,6 +77,10 @@ function updateProfile(event) {
 }
 
 window.onload = function () {
+  if (!isLoggedIn()) {
+    redirectLogin();
+    return;
+  }
   openDB()
     .then(() => {
       console.log("Database opened successfully");
@@ -64,6 +92,11 @@ window.onload = function () {
   const user = getLoggedUser();
   initProfile(user);
   $("update-button").onclick = updateProfile;
+
+  $("logout-button").onclick = function () {
+    logout();
+    redirectLogin();
+  };
 };
 
 window.redirectToHome = redirectToHome;

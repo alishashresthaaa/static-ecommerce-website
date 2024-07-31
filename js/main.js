@@ -1,4 +1,4 @@
-import { isLoggedIn } from "./db/local_storage.js";
+import { isLoggedIn, getLoggedUser } from "./db/local_storage.js";
 
 function redirectToLogin() {
   window.location.href = "login.html";
@@ -31,12 +31,22 @@ function showViewProfile() {
   const viewProfile = document.getElementById("viewProfile");
   viewProfile.style.display = "block";
 }
+function loadImage() {
+  const user = getLoggedUser();
+  const url =
+    "https://ui-avatars.com/api/?background=random&name=" +
+    user.firstName +
+    "+" +
+    user.lastName;
 
+  document.getElementById("profileImage").src = url;
+}
 window.onload = function () {
   // Check if the user is logged in when the page loads
   if (isLoggedIn()) {
     hideNavRight();
     showViewProfile();
+    loadImage();
   } else {
     showNavRight();
     hideViewProfile;
@@ -55,3 +65,5 @@ AOS.init({
   once: false,
   anchorPlacement: "top-bottom",
 });
+
+export { loadImage };
