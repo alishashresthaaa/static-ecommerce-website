@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <title>mytunes - Profile Page</title>
+    <title>mytunes - cart page</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -47,42 +47,78 @@
       </nav>
     </header>
 
-    <!-- Profile Content -->
-    <div class="profile-container">
-      <div style="display: flex; flex-direction: column; align-items: center">
-        <div class="profile-image">
-          <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="Profile Image" />
+    <!-- Cart Container -->
+    <div class="container cart__container">
+      <div class="cart__left">
+        <h2>Checkout</h2>
+        <p>You have <span>0</span> items in cart.</p>
+        <div class="cart__table__container">
+          <table class="track__table">
+            <tr>
+              <th>Artist List</th>
+              <th>Duration</th>
+              <th>Price</th>
+              <th>Total Songs</th>
+              <th>Remove</th>
+            </tr>
+            <tr>
+              <td>John Mayer, Adele, Miley Cyrus</td>
+              <td>3:30</td>
+              <td>Rs. 100</td>
+              <td>3</td>
+              <td><i class="fa-solid fa-trash"></i></td>
+            </tr>
+            <tr>
+              <td>John Mayer, Adele, Miley Cyrus</td>
+              <td>3:30</td>
+              <td>Rs. 100</td>
+              <td>3</td>
+              <td><i class="fa-solid fa-trash"></i></td>
+            </tr>
+            <tr>
+              <td>John Mayer, Adele, Miley Cyrus</td>
+              <td>3:30</td>
+              <td>Rs. 100</td>
+              <td>3</td>
+              <td><i class="fa-solid fa-trash"></i></td>
+            </tr>
+            <tr>
+              <td>John Mayer, Adele, Miley Cyrus</td>
+              <td>3:30</td>
+              <td>Rs. 100</td>
+              <td>3</td>
+              <td><i class="fa-solid fa-trash"></i></td>
+            </tr>
+          </table>
         </div>
-        <br />
-        <h1 id="profile-name"></h1>
-        <p id="profile-email"></p>
-        <p id="member-since"></p>
-        <br />
       </div>
+      <div class="cart__right">
+        <h2>Order Summary</h2>
+        <div class="summary__container">
+          <div class="summary__item">
+            <p>Subtotal</p>
+            <p>Rs. 400</p>
+          </div>
+          <div class="summary__item">
+            <p>Total Track Items</p>
+            <p>10</p>
+          </div>
+          <div class="summary__item">
+            <p>Discount</p>
+            <p>Rs. 0</p>
+          </div>
+          <div class="summary__item">
+            <p>Shipping</p>
+            <p>Rs. 0</p>
+          </div>
+          <p class="summary">Get your playlst delivered to you by date 20.20.2020 at your email address test@test.com</p>
+          <button class="btn btn-primary btn-full">Place Order</button>
+        </div>
 
-      <div class="profile-info">
-        <form>
-          <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" name="first-name" required />
-
-          <label for="last-name">Last Name:</label>
-          <input type="text" id="last-name" name="last-name" required />
-
-          <label for="dob">Date of Birth:</label>
-          <input type="date" id="dob" name="dob" />
-
-          <label for="gender">Gender:</label>
-          <select id="gender" name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-
-          <label for="address">Address:</label>
-          <textarea id="address" name="address"></textarea>
-
-          <button id="update-button" class="btn btn-primary btn-full" style="width: 250px">Update Profile</button>
-        </form>
+        <div class="discount__container">
+          <h4>Get up to 10% discount by using Premium Account!</h4>
+          <p>Visit our <a href="pricing.html">Pricing Page</a> find out more.</p>
+        </div>
       </div>
     </div>
 
@@ -154,7 +190,7 @@
     <script type="module" src="js/db/local_storage.js"></script>
     <script type="module" src="js/db/indexed_db.js"></script>
     <script type="module" src="js/profile.js"></script>
-    <script type="module" src="js/main.js"></script>
     <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
