@@ -1,10 +1,13 @@
-import { openDB, getMyCartItems } from "./db/indexed_db.js";
+import { openDB, getMyCartItems, removeCartItem } from "./db/indexed_db.js";
 
 // Function to populate the table
 function populateTable(data) {
   const $table = $("#cartTable");
+  let totalCost = 0;
 
   data.forEach((item) => {
+    totalCost += item.price;
+    console.log(totalCost, item.price);
     let duration = 0;
     let artists = [];
 
@@ -33,13 +36,18 @@ function populateTable(data) {
     const $removeIcon = $("<i>")
       .addClass("fa-solid fa-trash")
       .on("click", function () {
-        $row.remove();
+        removeCartItem(item.id)
+          .then(() => $row.remove())
+          .catch((error) => console.log("Error: ", error));
       });
     $removeCell.append($removeIcon);
     $row.append($removeCell);
 
     $table.append($row);
   });
+
+  $("#sub-total").text("$ " + totalCost.toFixed(2));
+  $("#total-track-items").text(data.length);
 }
 
 const getArtistsName = function (artists) {
