@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/jquery-toast-plugin@1.3.2/dist/jquery.toast.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/main.css" />
     <title>mytunes -playlist detail</title>
   </head>
@@ -19,9 +27,20 @@
           </ul>
         </div>
         <div class="nav__right" id="loginContent" style="display: none">
-          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            onclick="redirectToLogin()"
+          >
+            Sign in / Register
+          </button>
         </div>
-        <div class="nav__right" id="viewProfile" style="display: none" onclick="redirectToProfile()">
+        <div
+          class="nav__right"
+          id="viewProfile"
+          style="display: none"
+          onclick="redirectToProfile()"
+        >
           <div class="profile-image profile-image-mini">
             <img id="profileImage" src="images/user.png" alt="Profile Image" />
           </div>
@@ -41,47 +60,34 @@
     <section class="container playlist__flex">
       <div class="playlist__flex__left">
         <!-- Album Image -->
-        <img src="images/playlist/one.jpg" alt="Playlist" class="playlist__image" />
+        <div class="playlist__image" id="playlistImageContainer"></div>
+        <!-- <img
+          src="images/playlist/one.jpg"
+          alt="Playlist"
+          class="playlist__image"
+        /> -->
         <!-- Overview -->
         <div class="playlist__content">
           <h3 class="playlist__title">Playlist Overview</h3>
-          <p class="playlist__info">Total Songs: <span>12</span></p>
-          <p class="playlist__info">Total Minutes: <span>3342 minutes </span></p>
-          <p class="playlist__info">Price: <span>$34</span></p>
+          <p class="playlist__info">
+            Total Songs: <span id="totalSongs">0</span>
+          </p>
+          <p class="playlist__info">
+            Total Minutes: <span id="totalMinutes"> </span>
+          </p>
+          <p class="playlist__info">Price: <span id="totalPrice"></span></p>
         </div>
 
         <!-- Artist List -->
         <section class="playlist__content">
           <h3 class="playlist__title">Artist List</h3>
-          <div id="artist__list" class="content__grid">
-            <span class="search__pills">John Mayer</span>
-            <span class="search__pills">Bob Dylan</span>
-            <span class="search__pills">Bon Jovi</span>
-            <span class="search__pills">John Mayer</span>
-            <span class="search__pills">John Mayer</span>
-            <span class="search__pills">John Mayer</span>
-            <span class="search__pills">Bob Dylan</span>
-            <span class="search__pills">Bon Jovi</span>
-            <span class="search__pills">John Mayer</span>
-            <span class="search__pills">John Mayer</span>
-          </div>
+          <div id="artistList" class="content__grid"></div>
         </section>
 
         <!-- Genre List -->
         <section class="playlist__content">
           <h3 class="playlist__title">Genre List</h3>
-          <div id="genre__list" class="content__grid">
-            <span class="search__pills">Sad</span>
-            <span class="search__pills">Kill Me</span>
-            <span class="search__pills">Sleepy</span>
-            <span class="search__pills">Well</span>
-            <span class="search__pills">Sike</span>
-            <span class="search__pills">Sad</span>
-            <span class="search__pills">Kill Me</span>
-            <span class="search__pills">Sleepy</span>
-            <span class="search__pills">Well</span>
-            <span class="search__pills">Sike</span>
-          </div>
+          <div id="genreList" class="content__grid"></div>
         </section>
       </div>
 
@@ -89,58 +95,17 @@
       <div class="playlist__flex__right">
         <h3 class="playlist__title">Track List</h3>
         <!-- Track Table -->
-        <table class="track__table">
+        <table class="track__table" id="trackTable">
           <tr>
             <th>Song</th>
             <th>Artist</th>
             <th>Duration</th>
           </tr>
-          <tr>
-            <td>Gravity</td>
-            <td>John Mayer</td>
-            <td>3:30</td>
-          </tr>
-          <tr>
-            <td>Slow Dancing in a burning room</td>
-            <td>John Mayer</td>
-            <td>3:30</td>
-          </tr>
-          <tr>
-            <td>Gravity</td>
-            <td>John Mayer</td>
-            <td>3:30</td>
-          </tr>
-          <tr>
-            <td>Slow Dancing in a burning room</td>
-            <td>John Mayer</td>
-            <td>3:30</td>
-          </tr>
-          <tr>
-            <td>Gravity</td>
-            <td>John Mayer</td>
-            <td>3:30</td>
-          </tr>
-          <tr>
-            <td>Slow Dancing in a burning room</td>
-            <td>John Mayer</td>
-            <td>3:30</td>
-          </tr>
-          <tr>
-            <td>Gravity</td>
-            <td>John Mayer</td>
-            <td>3:30</td>
-          </tr>
-          <tr>
-            <td>Slow Dancing in a burning room</td>
-            <td>John Mayer</td>
-            <td>3:30</td>
-          </tr>
         </table>
 
         <!-- Button -->
         <div class="playlist__btn">
-          <button class="btn btn-primary">Add To Cart</button>
-          <button class="btn btn-secondary">Buy Now</button>
+          <button class="btn btn-primary" id="addToCart">Add To Cart</button>
         </div>
       </div>
     </section>
@@ -165,7 +130,11 @@
       <div class="container download__container">
         <div class="download__left">
           <h2>Download Our App</h2>
-          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
+          <p>
+            Our platform is designed to provide you with the best music
+            experience. We have a wide range of music genres, artists, and mood
+            boards to choose from.
+          </p>
           <div class="download__app__store">
             <img src="images/app_store_bg.svg" alt="App Store" />
             <img src="images/play_store_bg.svg" alt="Play Store" />
@@ -187,8 +156,12 @@
           <p class="footer__details">All rights reserved.</p>
           <div class="footer__socials">
             <h2 class="footer__title">socials</h2>
-            <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
-            <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook"></i> </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
             <a href="https://www.tiktok.com/" target="_blank">
               <i class="fa-brands fa-tiktok"></i>
             </a>
@@ -236,15 +209,26 @@
       <div class="footer__bottom">
         <div class="footer__bottom__container">
           <div class="footer__title">Disclaimer</div>
-          <div class="footer__desc">This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only. This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only. This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only.</div>
+          <div class="footer__desc">
+            This is a project for a fictional music streaming platform. All the
+            content and images used in this project are for educational purposes
+            only. This is a project for a fictional music streaming platform.
+            All the content and images used in this project are for educational
+            purposes only. This is a project for a fictional music streaming
+            platform. All the content and images used in this project are for
+            educational purposes only.
+          </div>
         </div>
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-toast-plugin@1.3.2/dist/jquery.toast.min.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/generateCard.js"></script>
     <script type="module" src="js/playlist-detail.js"></script>
   </body>
 </html>

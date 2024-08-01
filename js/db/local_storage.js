@@ -1,4 +1,5 @@
 const LOGGED_IN_USER = "loggedInUser";
+const CURRENT_PLAYLIST = "currentPlayList";
 
 /**
  * Sets the logged-in user in local storage.
@@ -31,4 +32,19 @@ function logout() {
   localStorage.removeItem(LOGGED_IN_USER);
 }
 
-export { setLoggedInUser, getLoggedUser, isLoggedIn, logout };
+function addCurretnPlaylist(playlist) {
+  localStorage.setItem(CURRENT_PLAYLIST, JSON.stringify(playlist));
+}
+
+function getCurrentPlaylist() {
+  return JSON.parse(localStorage.getItem(CURRENT_PLAYLIST));
+}
+
+export {
+  setLoggedInUser,
+  getLoggedUser,
+  isLoggedIn,
+  logout,
+  addCurretnPlaylist,
+  getCurrentPlaylist,
+};

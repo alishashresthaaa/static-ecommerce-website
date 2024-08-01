@@ -103,20 +103,20 @@ function populateTable(data) {
   $("#total-items-count").text(data.length);
 }
 
-const getArtistsName = function (artists) {
+export const getArtistsName = function (artists) {
   const combinedArtists = artists.flat();
   const uniqueArtistsSet = new Set(combinedArtists);
   const uniqueArtistsString = Array.from(uniqueArtistsSet).join(", ");
   return uniqueArtistsString;
 };
 
-const durationToSeconds = function (duration) {
+export const durationToSeconds = function (duration) {
   const [minutes, seconds] = duration.split(":").map(Number);
   return minutes * 60 + seconds;
 };
 
 // Function to convert seconds to duration string (MM:SS)
-const secondsToDuration = function (seconds) {
+export const secondsToDuration = function (seconds) {
   const minutes = Math.floor(seconds / 60);
   const remainingSeconds = seconds % 60;
   return `${minutes}:${remainingSeconds.toString().padStart(2, "0")} Mins`;
