@@ -31,7 +31,6 @@ var handleSearch = function () {
   let genre = $("#genre").val();
   let artist = $("#artist").val();
   let query = `?genre=${genre}&artist=${artist}`;
-  console.log(query);
   window.location.href = `\search.html${query}`;
 };
 

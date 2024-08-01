@@ -10,7 +10,7 @@ var generatePlaylist = function (
   artists = [],
   genres = [],
   limit = null,
-  count = 10
+  count = 12
 ) {
   let playlists = [];
 
@@ -24,6 +24,10 @@ var generatePlaylist = function (
       genres.includes(song.genre)
     );
   });
+
+  if (fiilteredSongs.length == 0) {
+    return playlists;
+  }
 
   // Shuffle and generate playlist
   for (let i = 0; i < count; i++) {
@@ -43,6 +47,23 @@ var populatePlaylists = function (artists, genres, id = "playlist") {
   const playlists = generatePlaylist(artists, genres);
   var $playlists = $("#" + id);
   $playlists.empty();
+
+  // Chec if no playlists are found
+  if (playlists.length == 0) {
+    let $noresult = $("<div>", { class: "no-results" });
+    $noresult.append($("<img>", { src: "./images/empty.jpg" }));
+    $noresult.append(
+      $("<h2>", { text: "Oops! Your search hit a flat note." })
+    );
+    $noresult.append(
+      $("<p>", {
+        text: "We couldn't find any playlists matching your search! Try spicing up the search by adding more artists or genres.",
+      })
+    );
+    $playlists.append($noresult);
+    return playlists;
+  }
+
   playlists.forEach((element) => {
     const playlistItem = getPlaylistItem(element);
     $playlists.append(playlistItem);

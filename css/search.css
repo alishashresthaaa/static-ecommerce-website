@@ -69,3 +69,20 @@
     justify-content: center;
   }
 }
+
+.no-results {
+  text-align: center;
+  margin-top: 20px;
+  flex-grow: 1;
+}
+
+.no-results img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.no-results p {
+  /* font-size: 14px; */
+  color: var(--color-grey-dark);
+}
