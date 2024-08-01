@@ -28,14 +28,25 @@ function isLoggedIn() {
   return localStorage.getItem(LOGGED_IN_USER) !== null;
 }
 
+/**
+ * Logs out the current user by removing the user data from local storage.
+ */
 function logout() {
   localStorage.removeItem(LOGGED_IN_USER);
 }
 
+/**
+ * Adds the current playlist to local storage.
+ * @param {Object} playlist - The playlist object to be stored.
+ */
 function addCurretnPlaylist(playlist) {
   localStorage.setItem(CURRENT_PLAYLIST, JSON.stringify(playlist));
 }
 
+/**
+ * Retrieves the current playlist from local storage.
+ * @returns {Object|null} The playlist object or null if not found.
+ */
 function getCurrentPlaylist() {
   return JSON.parse(localStorage.getItem(CURRENT_PLAYLIST));
 }
