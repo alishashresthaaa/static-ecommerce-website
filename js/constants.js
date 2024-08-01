@@ -19,8 +19,8 @@ const GENRES = [
 ];
 
 const ARTISTS = [
-  "Billie Eilish",
   "Taylor Swift",
+  "Billie Eilish",
   "Drake",
   "Ed Sheeran",
   "Kendrick Lamar",
@@ -2850,7 +2850,12 @@ const SONGS = [
   {
     title:
       "That's What Friends Are For (with Elton John, Gladys Knight & Stevie Wonder)",
-    artists: ["Dionne Warwick", "Elton John", "Gladys Knight", "Stevie Wonder"],
+    artists: [
+      "Dionne Warwick",
+      "Elton John",
+      "Gladys Knight",
+      "Stevie Wonder",
+    ],
     album: "Friends",
     image: "https://i.scdn.co/image/ab67616d0000b2732c65840d117b54c8d2a6cd2a",
     spotify: "https://api.spotify.com/v1/tracks/1OzrlK57iLTIjmbZC1ppWM",
@@ -3040,7 +3045,12 @@ const SONGS = [
   },
   {
     title: "That's What Friends Are For",
-    artists: ["Dionne Warwick", "Elton John", "Gladys Knight", "Stevie Wonder"],
+    artists: [
+      "Dionne Warwick",
+      "Elton John",
+      "Gladys Knight",
+      "Stevie Wonder",
+    ],
     album: "Diamonds (Deluxe)",
     image: "https://i.scdn.co/image/ab67616d0000b273904e306cf32fa5dc93dd927a",
     spotify: "https://api.spotify.com/v1/tracks/13vqqi30qvTpWVC9JSC2aM",
@@ -3598,7 +3608,12 @@ const SONGS = [
   {
     title:
       "That's What Friends Are For (with Elton John, Gladys Knight & Stevie Wonder) - Remastered",
-    artists: ["Dionne Warwick", "Elton John", "Gladys Knight", "Stevie Wonder"],
+    artists: [
+      "Dionne Warwick",
+      "Elton John",
+      "Gladys Knight",
+      "Stevie Wonder",
+    ],
     album: "The Essential Gladys Knight & The Pips",
     image: "https://i.scdn.co/image/ab67616d0000b273226d142cf9ca1eae5856cb97",
     spotify: "https://api.spotify.com/v1/tracks/3Oc4iQ506DbtBJebgBGyn6",
