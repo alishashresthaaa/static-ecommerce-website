@@ -10,7 +10,7 @@ import {
   getPlaylistImage,
   wrapPlaylistInSwiperSlide,
 } from "./generateCard.js";
-import { generatePlaylist, populatePlaylists } from "./search.js";
+import { populatePlaylists } from "./search.js";
 
 // Generate random playlist
 var similarPlaylist = function (artists, genres) {
