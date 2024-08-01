@@ -134,7 +134,7 @@ function addToCart(playlist, component) {
       $.toast({
         hideAfter: 4000,
         heading: "Error",
-        text: "Can't add item to cart",
+        text: "Login to add item to cart",
         icon: "error",
         position: "top-center",
       });

@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>mytunes - cart page</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -23,20 +20,9 @@
           </ul>
         </div>
         <div class="nav__right" id="loginContent" style="display: none">
-          <button
-            class="btn btn-primary"
-            type="button"
-            onclick="redirectToLogin()"
-          >
-            Sign in / Register
-          </button>
+          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
         </div>
-        <div
-          class="nav__right"
-          id="viewProfile"
-          style="display: none"
-          onclick="redirectToProfile()"
-        >
+        <div class="nav__right" id="viewProfile" style="display: none" onclick="redirectToProfile()">
           <div class="profile-image profile-image-mini">
             <img id="profileImage" src="images/user.png" alt="Profile Image" />
           </div>
@@ -64,14 +50,14 @@
       <div class="container download__container">
         <div class="download__left" data-aos="fade-right">
           <h2>Download Our App</h2>
-          <p>
-            Our platform is designed to provide you with the best music
-            experience. We have a wide range of music genres, artists, and mood
-            boards to choose from.
-          </p>
+          <p>Our platform is designed to provide you with the best music experience. We have a wide range of music genres, artists, and mood boards to choose from.</p>
           <div class="download__app__store">
-            <img src="images/app_store_bg.svg" alt="App Store" />
-            <img src="images/play_store_bg.svg" alt="Play Store" />
+            <a href="https://www.apple.com/ca/app-store/" target="_blank" class="no-hover">
+              <img src="images/app_store_bg.svg" alt="App Store" />
+            </a>
+            <a href="https://play.google.com" target="_blank" class="no-hover">
+              <img src="images/play_store_bg.svg" alt="Play Store" />
+            </a>
           </div>
         </div>
         <div class="download__right" data-aos="fade-left">
@@ -144,15 +130,7 @@
       <div class="footer__bottom">
         <div class="footer__bottom__container">
           <div class="footer__title">Disclaimer</div>
-          <div class="footer__desc">
-            This is a project for a fictional music streaming platform. All the
-            content and images used in this project are for educational purposes
-            only. This is a project for a fictional music streaming platform.
-            All the content and images used in this project are for educational
-            purposes only. This is a project for a fictional music streaming
-            platform. All the content and images used in this project are for
-            educational purposes only.
-          </div>
+          <div class="footer__desc">This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only. This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only. This is a project for a fictional music streaming platform. All the content and images used in this project are for educational purposes only.</div>
         </div>
       </div>
     </footer>
@@ -162,10 +140,7 @@
     <div id="successModal" class="modal">
       <div class="modal-content">
         <h2>Sent the request</h2>
-        <p>
-          You have successfully sent the request to get the access to the
-          package you just selected
-        </p>
+        <p>You have successfully sent the request to get the access to the package you just selected</p>
         <button class="btn btn-primary" id="closeDialog">Return to Page</button>
       </div>
     </div>

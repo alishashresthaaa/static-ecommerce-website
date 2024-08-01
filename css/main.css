@@ -321,3 +321,7 @@ footer {
     display: none;
   }
 }
+
+.no-hover:hover {
+  background: unset;
+}
