@@ -1,12 +1,16 @@
 import { UNAUTHORIZED } from "../constants.js";
 import { getLoggedUser } from "./local_storage.js";
 
+// Constants for the database name and version
 const DB_NAME = "mytunesDB";
 const DB_VERSION = 4;
+
+// Constants for the object store names
 const STORE_NAME_USERS = "users";
 const STORE_NAME_CART = "cartItems";
 const STORE_NAME_ORDER = "orderItems";
 
+// Variable to hold the database instance
 let db;
 
 /**
@@ -15,13 +19,18 @@ let db;
  */
 function openDB() {
   return new Promise((resolve, reject) => {
+    // Request to open the database with the specified name and version
     const request = indexedDB.open(DB_NAME, DB_VERSION);
 
+    // Event handler for when the database needs to be upgraded (e.g., new version)
     request.onupgradeneeded = (event) => {
-      db = event.target.result;
+      db = event.target.result; // Get the database instance from the event
+
+      // Create the 'users' object store if it doesn't already exist
       if (!db.objectStoreNames.contains(STORE_NAME_USERS)) {
         db.createObjectStore(STORE_NAME_USERS, { keyPath: "email" });
       }
+      // Create the 'cartItems' object store if it doesn't already exist
       if (!db.objectStoreNames.contains(STORE_NAME_CART)) {
         const cartStore = db.createObjectStore(STORE_NAME_CART, {
           keyPath: "id",
@@ -29,20 +38,28 @@ function openDB() {
         });
         cartStore.createIndex("email", "email", { unique: false });
       }
+
+      // Create the 'orderItems' object store if it doesn't already exist
       if (!db.objectStoreNames.contains(STORE_NAME_ORDER)) {
         const orderStore = db.createObjectStore(STORE_NAME_ORDER, {
           keyPath: "id",
           autoIncrement: true,
         });
+        // Creates an index on the 'email' field in the 'orderItems' object store.
+        // This allows for efficient querying of the 'orderItems' store by 'email'.
+        // The index is not unique, meaning multiple records can have the same 'email' value.
         orderStore.createIndex("email", "email", { unique: false });
       }
     };
 
+    // Event handler for when the database is successfully opened
     request.onsuccess = (event) => {
+      // Get the database instance from the event
       db = event.target.result;
       resolve(db);
     };
 
+    // Event handler for when there is an error opening the database
     request.onerror = (event) => {
       reject(new Error(`Database error: ${event.target.error}`));
     };
@@ -217,10 +234,17 @@ function removeCartItem(cartItemId) {
   });
 }
 
+/**
+ * Clears all items from the cart in the IndexedDB.
+ * @returns {Promise<void>} A promise that resolves when the cart is cleared.
+ */
 function clearCartItems() {
   return new Promise((resolve, reject) => {
+    // Start a new transaction with readwrite access on the cartItems store
     const transaction = db.transaction([STORE_NAME_CART], "readwrite");
+    // Get the object store for cartItems
     const objectStore = transaction.objectStore(STORE_NAME_CART);
+    // Request to clear all items in the object store
     const request = objectStore.clear();
 
     request.onsuccess = () => {
