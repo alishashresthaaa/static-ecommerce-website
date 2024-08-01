@@ -1,9 +1,11 @@
 import { UNAUTHORIZED } from "./constants.js";
 import { addCartItem } from "./db/indexed_db.js";
+import { addCurretnPlaylist } from "./db/local_storage.js";
 import { redirectToLogin } from "./main.js";
+import { getRandomInt } from "./utils.js";
 
 // Image grid for playlist card
-var getPlaylistImage = function (playlist) {
+const getPlaylistImage = function (playlist) {
   var $playlistImage = $("<div>", {
     class: "playlist__img__grid",
   });
@@ -25,7 +27,11 @@ var getPlaylistItem = function (playlist) {
   var $playlist = $("<div>", {
     class: "playlist__card",
   }).on("click", function () {
-    window.location.href = `playlist-detail.html?playlistId=${playlist.id}`;
+    addCurretnPlaylist(playlist);
+    window.location.href = `playlist-detail.html?playlistId=${getRandomInt(
+      100,
+      1000
+    )}`;
   });
 
   $playlist.append(getPlaylistImage(playlist.playlist));
@@ -105,9 +111,17 @@ function addToCart(playlist, component) {
       });
     })
     .catch((error) => {
-      if ((error.name = UNAUTHORIZED)) {
+      if (error.name === UNAUTHORIZED) {
         redirectToLogin();
+        return;
       }
+      $.toast({
+        hideAfter: 4000,
+        heading: "Error",
+        text: "Can't add item to cart",
+        icon: "error",
+        position: "top-center",
+      });
       console.log("Error to add item ", error);
     });
 }
@@ -118,4 +132,9 @@ var wrapPlaylistInSwiperSlide = function (playlist) {
   }).append(getPlaylistItem(playlist));
 };
 
-export { getPlaylistImage, getPlaylistItem, wrapPlaylistInSwiperSlide };
+export {
+  getPlaylistImage,
+  getPlaylistItem,
+  wrapPlaylistInSwiperSlide,
+  addToCart,
+};
