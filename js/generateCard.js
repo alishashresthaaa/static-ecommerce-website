@@ -89,7 +89,7 @@ var getPlaylistItem = function (playlist) {
       class: "playlist__track",
     }).append(
       $("<span>", {
-        text: `+ ${playlist.playlist.length - 3} more`,
+        text: `+ ${Math.max(playlist.playlist.length - 3, 0)} more`,
       })
     )
   );
@@ -154,8 +154,8 @@ var wrapPlaylistInSwiperSlide = function (playlist) {
 };
 
 export {
+  addToCart,
   getPlaylistImage,
   getPlaylistItem,
   wrapPlaylistInSwiperSlide,
-  addToCart,
 };
