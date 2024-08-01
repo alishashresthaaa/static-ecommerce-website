@@ -25,7 +25,11 @@ function populateTable(data) {
   const $tableBody = $table.find("tbody");
   // Clear all existing rows from the table body
   $tableBody.empty();
-
+  if (data.length === 0) {
+    $("#summaryContainer").hide();
+  } else {
+    $("#summaryContainer").show();
+  }
   data.forEach((item) => {
     totalCost += item.price;
     console.log(totalCost, item.price);
@@ -153,7 +157,6 @@ $(document).ready(() => {
   openDB()
     .then(getMyCartItems)
     .then((playlists) => {
-      console.log(JSON.stringify(playlists));
       populateTable(playlists);
     })
     .catch((error) => console.log("Error: ", error));
