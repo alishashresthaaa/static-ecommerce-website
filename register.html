@@ -1,119 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>mytunes - Register</title>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <header>
-      <nav class="nav__container">
-        <div class="nav__left">
-          <img src="images/logo.svg" alt="Logo" class="nav__logo" />
-          <ul class="nav__list" id="webNav">
-            <!-- Navigation List Here -->
-          </ul>
-        </div>
-        <div class="nav__right" id="loginContent" style="display: none">
-          <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
-        </div>
-        <div class="nav__right" id="viewProfile" style="display: none" onclick="redirectToProfile()">
-          <div class="profile-image profile-image-mini">
-            <img id="profileImage" src="images/user.png" alt="Profile Image" />
-          </div>
-        </div>
-        <div class="hamburger__menu">
-          <div class="hamburger__line"></div>
-          <div class="hamburger__line"></div>
-          <div class="hamburger__line"></div>
-        </div>
-        <ul class="nav__list__mobile" id="nav_list__mobile">
-          <!-- Navigation List Here For Mobile -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>mytunes - Register</title>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="nav__container">
+      <div class="nav__left">
+        <img src="images/logo.svg" alt="Logo" class="nav__logo" />
+        <ul class="nav__list" id="webNav">
+          <!-- Navigation List Here -->
         </ul>
-      </nav>
-    </header>
-
-    <!-- Main Container -->
-    <section class="authenticate__container register__container">
-      <div class="authenticate__overlay"></div>
-      <div class="container authenticate__container__main">
-        <div class="authenticate__left" data-aos="fade-right">
-          <img src="images/logo-white.svg" alt="Logo" />
-          <h3>Your Ultimate Destination for Seamless Real Music Experience</h3>
-          <p><i class="fa-solid fa-guitar"></i> Immerse yourself in a world of music by listening to your favorite tracks.</p>
-          <p><i class="fa-solid fa-music"></i> Explore a diverse range of genres and artists tailored to your musical preferences.</p>
-          <p><i class="fa-solid fa-headphones"></i> Never miss a beat with our mobile-friendly music experience.</p>
-          <p><i class="fa-solid fa-compact-disc"></i> Experience superior sound quality with high-definition audio that brings every note and beat to life.</p>
-          <p><i class="fa-solid fa-microphone"></i> Enhance your music experience by singing along with synchronized lyrics</p>
-          <p><i class="fa-solid fa-music"></i> Enjoy a comprehensive music experience with seamless streaming, personalized recommendations, and user-friendly features.</p>
-        </div>
-        <div class="authenticate__right" data-aos="fade-left">
-          <h2>Register</h2>
-          <form class="authenticate__form" id="registrationForm">
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" placeholder="Enter your first name" />
-              <div class="error-message" id="firstNameError"></div>
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" placeholder="Enter your last name" />
-              <div class="error-message" id="lastNameError"></div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Enter your email address" />
-              <div class="error-message" id="emailError"></div>
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <div class="password-wrapper">
-                <input type="password" id="password" placeholder="Enter your password" />
-                <i class="far fa-eye toggle-password" id="togglePassword"></i>
-              </div>
-              <div class="error-message" id="passwordError"></div>
-            </div>
-
-            <div class="form-group">
-              <label for="confirmPassword">Retype Password</label>
-              <div class="password-wrapper">
-                <input type="password" id="confirmPassword" placeholder="Retype your password" />
-                <i class="far fa-eye toggle-password" id="toggleRepassword"></i>
-              </div>
-              <div class="error-message" id="confirmPasswordError"></div>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">Register</button>
-          </form>
-
-          <h5 class="authenticate__form__footer">
-            Already have an account?
-            <a href="login.html">Sign in for MyTunes.</a>
-          </h5>
-          <p class="authenticate__form__copyright">All Rights Reserved &copy; 2024 Music Place</p>
+      </div>
+      <div class="nav__right" id="loginContent" style="display: none">
+        <button class="btn btn-primary" type="button" onclick="redirectToLogin()">Sign in / Register</button>
+      </div>
+      <div class="nav__right" id="viewProfile" style="display: none" onclick="redirectToProfile()">
+        <div class="profile-image profile-image-mini">
+          <img id="profileImage" src="images/user.png" alt="Profile Image" />
         </div>
       </div>
-    </section>
-    <!-- Modal Structure -->
-    <div id="overlay" class="overlay"></div>
+      <div class="hamburger__menu">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+      </div>
+      <ul class="nav__list__mobile" id="nav_list__mobile">
+        <!-- Navigation List Here For Mobile -->
+      </ul>
+    </nav>
+  </header>
 
-    <div id="successModal" class="modal">
-      <div class="modal-content">
-        <h2>Registration Successful</h2>
-        <p>You have successfully registered your account. Please login to access the cart page and checkout</p>
-        <button class="btn btn-primary" id="closeDialog">Login Now</button>
+  <!-- Main Container -->
+  <section class="authenticate__container register__container">
+    <div class="authenticate__overlay"></div>
+    <div class="container authenticate__container__main">
+      <div class="authenticate__left" data-aos="fade-right">
+        <img src="images/logo-white.svg" alt="Logo" />
+        <h3>Your Ultimate Destination for Seamless Real Music Experience</h3>
+        <p><i class="fa-solid fa-guitar"></i> Immerse yourself in a world of music by listening to your favorite tracks.
+        </p>
+        <p><i class="fa-solid fa-music"></i> Explore a diverse range of genres and artists tailored to your musical
+          preferences.</p>
+        <p><i class="fa-solid fa-headphones"></i> Never miss a beat with our mobile-friendly music experience.</p>
+        <p><i class="fa-solid fa-compact-disc"></i> Experience superior sound quality with high-definition audio that
+          brings every note and beat to life.</p>
+        <p><i class="fa-solid fa-microphone"></i> Enhance your music experience by singing along with synchronized
+          lyrics</p>
+        <p><i class="fa-solid fa-music"></i> Enjoy a comprehensive music experience with seamless streaming,
+          personalized recommendations, and user-friendly features.</p>
+      </div>
+      <div class="authenticate__right" data-aos="fade-left">
+        <h2>Register</h2>
+        <form class="authenticate__form" id="registrationForm">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="Enter your first name" />
+            <div class="error-message" id="firstNameError"></div>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Enter your last name" />
+            <div class="error-message" id="lastNameError"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email address" />
+            <div class="error-message" id="emailError"></div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="password" placeholder="Enter your password" />
+              <i class="far fa-eye toggle-password" id="togglePassword"></i>
+            </div>
+            <div class="error-message" id="passwordError"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Retype Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="confirmPassword" placeholder="Retype your password" />
+              <i class="far fa-eye toggle-password" id="toggleRepassword"></i>
+            </div>
+            <div class="error-message" id="confirmPasswordError"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Register</button>
+        </form>
+
+        <h5 class="authenticate__form__footer">
+          Already have an account?
+          <a href="login.html">Sign in for MyTunes.</a>
+        </h5>
+        <p class="authenticate__form__copyright">All Rights Reserved &copy; 2024 Music Place</p>
       </div>
     </div>
+  </section>
+  <!-- Modal Structure -->
+  <div id="overlay" class="overlay"></div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="module" src="js/main.js"></script>
-    <script type="module" src="js/utils.js"></script>
-    <script type="module" src="js/register.js"></script>
-    <script type="module" src="js/passwrod.js"></script>
-  </body>
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <h2>Registration Successful</h2>
+      <p>You have successfully registered your account. Please login to access the cart page and checkout</p>
+      <button class="btn btn-primary" id="closeDialog">Login Now</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/utils.js"></script>
+  <script type="module" src="js/register.js"></script>
+  <script type="module" src="js/password.js"></script>
+</body>
+
 </html>
