@@ -8,7 +8,7 @@ import { openDB, updateUserProfile } from "./db/indexed_db.js";
 import { loadImage } from "./main.js";
 
 // Function to get an element by its ID
-const $ = function (id) {
+const $element = function (id) {
   return document.getElementById(id);
 };
 
@@ -23,16 +23,16 @@ function redirectLogin() {
 }
 
 // Get references to profile elements
-let profileImage = $("profile-image");
-let profileName = $("profile-name");
-let profileEmail = $("profile-email");
-let memberSince = $("member-since");
+let profileImage = $element("profile-image");
+let profileName = $element("profile-name");
+let profileEmail = $element("profile-email");
+let memberSince = $element("member-since");
 
-let firstName = $("first-name");
-let lastName = $("last-name");
-let dob = $("dob");
-let gender = $("gender");
-let address = $("address");
+let firstName = $element("first-name");
+let lastName = $element("last-name");
+let dob = $element("dob");
+let gender = $element("gender");
+let address = $element("address");
 
 // Function to load the profile image
 function loadProfileImage() {
@@ -73,7 +73,16 @@ function updateProfile(event) {
   user.dob = dob.value;
   user.gender = gender.value;
   user.address = address.value;
-
+  if(!user.firstName || !user.lastName){
+    $.toast({
+      hideAfter: 4000,
+      heading: "Error",
+      text: "First name and last name are required fields",
+      icon: "error",
+      position: "top-center",
+    });
+    return;
+  }
   // Update the user profile in the database
   updateUserProfile(user.email, user)
     .then(() => {
@@ -117,8 +126,8 @@ window.onload = function () {
   // Check if the user is logged in when the page loads
   const user = getLoggedUser();
   initProfile(user);
-  $("update-button").onclick = updateProfile;
-  $("logout-button").onclick = function () {
+  $element("update-button").onclick = updateProfile;
+  $element("logout-button").onclick = function () {
     logout(); // Log out the user
     redirectLogin(); // Redirect to login page
   };
