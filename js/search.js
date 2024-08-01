@@ -1,8 +1,11 @@
 import { ARTISTS, GENRES, PRICE_PER_SONG, SONGS } from "./constants.js";
+import { openDB } from "./db/indexed_db.js";
 import { getPlaylistItem } from "./generateCard.js";
 import { getRandomInt, shuffleSongs } from "./utils.js";
-import { openDB } from "./db/indexed_db.js";
 
+// function to generate `count` no of playlists
+// uses given artists and genres to generate a playlist
+// NOTE:  limit is not given then it will be a random number between 10 and 25
 var generatePlaylist = function (
   artists = [],
   genres = [],
@@ -10,7 +13,9 @@ var generatePlaylist = function (
   count = 10
 ) {
   let playlists = [];
-  let playlist = SONGS.filter((song) => {
+
+  // filter songs based on artists and genres
+  let fiilteredSongs = SONGS.filter((song) => {
     if (artists.length == 0 && genres.length == 0) {
       return true;
     }
@@ -20,19 +25,20 @@ var generatePlaylist = function (
     );
   });
 
+  // Shuffle and generate playlist
   for (let i = 0; i < count; i++) {
-    shuffleSongs(playlist);
+    shuffleSongs(fiilteredSongs);
 
     var realLimit = limit ? limit : getRandomInt(10, 25);
     playlists.push({
-      playlist: playlist.slice(0, realLimit),
+      playlist: fiilteredSongs.slice(0, realLimit),
       price: PRICE_PER_SONG * realLimit,
     });
   }
-  console.log(playlists);
   return playlists;
 };
 
+// function to populate playlists in element with given id
 var populatePlaylists = function (artists, genres, id = "playlist") {
   const playlists = generatePlaylist(artists, genres);
   var $playlists = $("#" + id);
@@ -45,17 +51,21 @@ var populatePlaylists = function (artists, genres, id = "playlist") {
 };
 
 $(document).ready(function () {
+  // connect to database
   openDB()
     .then(() => {
       console.log("Database connected");
     })
     .catch((error) => console.log(error));
 
+  // Initialize selected artists and genres from url params
   const urlParams = new URLSearchParams(window.location.search);
   var selectedArtists = urlParams.getAll("artist");
   var selectedGenres = urlParams.getAll("genre");
 
-  var populateGenres = function () {
+  // function to populate genres and artists
+  var populateGenresAndArtists = function () {
+    // Get genres div and populate with genres
     let genresDiv = $("#genres");
     $.each(GENRES, function (index, value) {
       let $genre = $("<div>", {
@@ -69,6 +79,7 @@ $(document).ready(function () {
       genresDiv.append($genre);
     });
 
+    // Get artists div and populate with artists
     let artistsDiv = $("#artists");
     $.each(ARTISTS, function (index, value) {
       let $artist = $("<div>", {
@@ -84,6 +95,7 @@ $(document).ready(function () {
     });
   };
 
+  // Handle genre toggle
   var toggleGenre = function ($element, value) {
     if (selectedGenres.includes(value)) {
       selectedGenres = selectedGenres.filter((genre) => genre !== value);
@@ -94,6 +106,7 @@ $(document).ready(function () {
     }
   };
 
+  // Handle artist toggle
   var toggleArtists = function ($element, value) {
     if (selectedArtists.includes(value)) {
       selectedArtists = selectedArtists.filter((artist) => artist !== value);
@@ -105,24 +118,28 @@ $(document).ready(function () {
   };
 
   // Populate genres and playlists
-  populateGenres();
+  populateGenresAndArtists();
   // Populate default playlists
   populatePlaylists(selectedArtists, selectedGenres);
 
+  // handle search click
   var handleSearch = function () {
     const queryParams = new URLSearchParams();
     selectedArtists.forEach((artist) => queryParams.append("artist", artist));
     selectedGenres.forEach((genre) => queryParams.append("genre", genre));
 
+    // Add the query params to the url
     const queryString = queryParams.toString();
     const url = new URL(window.location.href);
     url.search = queryString;
     const newUrl = url.toString();
     window.history.pushState(null, null, newUrl);
-    console.log(selectedArtists, selectedGenres);
+
+    // populate the playlist
     populatePlaylists(selectedArtists, selectedGenres);
   };
 
+  // Add event listener to search button
   $("#search").on("click", handleSearch);
 });
 
