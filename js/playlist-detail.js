@@ -12,7 +12,11 @@ import {
 } from "./generateCard.js";
 import { populatePlaylists } from "./search.js";
 
-// Generate random playlist
+/**
+ * Generates a list of similar playlists based on provided artists and genres.
+ * @param {Array} artists - Array of artist names.
+ * @param {Array} genres - Array of genre names.
+ */
 var similarPlaylist = function (artists, genres) {
   const playlists = populatePlaylists(
     artists,
@@ -38,6 +42,10 @@ var similarPlaylist = function (artists, genres) {
   });
 };
 
+/**
+ * Populates the playlist detail section with provided data.
+ * @param {Object} data - Playlist data object.
+ */
 function populatePlaylistDetail(data) {
   console.log("Playlist", data);
   $("#totalSongs").text(data.playlist.length);
@@ -61,6 +69,10 @@ function populatePlaylistDetail(data) {
   listSongs(data.playlist);
 }
 
+/**
+ * Lists all songs in the provided playlist.
+ * @param {Array} playlist - Array of song objects.
+ */
 function listSongs(playlist) {
   const $trackTable = $("#trackTable");
   playlist.forEach((track) => {
@@ -71,6 +83,12 @@ function listSongs(playlist) {
     $trackTable.append($row);
   });
 }
+
+/**
+ * Adds content items to the specified container.
+ * @param {Array} items - Array of items to be added.
+ * @param {jQuery} container - jQuery object representing the container.
+ */
 function addContent(items, container) {
   const genreNames = getArtistsName(items);
   genreNames.split(", ").forEach((artist) => {

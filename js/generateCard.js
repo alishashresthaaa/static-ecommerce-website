@@ -4,7 +4,11 @@ import { addCurretnPlaylist } from "./db/local_storage.js";
 import { redirectToLogin } from "./main.js";
 import { getRandomInt } from "./utils.js";
 
-// Image grid for playlist card
+/**
+ * Generates a grid of images for a playlist.
+ * @param {Array} playlist - Array of song objects.
+ * @returns {jQuery} - A jQuery object containing the playlist image grid.
+ */
 const getPlaylistImage = function (playlist) {
   var $playlistImage = $("<div>", {
     class: "playlist__img__grid",
@@ -23,6 +27,11 @@ const getPlaylistImage = function (playlist) {
   return $playlistImage;
 };
 
+/**
+ * Generates a playlist card element.
+ * @param {Object} playlist - Playlist object containing songs and price.
+ * @returns {jQuery} - A jQuery object containing the playlist card.
+ */
 var getPlaylistItem = function (playlist) {
   var $playlist = $("<div>", {
     class: "playlist__card",
@@ -39,6 +48,7 @@ var getPlaylistItem = function (playlist) {
     class: "playlist__card__content",
   });
 
+  // Append playlist price
   $playlistContent.append(
     $("<div>", {
       class: "playlist__price",
@@ -53,6 +63,7 @@ var getPlaylistItem = function (playlist) {
   );
 
   var $playlistTracks = $("<div>", { class: "playlist__tracks" });
+  // Append up to 3 tracks from the playlist
   $.each(playlist.playlist.slice(0, 3), function (index, song) {
     $playlistTracks.append(
       $("<div>", {
@@ -72,6 +83,7 @@ var getPlaylistItem = function (playlist) {
     );
   });
 
+  // Append remaining tracks count
   $playlistTracks.append(
     $("<div>", {
       class: "playlist__track",
@@ -96,7 +108,11 @@ var getPlaylistItem = function (playlist) {
   return $playlist;
 };
 
-// Function to add the playlist to the cart
+/**
+ * Adds a playlist to the cart.
+ * @param {Object} playlist - Playlist object to be added to the cart.
+ * @param {jQuery} component - jQuery object representing the "Add to cart" button.
+ */
 function addToCart(playlist, component) {
   addCartItem(playlist)
     .then(() => {
@@ -126,6 +142,11 @@ function addToCart(playlist, component) {
     });
 }
 
+/**
+ * Wraps a playlist card in a Swiper slide.
+ * @param {Object} playlist - Playlist object to be wrapped.
+ * @returns {jQuery} - A jQuery object containing the Swiper slide.
+ */
 var wrapPlaylistInSwiperSlide = function (playlist) {
   return $("<div>", {
     class: "swiper-slide",

@@ -12,6 +12,7 @@ let cartItems = [];
 let totalCost = 0;
 let totalSongs = 0;
 
+// Function to truncate text to a specified limit and add ellipsis if needed
 const truncateText = function (text, limit) {
   return text.length > limit ? text.substring(0, limit) + "..." : text;
 };
@@ -107,6 +108,7 @@ function populateTable(data) {
   $("#total-items-count").text(data.length);
 }
 
+// Function to get unique artist names from a list of artists
 export const getArtistsName = function (artists) {
   const combinedArtists = artists.flat();
   const uniqueArtistsSet = new Set(combinedArtists);
@@ -114,6 +116,7 @@ export const getArtistsName = function (artists) {
   return uniqueArtistsString;
 };
 
+// Function to convert duration string (MM:SS) to seconds
 export const durationToSeconds = function (duration) {
   const [minutes, seconds] = duration.split(":").map(Number);
   return minutes * 60 + seconds;
@@ -126,6 +129,7 @@ export const secondsToDuration = function (seconds) {
   return `${minutes}:${remainingSeconds.toString().padStart(2, "0")} Mins`;
 };
 
+// Function to place an order
 function placeOrder() {
   if (cartItems.length === 0) {
     $.toast({
@@ -153,6 +157,7 @@ function placeOrder() {
     });
 }
 
+// Document ready function to initialize the page
 $(document).ready(() => {
   openDB()
     .then(getMyCartItems)

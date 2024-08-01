@@ -1,10 +1,12 @@
 import { openDB, getUser } from "./db/indexed_db.js";
 import { setLoggedInUser, isLoggedIn } from "./db/local_storage.js";
 
+// Helper function to get an element by ID
 const $ = function (id) {
   return document.getElementById(id);
 };
 
+// Predefined valid email and password for testing
 const validEmail = "admin@gmail.com";
 const validPassword = "admin123";
 let isValid = false;
@@ -12,6 +14,7 @@ let isValid = false;
 // Regex pattern for email validation
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Function to validate input fields
 const validateField = function (event) {
   const id = event.target.id;
   const value = event.target.value.trim();
@@ -19,7 +22,7 @@ const validateField = function (event) {
 
   let errorMessage = "";
   let isFieldValid = true;
-
+  // Validate the field based on the ID
   switch (id) {
     case "email":
       if (value === "") {
@@ -38,6 +41,7 @@ const validateField = function (event) {
       break;
   }
 
+  // Display error message if validation fails
   errorElement.textContent = errorMessage;
   if (!isFieldValid) {
     event.target.classList.add("input-error");
@@ -49,6 +53,7 @@ const validateField = function (event) {
   isValid = document.querySelectorAll(".input-error").length === 0;
 };
 
+// Function to authenticate the user
 const authenticateUser = function (event) {
   console.log("Authenticating user...");
   event.preventDefault(); // Prevent form submission
@@ -64,10 +69,11 @@ const authenticateUser = function (event) {
   const email = $("email").value.trim();
   const password = $("password").value.trim();
 
-  console.log("Authenticating user...", email, password);
+  // Check if the user exists in the database
   getUser(email)
     .then((user) => {
       console.log("User found", user);
+      // Check if the password matches
       if (user && user.password === password) {
         setLoggedInUser(user);
         window.location.href = "index.html";
@@ -90,11 +96,14 @@ const authenticateUser = function (event) {
   // }
 };
 
+// Function to initialize the page on window load
 window.onload = function () {
+  // Redirect to index.html if the user is already logged in
   if (isLoggedIn()) {
     window.location.href = "index.html";
   }
 
+  // Open the database
   openDB()
     .then(() => {
       console.log("Database opened successfully");
