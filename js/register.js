@@ -9,9 +9,10 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  * @param {Event} event - The input event triggered by the user.
  */
 const validateField = function (event) {
-  const id = event.target.id;
-  const value = event.target.value.trim();
-  const errorElement = $(`${id}Error`);
+  const $element = $(event.target);
+  const id = $element.attr("id");
+  const value = $element.val().trim();
+  const errorElement = $(`#${id}Error`);
 
   let errorMessage = "";
   let isFieldValid = true;
@@ -59,11 +60,11 @@ const validateField = function (event) {
       break;
   }
   // Display error message if validation fails
-  errorElement.textContent = errorMessage;
+  errorElement.text(errorMessage);
   if (!isFieldValid) {
-    event.target.classList.add("input-error");
+    $element.addClass("input-error");
   } else {
-    event.target.classList.remove("input-error");
+    $element.removeClass("input-error");
   }
 
   // Update the overall form validity
