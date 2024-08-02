@@ -1,17 +1,3 @@
-import {
-  durationToSeconds,
-  getArtistsName,
-  secondsToDuration,
-} from "./cart.js";
-import { ARTISTS, GENRES } from "./constants.js";
-import { getCurrentPlaylist } from "./db/local_storage.js";
-import {
-  addToCart,
-  getPlaylistImage,
-  wrapPlaylistInSwiperSlide,
-} from "./generateCard.js";
-import { populatePlaylists } from "./search.js";
-
 /**
  * Generates a list of similar playlists based on provided artists and genres.
  * @param {Array} artists - Array of artist names.

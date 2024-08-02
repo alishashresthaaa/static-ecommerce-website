@@ -1,12 +1,3 @@
-import {
-  setLoggedInUser,
-  getLoggedUser,
-  logout,
-  isLoggedIn,
-} from "./db/local_storage.js";
-import { openDB, updateUserProfile } from "./db/indexed_db.js";
-import { loadImage } from "./main.js";
-
 // Function to get an element by its ID
 const $element = function (id) {
   return document.getElementById(id);
@@ -73,7 +64,7 @@ function updateProfile(event) {
   user.dob = dob.value;
   user.gender = gender.value;
   user.address = address.value;
-  if(!user.firstName || !user.lastName){
+  if (!user.firstName || !user.lastName) {
     $.toast({
       hideAfter: 4000,
       heading: "Error",

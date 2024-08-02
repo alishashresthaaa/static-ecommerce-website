@@ -50,12 +50,3 @@ function addCurretnPlaylist(playlist) {
 function getCurrentPlaylist() {
   return JSON.parse(localStorage.getItem(CURRENT_PLAYLIST));
 }
-
-export {
-  setLoggedInUser,
-  getLoggedUser,
-  isLoggedIn,
-  logout,
-  addCurretnPlaylist,
-  getCurrentPlaylist,
-};

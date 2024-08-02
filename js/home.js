@@ -1,7 +1,3 @@
-import { ARTISTS, GENRES } from "./constants.js";
-import { wrapPlaylistInSwiperSlide } from "./generateCard.js";
-import { populatePlaylists } from "./search.js";
-
 // Populate the genres in  search section
 var populateGenres = function () {
   let genresDiv = $("#genre");

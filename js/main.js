@@ -1,23 +1,10 @@
-import { isLoggedIn, getLoggedUser } from "./db/local_storage.js";
-
-export function redirectToLogin() {
-  window.location.href = "login.html";
-}
-export function redirectToHome() {
-  window.location.href = "index.html";
-}
-
-export function redirectToProfile() {
-  window.location.href = "profile.html";
-}
-
-function redirectToSearchPage() {
-  window.location.href = "search.html";
-}
-
 function loadImage() {
   const user = getLoggedUser();
-  const url = "https://ui-avatars.com/api/?background=random&name=" + user.firstName + "+" + user.lastName;
+  const url =
+    "https://ui-avatars.com/api/?background=random&name=" +
+    user.firstName +
+    "+" +
+    user.lastName;
 
   document.getElementById("profileImage").src = url;
 }
@@ -36,11 +23,6 @@ const NAVIGATION__LIST = [
 ];
 
 $(document).ready(function () {
-  const $navList = $("#webNav");
-  const $mobileNavList = $("#nav_list__mobile");
-  const $loginContent = $("#loginContent");
-  const $viewProfile = $("#viewProfile");
-
   // Determine which items to include based on login status
   const isUserLoggedIn = isLoggedIn();
 
@@ -55,12 +37,20 @@ $(document).ready(function () {
 
   // Function to update navigation for both web and mobile
   function updateNavMenu() {
+    const $navList = $("#webNav");
+    const $mobileNavList = $("#nav_list__mobile");
+    const $loginContent = $("#loginContent");
+    const $viewProfile = $("#viewProfile");
+
     $navList.empty(); // Clear existing items
     $mobileNavList.empty(); // Clear existing items
 
     NAVIGATION__LIST.forEach(function (navItem) {
       // Determine visibility based on login status
-      if (!isUserLoggedIn && ["cart", "orders", "profile"].includes(navItem.key)) {
+      if (
+        !isUserLoggedIn &&
+        ["cart", "orders", "profile"].includes(navItem.key)
+      ) {
         return; // Skip these items if not logged in
       }
       if (isUserLoggedIn && ["login", "register"].includes(navItem.key)) {
@@ -69,7 +59,11 @@ $(document).ready(function () {
 
       const $navItem = createNavItem(navItem);
       // Append the item to the web navigation list if it's not "login" or "register"
-      if (navItem.key !== "login" && navItem.key !== "register" && navItem.key !== "profile") {
+      if (
+        navItem.key !== "login" &&
+        navItem.key !== "register" &&
+        navItem.key !== "profile"
+      ) {
         $navList.append($navItem);
       }
       $mobileNavList.append($navItem.clone()); // Add the same item to mobile nav
@@ -99,5 +93,3 @@ AOS.init({
   once: false,
   anchorPlacement: "top-bottom",
 });
-
-export { loadImage };

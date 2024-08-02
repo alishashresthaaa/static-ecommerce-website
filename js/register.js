@@ -1,5 +1,3 @@
-import { openDB, registerUser } from "./db/indexed_db.js";
-
 // Utility function to get an element by its ID
 const $ = function (id) {
   return document.getElementById(id);

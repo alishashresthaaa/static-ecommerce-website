@@ -1,6 +1,3 @@
-import { openDB, getUser } from "./db/indexed_db.js";
-import { setLoggedInUser, isLoggedIn } from "./db/local_storage.js";
-
 // Helper function to get an element by ID
 const $ = function (id) {
   return document.getElementById(id);

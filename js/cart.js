@@ -1,13 +1,3 @@
-import {
-  openDB,
-  getMyCartItems,
-  removeCartItem,
-  placeOrderItem,
-  clearCartItems,
-} from "./db/indexed_db.js";
-
-import { getLoggedUser } from "./db/local_storage.js";
-
 let cartItems = [];
 let totalCost = 0;
 let totalSongs = 0;
@@ -107,27 +97,6 @@ function populateTable(data) {
   $("#total-track-items").text(data.length);
   $("#total-items-count").text(data.length);
 }
-
-// Function to get unique artist names from a list of artists
-export const getArtistsName = function (artists) {
-  const combinedArtists = artists.flat();
-  const uniqueArtistsSet = new Set(combinedArtists);
-  const uniqueArtistsString = Array.from(uniqueArtistsSet).join(", ");
-  return uniqueArtistsString;
-};
-
-// Function to convert duration string (MM:SS) to seconds
-export const durationToSeconds = function (duration) {
-  const [minutes, seconds] = duration.split(":").map(Number);
-  return minutes * 60 + seconds;
-};
-
-// Function to convert seconds to duration string (MM:SS)
-export const secondsToDuration = function (seconds) {
-  const minutes = Math.floor(seconds / 60);
-  const remainingSeconds = seconds % 60;
-  return `${minutes}:${remainingSeconds.toString().padStart(2, "0")} Mins`;
-};
 
 // Function to place an order
 function placeOrder() {

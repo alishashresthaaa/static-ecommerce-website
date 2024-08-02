@@ -5274,5 +5274,3 @@ const SONGS = [
 
 const PRICE_PER_SONG = 1.5;
 const UNAUTHORIZED = "Unauthorized";
-
-export { ARTISTS, GENRES, PRICE_PER_SONG, SONGS, UNAUTHORIZED };

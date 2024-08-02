@@ -1,5 +1,3 @@
-import { openDB, getMyOrders } from "./db/indexed_db.js";
-
 // Function to populate the table with order data
 function populateTable(data) {
   const $table = $("#orderTable"); // Get the table element

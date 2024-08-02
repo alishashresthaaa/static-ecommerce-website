@@ -44,4 +44,38 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-export { getRandomInt, shuffleSongs, toggleMobileMenu };
+function redirectToLogin() {
+  window.location.href = "login.html";
+}
+function redirectToHome() {
+  window.location.href = "index.html";
+}
+
+function redirectToProfile() {
+  window.location.href = "profile.html";
+}
+
+function redirectToSearchPage() {
+  window.location.href = "search.html";
+}
+
+// Function to convert duration string (MM:SS) to seconds
+const durationToSeconds = function (duration) {
+  const [minutes, seconds] = duration.split(":").map(Number);
+  return minutes * 60 + seconds;
+};
+
+// Function to convert seconds to duration string (MM:SS)
+const secondsToDuration = function (seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  return `${minutes}:${remainingSeconds.toString().padStart(2, "0")} Mins`;
+};
+
+// Function to get unique artist names from a list of artists
+const getArtistsName = function (artists) {
+  const combinedArtists = artists.flat();
+  const uniqueArtistsSet = new Set(combinedArtists);
+  const uniqueArtistsString = Array.from(uniqueArtistsSet).join(", ");
+  return uniqueArtistsString;
+};

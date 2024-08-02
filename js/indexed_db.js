@@ -1,6 +1,3 @@
-import { UNAUTHORIZED } from "../constants.js";
-import { getLoggedUser } from "./local_storage.js";
-
 // Constants for the database name and version
 const DB_NAME = "mytunesDB";
 const DB_VERSION = 4;
@@ -312,16 +309,3 @@ function getMyCartItems() {
     };
   });
 }
-
-export {
-  openDB,
-  registerUser,
-  updateUserProfile,
-  getUser,
-  addCartItem,
-  removeCartItem,
-  clearCartItems,
-  getMyCartItems,
-  placeOrderItem,
-  getMyOrders,
-};
