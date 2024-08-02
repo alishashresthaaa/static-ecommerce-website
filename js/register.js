@@ -112,23 +112,23 @@ const registerNewUser = function (event) {
 };
 
 // Modal functionality
-const successModal = $("#successModal");
 
 /**
  * Function to show the success modal.
  */
 const showModal = function () {
-  overlay.style.display = "block";
-  successModal.style.display = "block";
-  successModal.style.opacity = "0";
+  $("#overlay").css("display", "block");
+  $("#successModal").css("display", "block");
+  $("#successModal").css("opacity", "0");
 };
 
 /**
  * Function to close the success modal and redirect to the login page.
  */
 const closeModal = function () {
-  overlay.style.display = "none";
-  successModal.style.opacity = "0";
+  $("#overlay").css("display", "none");
+  $("#successModal").css("opacity", "0");
+  $("#successModal").css("display", "none");
   window.location.href = "login.html";
 };
 

@@ -164,13 +164,13 @@ function populateProductsList() {
 const successModal = document.getElementById("successModal");
 
 const showModal = function () {
-  overlay.style.display = "block";
-  successModal.style.display = "block";
-  successModal.style.opacity = "0";
+  $("#overlay").css("display", "block");
+  $("#successModal").css("display", "block");
+  $("#successModal").css("opacity", "0");
 };
 
 const closeModal = function () {
-  overlay.style.display = "none";
-  successModal.style.display = "none";
-  successModal.style.opacity = "0";
+  $("#overlay").css("display", "none");
+  $("#successModal").css("opacity", "0");
+  $("#successModal").css("display", "none");
 };
