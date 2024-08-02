@@ -23,7 +23,6 @@ function populateTable(data) {
   }
   data.forEach((item) => {
     totalCost += item.price;
-    console.log(totalCost, item.price);
     let duration = 0;
     let artists = [];
 
@@ -85,7 +84,7 @@ function populateTable(data) {
           .then((playlists) => {
             populateTable(playlists);
           })
-          .catch((error) => console.log("Error: ", error));
+          .catch((error) => console.error("Error: ", error));
       });
     $removeCell.append($removeIcon);
     $row.append($removeCell);
@@ -121,7 +120,7 @@ function placeOrder() {
       $("#successModal").fadeIn();
     })
     .catch((error) => {
-      console.log("Error: ", error);
+      console.error("Error: ", error);
       alert("Error placing order. Please try again.");
     });
 }
@@ -133,7 +132,7 @@ $(document).ready(() => {
     .then((playlists) => {
       populateTable(playlists);
     })
-    .catch((error) => console.log("Error: ", error));
+    .catch((error) => console.error("Error: ", error));
 
   $("#userEamil").text(getLoggedUser().email);
 

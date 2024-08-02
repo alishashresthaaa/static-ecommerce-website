@@ -90,7 +90,7 @@ $(document).ready(function () {
     .then(() => {
       console.log("Database connected");
     })
-    .catch((error) => console.log(error));
+    .catch((error) => console.error(error));
 
   const playlist = getCurrentPlaylist();
   if (playlist) {

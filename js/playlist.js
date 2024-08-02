@@ -211,6 +211,6 @@ function addToCart(playlist, component) {
         icon: "error",
         position: "top-center",
       });
-      console.log("Error to add item ", error);
+      console.error("Error to add item ", error);
     });
 }

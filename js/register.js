@@ -102,7 +102,6 @@ const registerNewUser = function (event) {
       showModal(); // Show success modal
     })
     .catch((error) => {
-      console.log(error);
       $("#confirmPasswordError").text(
         error.name === "ConstraintError"
           ? "User with this email already exists."

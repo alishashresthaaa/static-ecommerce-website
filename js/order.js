@@ -50,5 +50,5 @@ $(document).ready(() => {
       // Populate the table with the orders
       populateTable(playlists);
     })
-    .catch((error) => console.log("Error: ", error));
+    .catch((error) => console.error("Error: ", error));
 });

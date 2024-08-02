@@ -4,7 +4,7 @@ $(document).ready(function () {
     .then(() => {
       console.log("Database connected");
     })
-    .catch((error) => console.log(error));
+    .catch((error) => console.error(error));
 
   // Initialize selected artists and genres from url params
   const urlParams = new URLSearchParams(window.location.search);
