@@ -80,13 +80,6 @@ const authenticateUser = function (event) {
       $("#passwordError").text("Username or password is incorrect.");
       $("#password").addClass("input-error");
     });
-
-  // if (email === validEmail && password === validPassword) {
-  //   authenticated = true;
-  // } else {
-  //   $("passwordError").textContent = "Username or password is incorrect.";
-  //   $("password").classList.add("input-error");
-  // }
 };
 
 // Function to initialize the page on window load
