@@ -84,6 +84,16 @@ var populateTopSales = function (artists, genres) {
 
 // On document ready populate the genres and artists
 $(document).ready(function () {
+  // Open the database
+
+  openDB()
+    .then(() => {
+      console.log("Database opened successfully");
+    })
+    .catch((error) => {
+      console.error("Error opening database", error);
+    });
+
   populateGenres();
   populateArtists();
   // Form Submission
