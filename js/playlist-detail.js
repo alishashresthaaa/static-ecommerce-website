@@ -85,6 +85,13 @@ function addContent(items, container) {
 
 // On document ready populate the genres and artists
 $(document).ready(function () {
+  // connect to database
+  openDB()
+    .then(() => {
+      console.log("Database connected");
+    })
+    .catch((error) => console.log(error));
+
   const playlist = getCurrentPlaylist();
   if (playlist) {
     populatePlaylistDetail(playlist);
