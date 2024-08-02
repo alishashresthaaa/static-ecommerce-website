@@ -1,6 +1,5 @@
 $(document).ready(function () {
   $("#togglePassword").on("click", function () {
-    console.log("Doing");
     var passwordInput = $("#password");
     var type = passwordInput.attr("type") === "password" ? "text" : "password";
     passwordInput.attr("type", type);
