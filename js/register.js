@@ -1,8 +1,3 @@
-// Utility function to get an element by its ID
-const $ = function (id) {
-  return document.getElementById(id);
-};
-
 // Variable to track the overall form validity
 let isValid = false;
 
@@ -57,7 +52,7 @@ const validateField = function (event) {
       if (value === "") {
         errorMessage = "Confirm password is required.";
         isFieldValid = false;
-      } else if (value !== $("password").value.trim()) {
+      } else if (value !== $("#password").val().trim()) {
         errorMessage = "Passwords do not match.";
         isFieldValid = false;
       }
@@ -84,20 +79,20 @@ const registerNewUser = function (event) {
 
   if (!isValid) {
     // Trigger validation for all fields
-    validateField({ target: $("firstName") });
-    validateField({ target: $("lastName") });
-    validateField({ target: $("email") });
-    validateField({ target: $("password") });
-    validateField({ target: $("confirmPassword") });
+    validateField({ target: $("#firstName") });
+    validateField({ target: $("#lastName") });
+    validateField({ target: $("#email") });
+    validateField({ target: $("#password") });
+    validateField({ target: $("#confirmPassword") });
     return;
   }
 
   // Create a user object with form values
   const user = {
-    firstName: $("firstName").value.trim(),
-    lastName: $("lastName").value.trim(),
-    email: $("email").value.trim(),
-    password: $("password").value.trim(),
+    firstName: $("#firstName").val().trim(),
+    lastName: $("#lastName").val().trim(),
+    email: $("#email").val().trim(),
+    password: $("#password").val().trim(),
   };
   // Register the user in the database
   registerUser(user)
@@ -107,16 +102,17 @@ const registerNewUser = function (event) {
     })
     .catch((error) => {
       console.log(error);
-      $("confirmPasswordError").textContent =
+      $("#confirmPasswordError").text(
         error.name === "ConstraintError"
           ? "User with this email already exists."
-          : "Error adding user.";
-      $("confirmPassword").classList.add("input-error");
+          : "Error adding user."
+      );
+      $("#confirmPassword").addClass("input-error");
     });
 };
 
 // Modal functionality
-const successModal = $("successModal");
+const successModal = $("#successModal");
 
 /**
  * Function to show the success modal.
@@ -137,7 +133,7 @@ const closeModal = function () {
 };
 
 // Initialize the form and event listeners when the window loads
-window.onload = function () {
+$(document).ready(function () {
   openDB()
     .then(() => {
       console.log("Database opened successfully");
@@ -146,37 +142,37 @@ window.onload = function () {
       console.error("Error opening database", error);
     });
 
-  const registrationForm = $("registrationForm");
+  const registrationForm = $("#registrationForm");
   if (registrationForm) {
-    registrationForm.onsubmit = registerNewUser;
+    registrationForm.on("submit", registerNewUser);
   }
 
-  $("closeDialog").onclick = closeModal;
+  $("#closeDialog").on("click", closeModal);
 
-  const firstNameInput = $("firstName");
-  const lastNameInput = $("lastName");
-  const emailInput = $("email");
-  const passwordInput = $("password");
-  const confirmPasswordInput = $("confirmPassword");
+  const firstNameInput = $("#firstName");
+  const lastNameInput = $("#lastName");
+  const emailInput = $("#email");
+  const passwordInput = $("#password");
+  const confirmPasswordInput = $("#confirmPassword");
 
   // Add input event listeners for validation
   if (firstNameInput) {
-    firstNameInput.addEventListener("input", validateField);
+    firstNameInput.on("input", validateField);
   }
 
   if (lastNameInput) {
-    lastNameInput.addEventListener("input", validateField);
+    lastNameInput.on("input", validateField);
   }
 
   if (emailInput) {
-    emailInput.addEventListener("input", validateField);
+    emailInput.on("input", validateField);
   }
 
   if (passwordInput) {
-    passwordInput.addEventListener("input", validateField);
+    passwordInput.on("input", validateField);
   }
 
   if (confirmPasswordInput) {
-    confirmPasswordInput.addEventListener("input", validateField);
+    confirmPasswordInput.on("input", validateField);
   }
-};
+});

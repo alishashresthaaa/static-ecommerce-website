@@ -1,8 +1,3 @@
-// Function to get an element by its ID
-const $element = function (id) {
-  return document.getElementById(id);
-};
-
 // Function to redirect to the home page
 function redirectToHome() {
   window.location.href = "index.html";
@@ -14,16 +9,16 @@ function redirectLogin() {
 }
 
 // Get references to profile elements
-let profileImage = $element("profile-image");
-let profileName = $element("profile-name");
-let profileEmail = $element("profile-email");
-let memberSince = $element("member-since");
+let $profileImage = $("#profile-image");
+let $profileName = $("#profile-name");
+let $profileEmail = $("#profile-email");
+let $memberSince = $("#member-since");
 
-let firstName = $element("first-name");
-let lastName = $element("last-name");
-let dob = $element("dob");
-let gender = $element("gender");
-let address = $element("address");
+let $firstName = $("#first-name");
+let $lastName = $("#last-name");
+let $dob = $("#dob");
+let $gender = $("#gender");
+let $address = $("#address");
 
 // Function to load the profile image
 function loadProfileImage() {
@@ -35,23 +30,23 @@ function loadProfileImage() {
     "+" +
     user.lastName;
   // Set the profile image source
-  profileImage.src = url;
+  $profileImage.attr("src", url);
 }
 
 // Function to initialize the profile with user data
 function initProfile(user) {
   loadImage(); // Load the image
   loadProfileImage(); // Load the profile image
-  profileName.textContent = user.firstName + " " + user.lastName;
-  profileEmail.textContent = user.email;
-  memberSince.textContent = user.memberSince || "Member since: 2024";
+  $profileName.text(user.firstName + " " + user.lastName);
+  $profileEmail.text(user.email);
+  $memberSince.text(user.memberSince || "Member since: 2024");
 
   // Set profile form fields
-  firstName.value = user.firstName || "";
-  lastName.value = user.lastName || "";
-  dob.value = user.dob || "";
-  gender.value = user.gender || "";
-  address.value = user.address || "";
+  $firstName.val(user.firstName || "");
+  $lastName.val(user.lastName || "");
+  $dob.val(user.dob || "");
+  $gender.val(user.gender || "");
+  $address.val(user.address || "");
 }
 
 // Function to update the user profile
@@ -59,11 +54,11 @@ function updateProfile(event) {
   event.preventDefault(); // Prevent the default form submission
   const user = getLoggedUser(); // Get the logged-in user
   // Update user object with form values
-  user.firstName = firstName.value;
-  user.lastName = lastName.value;
-  user.dob = dob.value;
-  user.gender = gender.value;
-  user.address = address.value;
+  user.firstName = $firstName.val();
+  user.lastName = $lastName.val();
+  user.dob = $dob.val();
+  user.gender = $gender.val();
+  user.address = $address.val();
   if (!user.firstName || !user.lastName) {
     $.toast({
       hideAfter: 4000,
@@ -100,7 +95,7 @@ function updateProfile(event) {
 }
 
 // Function to run when the window loads
-window.onload = function () {
+$(document).ready(function () {
   if (!isLoggedIn()) {
     // Check if the user is not logged in
     redirectLogin(); // Redirect to login page
@@ -117,12 +112,12 @@ window.onload = function () {
   // Check if the user is logged in when the page loads
   const user = getLoggedUser();
   initProfile(user);
-  $element("update-button").onclick = updateProfile;
-  $element("logout-button").onclick = function () {
+  $("#update-button").on("click", updateProfile);
+  $("#logout-button").on("click", function () {
     logout(); // Log out the user
     redirectLogin(); // Redirect to login page
-  };
-};
+  });
+});
 
 // Expose redirectToHome function to the global scope
 window.redirectToHome = redirectToHome;

@@ -27,23 +27,6 @@ var toggleMobileMenu = function () {
   menu.classList.toggle("show");
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  document
-    .querySelector(".hamburger__menu")
-    .addEventListener("click", toggleMobileMenu);
-  document.querySelector(".nav__logo").addEventListener("click", function () {
-    window.location.href = "/";
-  });
-
-  if (document.querySelector(".header__login")) {
-    document
-      .querySelector(".header__login")
-      .addEventListener("click", function () {
-        window.location.href = "login.html";
-      });
-  }
-});
-
 function redirectToLogin() {
   window.location.href = "login.html";
 }
@@ -79,3 +62,14 @@ const getArtistsName = function (artists) {
   const uniqueArtistsString = Array.from(uniqueArtistsSet).join(", ");
   return uniqueArtistsString;
 };
+
+function loadImage() {
+  const user = getLoggedUser();
+  const url =
+    "https://ui-avatars.com/api/?background=random&name=" +
+    user.firstName +
+    "+" +
+    user.lastName;
+
+  document.getElementById("profileImage").src = url;
+}

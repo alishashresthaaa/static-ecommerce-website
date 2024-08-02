@@ -1,14 +1,3 @@
-function loadImage() {
-  const user = getLoggedUser();
-  const url =
-    "https://ui-avatars.com/api/?background=random&name=" +
-    user.firstName +
-    "+" +
-    user.lastName;
-
-  document.getElementById("profileImage").src = url;
-}
-
 // Handle navigation bar based on user login status
 const NAVIGATION__LIST = [
   { key: "home", name: "Home", value: "index.html" },
@@ -76,8 +65,30 @@ $(document).ready(function () {
     } else {
       $loginContent.show();
     }
+
+    $(".nav__logo").click(function () {
+      window.location.href = "index.html";
+    });
   }
 
+  function initHamburgerMenu() {
+    // Attach click event to the hamburger menu
+    $(".hamburger__menu").on("click", toggleMobileMenu);
+
+    // Attach click event to the navigation logo
+    $(".nav__logo").on("click", function () {
+      window.location.href = "/";
+    });
+
+    // Attach click event to the login link if it exists
+    if ($(".header__login").length) {
+      $(".header__login").on("click", function () {
+        window.location.href = "login.html";
+      });
+    }
+  }
+
+  initHamburgerMenu(); // Call function to initialize the hamburger menu
   updateNavMenu(); // Call function to update the navigation menus
 });
 
