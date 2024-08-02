@@ -102,12 +102,12 @@ const registerNewUser = function (event) {
       showModal(); // Show success modal
     })
     .catch((error) => {
-      $("#confirmPasswordError").text(
+      $("#emailError").text(
         error.name === "ConstraintError"
           ? "User with this email already exists."
           : "Error adding user."
       );
-      $("#confirmPassword").addClass("input-error");
+      $("#email").addClass("input-error");
     });
 };
 
