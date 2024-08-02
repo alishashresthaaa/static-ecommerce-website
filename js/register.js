@@ -142,6 +142,11 @@ $(document).ready(function () {
       console.error("Error opening database", error);
     });
 
+  // Redirect to index.html if the user is already logged in
+  if (isLoggedIn()) {
+    window.location.href = "index.html";
+  }
+
   const registrationForm = $("#registrationForm");
   if (registrationForm) {
     registrationForm.on("submit", registerNewUser);
